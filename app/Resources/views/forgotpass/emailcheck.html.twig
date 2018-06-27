@@ -1,0 +1,13 @@
+{% block body %}
+
+    {% if invalid_email is defined %}
+    mytho, ton email existe pas
+{% endif %}
+    {{ form_start(form) }}
+    <p>
+        {{ form_label(form.email) }}
+        {{ form_widget(form.email) }}
+    </p>
+    <button type="submit">Valider</button>
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends "base.html.twig" %}
+{% block layout_content %}
+    <section class="section" id="section-co">
+        <div class="connexion-section-content">
+
+            <div id="form-ins">
+                <h2>Inscription</h2>
+                <form name="user" method="post" {{ path(('add-user')) }}>
+                    {{ form_row(form._token) }}
+                    <div class="form-group-ins">
+                        <input placeholder="E-mail" type="email" id="user_email" name="user[email]" required="required"/>
+                    </div>
+
+                    <div class="form-group-ins">
+                        <input placeholder="Mot de passe" type="password" id="user_plainPassword_first" name="user[plainPassword][first]"
+                               required="required"/>
+                    </div>
+
+                    <div class="form-group-ins">
+                        <input placeholder="Confirmation du mot de passe" type="password" id="user_plainPassword_second" name="user[plainPassword][second]"
+                               required="required"/>
+                    </div>
+
+                    <div class="form-group-ins" id="check-box">
+                        <div class="div-check">
+                            <input type="radio" id="user_art_ent_0" name="user[art_ent]" required="required" value="1">
+                            <label id="submit-ins" for="user_art_ent_0" class="required">Je suis une entreprise</label>
+                        </div>
+                        <div class="div-check">
+                            <input type="radio" id="user_art_ent_1" name="user[art_ent]" required="required" value="2">
+                            <label id="submit-ins" for="user_art_ent_1" class="required">Je suis un(e) artiste</label>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group-ins">
+                        <button type="submit" id="user_save" name="user[save]" class="save">INSCRIPTION</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+
+        <div id="connexion-section-2" class="background-right"></div>
+
+
+    </section>
+
+
+
+
+
+
+
+
+{% endblock %}
