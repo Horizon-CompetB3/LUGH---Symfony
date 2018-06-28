@@ -12,16 +12,15 @@ use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 
-class CompleteType extends AbstractType
+class CompleteEntrepriseType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
 
-            ->add('image', FileType::class, array('label' => 'Image(JPG)'))
             ->add('adresse', TextType::class)
             ->add('description',TextareaType::class)
-            ->add('projets',TextareaType::class)
+
             ->add('type', ChoiceType::class, array(
                 'choices'  => array(
                     'Entreprise Individuelle' => 'Entreprise Individuelle',

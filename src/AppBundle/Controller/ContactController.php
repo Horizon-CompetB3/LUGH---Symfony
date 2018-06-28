@@ -2,23 +2,49 @@
 
 namespace AppBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use AppBundle\Form\ContactType;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
-class ContactController extends AbstractController
+class ContactController extends Controller
 {
-/**
-* @Route("/contact", name="contact")
-*/
-public function index()
+    /**
+     * @Route("/contact", name="contact")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     */
+public function contactAction(Request $request)
 {
-    $form = $this->createForm(ContactType::class);
+
+    $form = $this->createFormBuilder()
+        ->add('from', EmailType::class)
+        ->add('message', TextareaType::class)
+        ->add('send', SubmitType::class)
+        ->getForm()
+
+    ;
+
+    $form->handleRequest($request);
+    if ($form->isSubmitted() && $form->isValid()) {
+        $data = $form->getData();
+        dump($data);
+        $message =\Swift_Message::newInstance()
+            ->setSubject('Support from submissions')
+            ->setFrom($data['from'])
+            ->setTo('alex.s95120@gmail.com')
+            ->setBody(
+                $form->getData()['message'],
+                'text/plain'
+            );
+        $this->get('mailer')->send($message);
+    }
 
     return $this->render('content/contact.html.twig', [
 
-        'our_form' => $form->createView(),]);
+        'form' => $form->createView()
+    ]);
 }
 }

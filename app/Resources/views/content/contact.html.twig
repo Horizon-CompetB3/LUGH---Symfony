@@ -1,35 +1,9 @@
-{% extends "base.html.twig" %}
+{% extends "base-2.html.twig" %}
 {% block layout_content %}
-<section id="first-section" class="section" data-midnight="default" data-anchor="slide1">
-    <div id="first-section-content">
-        <h2>LUGH RÉUNIT ARTISTES ET <br>ENTREPRISES</h2>
-        <p class="text-contact">Vous êtes à la recherche d’une communication différente et valorisante pour votre entreprise ? Vous cherchez une scène pour votre talent et vos oeuvres ? Laissez nous un message !
-        </p>
-        <div>
-            <div id="contact">
-                <div>
-                    <input class="input-contact" type="text" id="contact_name" name="contact[name]" required="required" placeholder="Votre nom">
-                </div>
-                <div>
 
-                    <input class="input-contact" type="email" id="contact_from" name="contact[from]" required="required" placeholder="Votre e-mail">
-                </div>
-                <div>
-                    <textarea class="textarea-contact" id="contact_message" name="contact[message]" required="required" placeholder="Message">
+    {{ form(form) }}
 
-                    </textarea>
-                </div>
-                <input type="hidden" id="contact__token" name="contact[_token]"
-                       value="q1f-VeUa0f_26qh9boAfHfdJN1DJ2CwH0xDhg_2Ehcc"></div>
-
-            <input  class="btn-contact" type="submit" value="Envoyer" />
-
-        </div>
-    </div>
-    <div id="first-section-content-2" class="background-right"></div>
-</section>
 
 {% endblock %}
-
 
 

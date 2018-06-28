@@ -53,7 +53,7 @@ class AddUserController extends Controller
     public function CompleteProfilAction(Request $request)
     {
 // creates a projets and gives it some dummy data for this example
-        $user = $this->getDoctrine()->getRepository(User::class );
+        $user = $this->getUser()->getRepository(User::class );
         $form = $this->createForm(CompleteType::class, $user);
         $form->handleRequest($request);
 

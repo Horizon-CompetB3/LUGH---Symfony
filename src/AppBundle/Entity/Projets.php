@@ -7,7 +7,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProjetsRepository")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\ProjetsRepository")
  */
 class Projets
 {

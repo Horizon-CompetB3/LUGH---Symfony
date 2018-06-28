@@ -16,10 +16,10 @@ body{
 .sidebar {
     position: absolute;
     z-index: 300;
-    right: 6%;
-    top: 6%;
+    right: 12%;
+    top: 3%;
     height: 80vh;
-    width: 30%;
+    margin-top: 10vh;
 }
 
 .sidebar nav ul {
@@ -32,8 +32,7 @@ body{
     display: block;
     list-style: none;
     padding: 0;
-    margin-bottom: 3vh;
-    margin-top: 1vh;
+    margin-bottom: 5vh;
 }
 /*
 .sidebar nav ul li a {
@@ -60,7 +59,7 @@ body{
     display: block;
     text-decoration: none;
     margin: 0 auto;
-    padding: 6px 20px;
+    padding: 10px 20px;
     position: relative;
     color: #000;
     font-size: 0.8vw;
@@ -69,18 +68,17 @@ body{
 }
 
 .singe-entreprise {
-    width: 9%;
-    padding: 1%;
+    width: 10%;
+    padding: 2%;
 }
 
 .link-entreprise {
     display: none;
     text-decoration: none;
-    margin: -2%;
+    margin: -1%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -95,18 +93,17 @@ body{
 }
 
 .singe-artiste {
-    width: 9%;
-    padding: 1%;
+    width: 10%;
+    padding: 2%;
 }
 
 .link-artiste {
     display: none;
     text-decoration: none;
-    margin: -2%;
+    margin: -1%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -121,18 +118,17 @@ body{
 }
 
 .singe-galerie {
-    width: 9%;
-    padding: 1%;
+    width: 10%;
+    padding: 2%;
 }
 
 .link-galerie {
     display: none;
     text-decoration: none;
-    margin: -2%;
+    margin: -1%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -146,19 +142,18 @@ body{
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
 
-.singe-home {
-    width: 9%;
-    padding: 1%;
+.singe-connexion {
+    width: 10%;
+    padding: 2%;
 }
 
-.link-home {
+.link-connexion {
     display: none;
     text-decoration: none;
-    margin: -2%;
+    margin: -1%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -173,18 +168,17 @@ body{
 }
 
 .singe-contact {
-    width: 9%;
-    padding: 1%;
+    width: 10%;
+    padding: 2%;
 }
 
 .link-contact {
     display: none;
     text-decoration: none;
-    margin: -2%;
+    margin: -1%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -205,29 +199,6 @@ body{
 .link-active {
     display: block;
 }
-
-
-.link-connexion {
-    display: ;
-    text-decoration: none;
-    margin: -2%;
-    padding: 10px 20px;
-    position: relative;
-    color: #000;
-    height: 8vh;
-    font-size: 0.8vw;
-    text-transform:  uppercase;
-    writing-mode: vertical-lr;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
-    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
-    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
-}
-
 
 /*
 .sidebar nav ul li a::after {
@@ -272,6 +243,140 @@ body{
     width: 50%;
 }*/
 
+#div-projet {
+    background-color: white;
+    color: #000;
+    width: 55%;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight: 700;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 201;
+    transition: 0.7s;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.nav-projet:hover + #div-projet {
+    transition: 0.7s;
+    visibility: visible;
+    left: 0;
+}
+
+
+
+#div-voir {
+    background-color: white;
+    color: #000;
+    width: 55%;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight: 700;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 201;
+    transition: 0.7s;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.nav-voir:hover + #div-voir {
+    transition: 0.7s;
+    visibility: visible;
+    left: 0;
+}
+
+
+
+
+#div-connexion {
+    background-color: white;
+    color: #000;
+    width: 55%;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight: 700;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 201;
+    transition: 0.7s;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.nav-connexion:hover + #div-connexion {
+    transition: 0.7s;
+    visibility: visible;
+    left: 0;
+}
+
+#div-galerie {
+    background-color: white;
+    color: #000;
+    width: 55%;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight: 700;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 201;
+    transition: 0.7s;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.nav-galerie:hover + #div-galerie {
+    transition: 0.7s;
+    visibility: visible;
+    left: 0;
+}
+
+#div-contact {
+    background-color: white;
+    color: #000;
+    width: 55%;
+    height: 100vh;
+    font-size: 30px;
+    line-height: 10vh;
+    font-weight: 700;
+    padding-left: 1vw;
+    padding-top: 1vw;
+    text-transform: uppercase;
+    position: fixed;
+    top: 0;
+    left: -60%;
+    z-index: 201;
+    transition: 0.7s;
+    visibility: hidden;
+    opacity: 1;
+}
+
+.nav-contact:hover + #div-contact {
+    transition: 0.7s;
+    visibility: visible;
+    left: 0;
+}
 
 .all-content {
     width: 100%;
@@ -310,7 +415,7 @@ h1{
 #div-logo{
     width: 7%;
     margin: auto;
-    position: fixed;
+    position: absolute;
     top: 2vw;
     left: 2vw;
 }
@@ -320,40 +425,27 @@ h1{
     display: flex;
 }
 
-.first-section-content{
+#first-section-content{
     margin-top: auto;
     margin-bottom: auto;
     width: 70%;
     margin-left: 3vw;
 
 }
-.first-section-content h2{
+#first-section-content h2{
     font-size: 1.8vw;
     line-height: 2.8vw;
     font-weight: 600;
 }
-
-.first-section-content p{
-    font-size: 1vw;
-    line-height: 1.5vw;
-    width: 50%;
-    font-weight: 500;
-    margin-top: 2%;
-}
-
 #first-section-content-2{
     background-image: url("../img/IMG1-HOME.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.4s;
 }
-
 #div-btn-artent{
     margin-top: 3vw;
     justify-content: space-between;
-    -webkit-appearance: none;
 }
 #div-btn-artent a{
     background-color: #fff;
@@ -369,29 +461,10 @@ h1{
     text-decoration: none;
     color: #000;
     outline: none;
-    transition: 0.5s;
-}
 
-#div-btn-artent a:hover{
-    background-color: black;
-    padding: 2%;
-    padding-top: 1%;
-    padding-bottom: 1%;
-    border: 3px solid black;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 0.8vw;
-    margin-right: 2vw;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    outline: none;
-    transition: 0.5s;
 }
-
 .div-btn-proj{
     margin-top: 3vw;
-    -webkit-appearance: none;
 
 }
 .div-btn-proj button{
@@ -405,14 +478,7 @@ h1{
     font-size: 0.8vw;
     margin-right: 2vw;
     cursor: pointer;
-    transition: 0.5s;
-    -webkit-appearance: none;
-}
 
-.div-btn-proj button:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
 }
 
 .second-section-content{
@@ -421,7 +487,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .third-section-content{
@@ -430,7 +496,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .five-section-content{
@@ -439,7 +505,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .fourth-section-content{
@@ -448,7 +514,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1s;
 }
 
 .connexion-section-content{
@@ -464,7 +530,6 @@ h1{
     font-size: 1.9vw;
     line-height: 2.8vw;
     margin-bottom: 3vw;
-    text-transform: uppercase;
 }
 
 .third-section-content h3{
@@ -520,38 +585,24 @@ h1{
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.3s;
 }
 #third-section-content-2{
     background-image: url("../img/IMG4-HOME-ARTISTE.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.3s;
 }
 #five-section-content-2{
     background-image: url("../img/IMG3-HOME-GALLERIE.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.3s;
 }
 #fourth-section-content-2{
     background-image: url("../img/IMG5-HOME-NEWSLETTER.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
-    opacity: 0;
-    transition: 0.3s;
-}
-
-.img-fadein {
-    transition: 0.8s !important;
-    transition-delay: 0.7s !important;
-    opacity: 1 !important;
 }
 
 #connexion-section-2{
@@ -579,8 +630,8 @@ h1{
 
 .position-finale {
     opacity: 1;
-    transition: 0.8s;
-    transition-delay: 0.7s;
+    transition: 1s;
+    transition-delay: 0.5s;
 }
 
 
@@ -626,7 +677,6 @@ form h3{
     border-bottom: 3px solid black;
     width: 30%;
     padding: 0.8%;
-    -webkit-appearance: none;
 }
 
 ::placeholder{
@@ -648,20 +698,9 @@ form h3{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8vw;
-    margin-top: 3%;
+    margin-left: 1vw;
     cursor: pointer;
-    transition: 0.5s;
-    -webkit-appearance: none;
 }
-
-#mc-embedded-subscribe:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
-    -webkit-appearance: none;
-}
-
-
 #clear{
     position: relative;
     width: 54%;
@@ -670,21 +709,16 @@ form h3{
 }
 
 #mc_embed_signup_scroll{
-    margin-left: 3vw;
+margin-left: 3vw;
 }
 
 #copyright {
-    width: 50%;
-}
-
-#copyright a{
-    color: black;
-    text-decoration: none;
+    width: 40%;
 }
 
 #rs {
-    width: 50%;
-    margin-left: 17%;
+    width: 60%;
+    margin-left: 30%;
 }
 
 #rs a{
@@ -831,15 +865,8 @@ label{
     font-size: 0.8vw;
     margin-left: 20vw;
     cursor: pointer;
-    transition: 0.5s;
-    -webkit-appearance: none;
 }
 
-.form-group-co button:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
-}
 
 .link-co{
     text-decoration: underline;
@@ -873,6 +900,7 @@ label{
 .link-co:hover .underline{
     width: 50%;
     transition: 0.5s;
+
 }
 
 
@@ -931,17 +959,7 @@ input::placeholder{
     margin-left: 29vw;
     cursor: pointer;
     margin-top: 6%;
-    transition: 0.5s;
-    -webkit-appearance: none;
 }
-
-.form-group-ins button:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
-    -webkit-appearance: none;
-}
-
 #footer{
     display: flex;
 }
@@ -981,25 +999,74 @@ input::placeholder {
     width: 100%;
     margin-top: 6%;
     margin-left: -15%;
-    -webkit-appearance: none;
+}
+.fp-viewing-slide2{
+    background-color: red;
+}
+
+/* PAGE PROFIL */
+
+.section-profil{
+    display: flex;
+}
+.left-bar{
+    position: absolute;
+    left: 0;
+    background-color: #f6f6f6;
+    height: 100VH;
+    width: 15vw;
+}
+.left-bar button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+}
+.content-left{
+    margin: auto;
+    width: 80%;
+    margin-top: 6vh;
+    text-align: center;
+}
+.profil-container{
+    width: 55%;
+    height: 70vh;
+    margin: auto;
+}
+#div-logo-profil{
+    width: 80%;
+    margin: auto;
+    top: 2vw;
+    left: 2vw;
 }
 
 
-#title-ml{
-    font-family: "Montserrat-Regular", sans-serif;
-    color: #000;
-    font-size: 1.6vw;
-    font-weight: 700;
-    margin-top: 8%;
-}
 
-#section-ml {
+.complete-profil{
     width: 70%;
-    margin-left: 5%;
+}
+.flex-form div{
+    width: 45%;
+}
+.complete-profil input{
+    padding: 0.5vw;
+    width: 100%;
+    border: 1px solid black;
+}
+.complete-profil label{
+    margin-bottom: 2%;
+}
+.flex-form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 4%;
 }
 
-#text-ml {
-    font-family: "Montserrat-Regular", sans-serif;
-    color: #000;
-    font-size: 0.9vw;
+.profil-container h2{
+    color: #fda229;
+    margin-bottom: 3%;
+}
+.no-visible-form{
+    visibility: hidden;
 }
