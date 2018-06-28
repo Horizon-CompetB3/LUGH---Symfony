@@ -1,10 +1,174 @@
-{% extends "base.html.twig" %}
+{% extends "base-2.html.twig" %}
 {% block layout_content %}
-<div class="card border-dark mb-3">
-    <h1>Votre profil</h1>
-    <div class="card-title">{{ app.user.username }}</div>
-    <p class="card-text">{{ app.user.email }}</p>
 
-    {% if is_granted('ROLE_USER') == true and app.user.art_ent = 2 %}
-</div>
+    <div class="left-bar">
+        <div class="content-left">
+            <div id="div-logo-profil">
+                <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.6 94.4"><title>Fichier 4</title>
+                    <g id="Calque_2" data-name="Calque 2">
+                        <g id="Calque_1-2" data-name="Calque 1">
+                            <path d="M0,4.2H16.2V61H51.3V74.2H0Z"/>
+                            <path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/>
+                            <path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/>
+                            <path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            {{ app.user.photo_profil }}
+            <div class="card-title">{{ app.user.username }}</div>
+
+            <button onclick="diplayNoneFormComp()" class="side-button-profil">Informations</button>
+            <button onclick="diplayNoneFormInfo()" class="side-button-profil">Profil Artiste</button>
+            <button onclick="diplayNoneFormRea()" class="side-button-profil">Réalisations</button>
+        </div>
+    </div>
+
+
+    <section class="section section-profil">
+
+
+        <div class="profil-container">
+            <h2>Mes informations</h2>
+
+            {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
+
+                {{ form_start(form_ent) }}
+                {{ form_widget(form_ent) }}
+                {{ form_end(form_ent) }}
+
+
+
+            {% endif %}
+
+            {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
+
+
+
+                <form name="complete_artiste" method="post">
+                    <div id="complete_artiste">
+                        <div>
+                            <label for="complete_artiste_nom" class="required">Nom</label>
+                            <input type="text" id="complete_artiste_nom" name="complete_artiste[nom]" required="required" value="{{ app.user.nom }}" />
+                        </div>
+                        <div>
+                            <label for="complete_artiste_prenom" class="required">Prenom</label>
+                            <input type="text" id="complete_artiste_prenom" name="complete_artiste[prenom]" required="required" value="{{ app.user.prenom }}" />
+                        </div>
+                        <div>
+                            <label for="complete_artiste_email" class="required">Email</label>
+                            <input type="email" id="complete_artiste_email" name="complete_artiste[email]" required="required" value="{{ app.user.email }}" />
+                        </div>
+                        <div>
+                            <label for="complete_artiste_adresse" class="required">Adresse</label>
+                            <input type="text" id="user_input_autocomplete_address" name="complete_artiste[adresse]" required="required" value="{{ app.user.adresse }}" />
+                        </div>
+                        <div>
+                            <label for="complete_artiste_telephone" class="required">Telephone</label>
+                            <input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]" required="required" value="{{ app.user.telephone }}" />
+                        </div>
+                        <div>
+                            <button type="submit" id="complete_artiste_save" name="complete_artiste[save]" class="save">Save</button>
+                        </div>
+                        <input type="hidden" id="complete_artiste__token" name="complete_artiste[_token]" value="KfZpD7cmeQlTaXRYj4YxaP6zgAIdsoc6lURwfm763BE" />
+                    </div>
+                </form>
+
+
+                <form id="form-realisations" class="none" name="realisations" method="post" enctype="multipart/form-data">
+                    <div id="realisations">
+                        <div>
+                            <label for="realisations_realisations" class="required">Realisations (jpg file)</label>
+                            <input type="file" id="realisations_realisations" name="realisations[realisations]" required="required" />
+                        </div>
+                        <div>
+                            <button type="submit" id="realisations_save" name="realisations[save]" class="save">Save</button>
+                        </div>
+                        <input type="hidden" id="realisations__token" name="realisations[_token]" value="8tT75Mweq8kvg63DTWGChMRqIfCI1IAup53NUKiPIVM" />
+                    </div>
+                </form>
+
+                <form id="info_artiste" name="info_artiste" method="post" class="none">
+                    <div id="info_artiste">
+                        <div>
+                            <label for="info_artiste_description" class="required">Description</label>
+                            <textarea id="info_artiste_description" name="info_artiste[description]" required="required">lol</textarea>
+                        </div>
+                        <div>
+                            <label for="info_artiste_formation" class="required">Formation</label>
+                            <textarea id="info_artiste_formation" name="info_artiste[formation]" required="required"></textarea>
+                        </div>
+                        <div>
+                            <label for="info_artiste_experience" class="required">Experience</label>
+                            <textarea id="info_artiste_experience" name="info_artiste[experience]" required="required"></textarea>
+                        </div>
+                        <div>
+                            <button type="submit" id="info_artiste_save" name="info_artiste[save]" class="save">Save</button>
+                        </div>
+                        <input type="hidden" id="info_artiste__token" name="info_artiste[_token]" value="FkCDYtueMxyBlZiFAnXlBEciW_HxexKjBfub87IjkeA" />
+                    </div>
+                </form>
+
+
+            {% endif %}
+
+
+        </div>
+        </div>
+    </section>
+
+    <!-- Include Google Maps JS API -->
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCPx9-c7_wRoUlBnzW4Ws0BSyKcSPqMA2k">
+    </script>
+
+    <!-- Custom JS code to bind to Autocomplete API -->
+    <!-- find it here: https://github.com/lewagon/google-place-autocomplete/blob/gh-pages/autocomplete.js -->
+    <!-- We'll detail this file in the article -->
+    <script type="text/javascript">
+        function initializeAutocomplete(id) {
+            var element = document.getElementById(id);
+            if (element) {
+                var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
+                google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+            }
+        }
+        function onPlaceChanged() {
+            var place = this.getPlace();
+
+            // console.log(place);  // Uncomment this line to view the full object returned by Google API.
+
+            for (var i in place.address_components) {
+                var component = place.address_components[i];
+                for (var j in component.types) {  // Some types are ["country", "political"]
+                    var type_element = document.getElementById(component.types[j]);
+                    if (type_element) {
+                        type_element.value = component.long_name;
+                    }
+                }
+            }
+        }
+        google.maps.event.addDomListener(window, 'load', function() {
+            initializeAutocomplete('user_input_autocomplete_address');
+        });
+
+        function diplayNoneFormRea(){
+            document.getElementById('complete_artiste').classList.add('none');
+            document.getElementById('info_artiste').classList.add('none');
+            document.getElementById('form-realisations').classList.remove('none');
+
+        }
+        function diplayNoneFormComp(){
+            document.getElementById('complete_artiste').classList.remove('none');
+            document.getElementById('info_artiste').classList.add('none');
+            document.getElementById('form-realisations').classList.add('none');
+
+        }
+        function diplayNoneFormInfo(){
+            document.getElementById('info_artiste').classList.remove('none');
+            document.getElementById('complete_artiste').classList.add('none');
+            document.getElementById('form-realisations').classList.add('none');
+
+        }
+    </script>
 {% endblock %}

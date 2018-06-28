@@ -1003,3 +1003,70 @@ input::placeholder {
 .fp-viewing-slide2{
     background-color: red;
 }
+
+/* PAGE PROFIL */
+
+.section-profil{
+    display: flex;
+}
+.left-bar{
+    position: absolute;
+    left: 0;
+    background-color: #f6f6f6;
+    height: 100VH;
+    width: 15vw;
+}
+.left-bar button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+}
+.content-left{
+    margin: auto;
+    width: 80%;
+    margin-top: 6vh;
+    text-align: center;
+}
+.profil-container{
+    width: 55%;
+    height: 70vh;
+    margin: auto;
+}
+#div-logo-profil{
+    width: 80%;
+    margin: auto;
+    top: 2vw;
+    left: 2vw;
+}
+
+
+
+.complete-profil{
+    width: 70%;
+}
+.flex-form div{
+    width: 45%;
+}
+.complete-profil input{
+    padding: 0.5vw;
+    width: 100%;
+    border: 1px solid black;
+}
+.complete-profil label{
+    margin-bottom: 2%;
+}
+.flex-form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.profil-container h2{
+    color: #fda229;
+    margin-bottom: 3%;
+}
+.no-visible-form{
+    visibility: hidden;
+}

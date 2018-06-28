@@ -32,7 +32,9 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", length=64)
      */
-    private $art_ent;
+    public $art_ent;
+
+
 
     /**
      * @return mixed
@@ -62,7 +64,12 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", nullable=true)
      * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
      */
-    private $realisations;
+    public $photo_profil;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     */
+    public $realisations;
 
     /**
      * @return mixed
@@ -169,13 +176,131 @@ class User implements UserInterface, \Serializable
     }
     private $resetPasswordToken = false;
     /**
-     * @ORM\Column(type="string", length=100, nullable=true)
+     * @ORM\Column(type="string", length=150, nullable=true)
      */
     private $adresse;
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $telephone;
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $nom;
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $prenom;
+
+    /**
+     * @return mixed
+     */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    /**
+     * @param mixed $nom
+     */
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    /**
+     * @param mixed $prenom
+     */
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * @param mixed $telephone
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    }
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
     private $description;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $experience;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $formation;
+
+
+
+    /**
+     * @return mixed
+     */
+    public function getPhotoProfil()
+    {
+        return $this->photo_profil;
+    }
+
+    /**
+     * @param mixed $photo_profil
+     */
+    public function setPhotoProfil($photo_profil)
+    {
+        $this->photo_profil = $photo_profil;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExperience()
+    {
+        return $this->experience;
+    }
+
+    /**
+     * @param mixed $experience
+     */
+    public function setExperience($experience)
+    {
+        $this->experience = $experience;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFormation()
+    {
+        return $this->formation;
+    }
+
+    /**
+     * @param mixed $formation
+     */
+    public function setFormation($formation)
+    {
+        $this->formation = $formation;
+    }
     /**
      * @ORM\Column(type="string", length=15, nullable=true)
      */
