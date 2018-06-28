@@ -89,7 +89,7 @@ class ProfilController extends Controller
 
             // ... persist the $product variable or any other work
 
-            return $this->redirect($this->generateUrl('profil'));
+            return $this->redirect($this->generateUrl('home'));
         }
             $user = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();

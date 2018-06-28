@@ -18,9 +18,19 @@
             {{ app.user.photo_profil }}
             <div class="card-title">{{ app.user.username }}</div>
 
+            {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
+
             <button onclick="diplayNoneFormComp()" class="side-button-profil">Informations</button>
             <button onclick="diplayNoneFormInfo()" class="side-button-profil">Profil Artiste</button>
             <button onclick="diplayNoneFormRea()" class="side-button-profil">Réalisations</button>
+
+            {% endif %}
+            {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
+
+                <button onclick="diplayNoneFormComp()" class="side-button-profil">Informations</button>
+                <button onclick="diplayNoneFormInfo()" class="side-button-profil">Profil Entreprise</button>
+
+            {% endif %}
         </div>
     </div>
 
@@ -108,6 +118,10 @@
                         <input type="hidden" id="info_artiste__token" name="info_artiste[_token]" value="FkCDYtueMxyBlZiFAnXlBEciW_HxexKjBfub87IjkeA" />
                     </div>
                 </form>
+                <div>
+
+                    <img src="{{ app.user.realisations }}">
+                </div>
 
 
             {% endif %}

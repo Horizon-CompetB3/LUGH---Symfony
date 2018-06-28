@@ -1,7 +1,7 @@
 # Learn more about services, parameters and containers at
 # https://symfony.com/doc/current/service_container.html
 parameters:
-    upload_files: '%kernel.project_dir%/web/uploads/realisations'
+
 
 services:
     # default configuration for services in *this* file
@@ -33,4 +33,8 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+    # ...
 
+    AppBundle\Service\FileUploader:
+        arguments:
+            $targetDirectory: '%upload_files%'
