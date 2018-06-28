@@ -25,17 +25,6 @@
         <!-- End Google Tag Manager -->
     {% endblock %}
 
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120903004-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-120903004-1');
-    </script>
-
-
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -155,7 +144,6 @@
 
 
     <script>
-
         $(window).bind('hashchange', function() {
             if (window.location.hash == '#slide1') {
                 $('.singe-home').addClass('singe-active')
@@ -171,7 +159,6 @@
                 $('#first-section-content-2').removeClass('img-fadein');
             }
         });
-
         $(window).bind('hashchange', function() {
             if (window.location.hash == '#slide2') {
                 $('.singe-entreprise').addClass('singe-active')
