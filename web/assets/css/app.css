@@ -322,6 +322,8 @@ h1{
     margin-bottom: auto;
     width: 70%;
     margin-left: 3vw;
+    opacity: 0;
+    transition: 0.2s;
 
 }
 .first-section-content h2{
@@ -418,7 +420,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .third-section-content{
@@ -427,7 +429,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .five-section-content{
@@ -436,7 +438,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .fourth-section-content{
@@ -445,7 +447,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .connexion-section-content{
@@ -546,8 +548,8 @@ h1{
 }
 
 .img-fadein {
-    transition: 0.8s !important;
-    transition-delay: 0.7s !important;
+    transition: 0.4s !important;
+    transition-delay: 0.5s !important;
     opacity: 1 !important;
 }
 
@@ -576,8 +578,8 @@ h1{
 
 .position-finale {
     opacity: 1;
-    transition: 0.8s;
-    transition-delay: 0.7s;
+    transition: 0.4s;
+    transition-delay: 0.5s;
 }
 
 
@@ -872,6 +874,9 @@ label{
     transition: 0.5s;
 }
 
+.link-inscription {
+    text-decoration: underline;
+}
 
 input::placeholder{
 

@@ -43,6 +43,21 @@
         /></noscript>
     <!-- End Facebook Pixel Code -->
 
+
+    <script type="text/javascript">
+
+        var gaq = gaq || [];
+        _gaq.push(['_setAccount', 'UA-120903004-1']);
+        _gaq.push(['_trackEvent']);
+
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+
 </head>
 <!-- Google Tag Manager -->
 
@@ -144,6 +159,8 @@
 
 
     <script>
+
+
         $(window).bind('hashchange', function() {
             if (window.location.hash == '#slide1') {
                 $('.singe-home').addClass('singe-active')
@@ -233,6 +250,10 @@
         $('.closeButton').on('click', function() {
             $('.nav-mobile').removeClass('burger-active');
         });
+
+        var pageTracker = _gat._getTracker('UA-120903004-1');
+        pageTracker._trackPageview();
+
     </script>
     <script>
         /*$(document).ready(function(){
@@ -246,6 +267,7 @@
             document.getElementById('fullscreen').classList.remove('fullscreen-hover')
         })*/
     </script>
+
 
 {% endblock %}
 </body>

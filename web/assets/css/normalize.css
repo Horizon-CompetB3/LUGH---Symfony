@@ -189,42 +189,42 @@
     }
 
     .first-section-content {
-        margin-top: 66%;
+        margin-top: 63%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
     }
 
     .second-section-content {
-        margin-top: 75%;
+        margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
     }
 
     .third-section-content {
-        margin-top: 75%;
+        margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
     }
 
     .five-section-content {
-        margin-top: 75%;
+        margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
     }
 
     .fourth-section-content {
-        margin-top: 75%;
+        margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
     }
 
     .connexion-section-content {
-        margin-top: 75%;
+        margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
         margin-left: 6vw;
@@ -565,28 +565,41 @@
         width: 37%;
     }
 
+
     .sidebar {
-        right: 26%;
+        right: 10%;
     }
 
-    .singe-entreprise {
-        width: 20%;
+    .link-home {
+        margin: 0%;
     }
 
-    .singe-artiste {
-        width: 20%;
+    .link-entreprise {
+        margin: 0%;
     }
 
-    .singe-galerie {
-        width: 20%;
+    .link-artiste {
+        margin: 0%;
     }
 
-    .singe-connexion {
-        width: 20%;
+    .link-galerie {
+        margin: 0%;
     }
 
-    .singe-contact {
-        width: 20%;
+    .link-contact {
+        margin: 0%;
+    }
+
+    .link-connexion {
+        margin: 0%;
+    }
+
+    .form-group-ins button {
+        margin-left: 27vw;
+    }
+
+    .form-group-co button {
+        margin-left: 19vw;
     }
 
 }
