@@ -79,6 +79,30 @@
         left: 0;
     }
 
+    #connexion-section-2 {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #image-right-art{
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    #image-right-ent{
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+
     h1 {
         font-size: 4.5vw;
     }
@@ -283,6 +307,10 @@
 
     .mc-field-group {
         margin-top: 20%;
+    }
+
+    .none {
+        display: none;
     }
 
     .nav-mobile {
@@ -499,6 +527,116 @@
         margin-top: 6%;
     }
 
+
+
+    /* PAGE PROFIL */
+
+
+    .flex-form {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 1%;
+        margin-bottom: 2%;
+    }
+
+    .section-profil label {
+        margin-bottom: 3%;
+        margin-top: 3%;
+        font-size: 3.2vw;
+        font-weight: 600;
+    }
+
+    .section-profil form {
+        width: 85%;
+    }
+
+    .profil-container h2 {
+        color: #fda229;
+        margin-bottom: 3%;
+        font-size: 4.5vw;
+        margin-top: 4%;
+    }
+
+    .h3-profil {
+        font-size: 3.2vw;
+        font-weight: 600;
+        margin-top: 0;
+    }
+    .profil-container a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .profil-container {
+        width: 100%;
+        height: auto;
+        /* margin: auto; */
+        margin-top: 60%;
+        margin-left: 10%;
+    }
+
+    .section-profil input {
+        width: 100%;
+        padding: 0.5vw;
+        border: 0.5px solid black;
+        padding: 1.3vw;
+    }
+
+    #ident-ent h3 {
+        margin-bottom: 3%;
+        font-size: 4.5vw;
+    }
+
+    .save {
+        background-color: #fff;
+        padding: 8vw;
+        padding-top: 1.7vw;
+        padding-bottom: 1.7vw;
+        border: 1px solid black;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2.8vw;
+        margin-right: -2%;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .flex-form div {
+        width: 100%;
+    }
+
+    .left-bar {
+        display: none;
+    }
+
+    .left-bar-mobile {
+        display: flex;
+        border-bottom: 0.5px solid black;
+        width: 88%;
+    }
+
+    .left-bar-mobile button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        opacity: 0.7;
+        transition: 0.7s;
+        margin: 0;
+        font-size: 3.5vw;
+        font-weight: 500;
+        padding-right: 5%;
+    }
+
+    .side-color {
+        position: absolute;
+        background-color: #679bd7;
+        left: 0%;
+        top: 87%;
+        width: 88%;
+        height: 1vh;
+    }
 
 }
 
