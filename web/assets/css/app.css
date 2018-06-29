@@ -208,7 +208,7 @@ body{
 
 
 .link-connexion {
-    display: ;
+
     text-decoration: none;
     margin: -2%;
     padding: 10px 20px;
@@ -999,4 +999,164 @@ input::placeholder {
     font-family: "Montserrat-Regular", sans-serif;
     color: #000;
     font-size: 0.9vw;
+}
+
+.section-profil{
+    display: flex;
+}
+.left-bar{
+    position: absolute;
+    left: 0;
+    background-color: #f6f6f6;
+    height: 100VH;
+    width: 12vw;
+}
+.left-bar button{
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.7s;
+    height: 5vh;
+
+}
+.cont-btn-profil{
+    position: relative;
+    display: flex;
+    width: 100%;
+}
+
+.side-color{
+    position: absolute;
+    background-color: #679bd7;
+    left: 0;
+    height: 5vh;
+}
+.left-bar button:hover{
+    opacity: 1;
+    transition: 0.7s;
+
+}
+.content-left{
+    margin: auto;
+    width: 100%;
+    margin-top: 6vh;
+    text-align: center;
+}
+.profil-container{
+    width: 55%;
+    height: auto;
+    margin: auto;
+}
+#div-logo-profil{
+    width: 80%;
+    margin: auto;
+    top: 2vw;
+    left: 2vw;
+}
+
+
+
+.complete-profil{
+    width: 70%;
+}
+.flex-form div{
+    width: 45%;
+}
+
+.complete-profil label{
+    margin-bottom: 2%;
+}
+.flex-form{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+.profil-container h2{
+    color: #fda229;
+    margin-bottom: 3%;
+}
+.no-visible-form {
+    visibility: hidden;
+}
+.section-profil input{
+    width: 100%;
+    padding: 0.5vw;
+    border: 1px solid black;
+}
+.section-profil textarea{
+    width: 100%;
+    padding: 0.5vw;
+    border: 1px solid black;
+    resize: none;
+    height: 12vh;
+}
+.section-profil form{
+    width: 60%;
+}
+.section-profil label{
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+.section-profil select:after{
+    padding: 0.5vw;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 0;
+}
+#ident-ent{
+    margin-top: 10vh;
+}
+#ident-ent h3{
+    margin-bottom: 3%;
+}
+.image-right{
+
+    width: 30vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.4s;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+#image-right-art{
+    background-image: url(../img/IMG1-HOME.jpg);
+}
+#image-right-ent{
+    background-image: url(../img/IMG2-HOME-ENTREPRISE.jpg);
+}
+.save{
+    background-color: #fff;
+    padding: 4vw;
+    padding-top: 0.7vw;
+    padding-bottom: 0.7vw;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    transition: 0.5s;
+    position: absolute;
+    right: -1vw;
+    margin-top: 2%;
+
+}
+.btn-form-profil{
+    position: relative;
+    margin-top: 1vw;
+}
+.side-visible{
+    width: 0.4vw;
+    transition: 0.7s;
 }

@@ -62,12 +62,12 @@ class User implements UserInterface, \Serializable
     private $plainPassword;
     /**
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
      */
     public $photo_profil;
     /**
      * @ORM\Column(type="string", nullable=true)
-     * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
+     * @Assert\File(mimeTypes={ "image/jpeg" })
      */
     public $realisations;
 
@@ -141,22 +141,6 @@ class User implements UserInterface, \Serializable
     public function setSecteur($secteur)
     {
         $this->secteur = $secteur;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getType()
-    {
-        return $this->type;
-    }
-
-    /**
-     * @param mixed $type
-     */
-    public function setType($type)
-    {
-        $this->type = $type;
     }
 
     /**
@@ -246,6 +230,66 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
+    public $histoire;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $activite;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $identite;
+
+    /**
+     * @return mixed
+     */
+    public function getHistoire()
+    {
+        return $this->histoire;
+    }
+
+    /**
+     * @param mixed $histoire
+     */
+    public function setHistoire($histoire)
+    {
+        $this->histoire = $histoire;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getActivite()
+    {
+        return $this->activite;
+    }
+
+    /**
+     * @param mixed $activite
+     */
+    public function setActivite($activite)
+    {
+        $this->activite = $activite;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIdentite()
+    {
+        return $this->identite;
+    }
+
+    /**
+     * @param mixed $identite
+     */
+    public function setIdentite($identite)
+    {
+        $this->identite = $identite;
+    }
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
     private $experience;
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
@@ -306,13 +350,113 @@ class User implements UserInterface, \Serializable
      */
     private $secteur;
     /**
-     * @ORM\Column(type="string", length=15, nullable=true)
-     */
-    private $type;
-    /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
     private $projets;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $raison_sociale;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $siren;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $siret;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $telephone_ent;
+    /**
+     * @ORM\Column(type="string", length=150, nullable=true)
+     */
+    private $adresse_ent;
+
+    /**
+     * @return mixed
+     */
+    public function getRaisonSociale()
+    {
+        return $this->raison_sociale;
+    }
+
+    /**
+     * @param mixed $raison_sociale
+     */
+    public function setRaisonSociale($raison_sociale)
+    {
+        $this->raison_sociale = $raison_sociale;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSiren()
+    {
+        return $this->siren;
+    }
+
+    /**
+     * @param mixed $siren
+     */
+    public function setSiren($siren)
+    {
+        $this->siren = $siren;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSiret()
+    {
+        return $this->siret;
+    }
+
+    /**
+     * @param mixed $siret
+     */
+    public function setSiret($siret)
+    {
+        $this->siret = $siret;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTelephoneEnt()
+    {
+        return $this->telephone_ent;
+    }
+
+    /**
+     * @param mixed $telephone_ent
+     */
+    public function setTelephoneEnt($telephone_ent)
+    {
+        $this->telephone_ent = $telephone_ent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getAdresseEnt()
+    {
+        return $this->adresse_ent;
+    }
+
+    /**
+     * @param mixed $adresse_ent
+     */
+    public function setAdresseEnt($adresse_ent)
+    {
+        $this->adresse_ent = $adresse_ent;
+    }
+
+
+
+
 
 
 

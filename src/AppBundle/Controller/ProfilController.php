@@ -5,6 +5,8 @@ use AppBundle\Entity\User;
 use AppBundle\Form\CompleteArtisteType;
 use AppBundle\Form\CompleteEntrepriseType;
 use AppBundle\Form\InfoArtisteType;
+use AppBundle\Form\InfoEntType;
+use AppBundle\Form\ProfilEntType;
 use AppBundle\Form\RealisationsType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Request;
@@ -48,6 +50,10 @@ class ProfilController extends Controller
             $em->flush();
             return $this->redirectToRoute('home');
         }
+
+        //
+
+
         $user = $this->getUser();
         $entityManager = $this->getDoctrine()->getManager();
         $user = $entityManager->getRepository(User::class)->find($user->getId());
@@ -65,8 +71,11 @@ class ProfilController extends Controller
             return $this->redirectToRoute('home');
         }
 
+        //
+
         $user = $this->getUser();
         $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($user->getId());
         $form_real = $this->createForm(RealisationsType::class, $user);
         $form_real->handleRequest($request);
 
@@ -80,8 +89,13 @@ class ProfilController extends Controller
             // moves the file to the directory where brochures are stored
             $file->move(
                 $this->getParameter('upload_files'),
-                $fileName
-            );
+                $fileName);
+
+                $editUser = $form_ent->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($editUser);
+            $em->flush();
+            ;
 
             // updates the 'brochure' property to store the PDF file name
             // instead of its contents
@@ -91,13 +105,17 @@ class ProfilController extends Controller
 
             return $this->redirect($this->generateUrl('home'));
         }
+
+        //
+
+
             $user = $this->getUser();
             $entityManager = $this->getDoctrine()->getManager();
             $user = $entityManager->getRepository(User::class)->find($user->getId());
             $form_info = $this->createForm(InfoArtisteType::class, $user);
             $form_info->handleRequest($request);
             if ($form_info->isSubmitted()) {
-                dump($form_info->getData());
+                dump($form_info->getData());}
 
             if ($form_info->isSubmitted() && $form_info->isValid()) {
 
@@ -107,9 +125,54 @@ class ProfilController extends Controller
                 $em->flush();
                 return $this->redirectToRoute('home');
             }
+
+            //
+
+        $user = $this->getUser();
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($user->getId());
+        $form_info_ent = $this->createForm(InfoEntType::class, $user);
+        $form_info_ent->handleRequest($request);
+        if ($form_info_ent->isSubmitted()) {
+            dump($form_info_ent->getData());}
+
+        if ($form_info_ent->isSubmitted() && $form_info_ent->isValid()) {
+
+            $editUser = $form_info_ent->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($editUser);
+            $em->flush();
+            return $this->redirectToRoute('profil');
         }
 
-        return $this->render('content/profil.html.twig', ['form_art'=>$form_art->createView(),'form_ent'=>$form_ent->createView(), 'form_real'=>$form_real->createView(), 'form_info'=>$form_info->createView()]);
+
+        //
+
+        $user = $this->getUser();
+        $entityManager = $this->getDoctrine()->getManager();
+        $user = $entityManager->getRepository(User::class)->find($user->getId());
+        $form_profil_ent = $this->createForm(ProfilEntType::class, $user);
+        $form_profil_ent->handleRequest($request);
+        if ($form_profil_ent->isSubmitted()) {
+            dump($form_profil_ent->getData());}
+
+        if ($form_profil_ent->isSubmitted() && $form_profil_ent->isValid()) {
+
+            $editUser = $form_info_ent->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($editUser);
+            $em->flush();
+            return $this->redirectToRoute('profil');
+        }
+
+        return $this->render('content/profil.html.twig', [
+            'form_art'=>$form_art->createView(),
+            'form_ent'=>$form_ent->createView(),
+            'form_real'=>$form_real->createView(),
+            'form_info'=>$form_info->createView(),
+            'form_info_ent'=>$form_info_ent->createView(),
+            'form_profil_ent'=>$form_profil_ent->createView(),
+            ]);
     }
         /**
          * @return string
