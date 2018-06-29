@@ -18,7 +18,9 @@ class RealisationsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('realisations', FileType::class, array('label' => 'Realisations (jpg file)'))
+            ->add('realisations', FileType::class, array(
+                'label' => 'Realisations (jpg file)',
+                'data_class'=>null))
             ->add('save', SubmitType::class, array(
         'attr' => array('class' => 'save')));
 
