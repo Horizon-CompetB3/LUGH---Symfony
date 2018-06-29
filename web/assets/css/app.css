@@ -1005,3 +1005,25 @@ input::placeholder {
     color: #000;
     font-size: 0.9vw;
 }
+
+
+@media not all and (min-resolution:.001dpcm) { @media
+{
+    .safari_only {
+
+        #check-box {
+            display: flex;
+            margin-top: 3%;
+            margin-left: 0;
+            flex-direction: row;
+        }
+
+        #submit-ins {
+            width: 100%;
+            margin-top: 6%;
+            margin-left: -18%;
+            -webkit-appearance: none;
+        }
+
+    }
+}}
