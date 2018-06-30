@@ -208,13 +208,12 @@ body{
 
 
 .link-connexion {
-
     text-decoration: none;
     margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    height: 14vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -322,6 +321,8 @@ h1{
     margin-bottom: auto;
     width: 70%;
     margin-left: 3vw;
+    opacity: 0;
+    transition: 0.2s;
 
 }
 .first-section-content h2{
@@ -418,7 +419,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .third-section-content{
@@ -427,7 +428,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .five-section-content{
@@ -436,7 +437,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .fourth-section-content{
@@ -445,7 +446,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 0.5s;
+    transition: 0.2s;
 }
 
 .connexion-section-content{
@@ -546,8 +547,8 @@ h1{
 }
 
 .img-fadein {
-    transition: 0.8s !important;
-    transition-delay: 0.7s !important;
+    transition: 0.4s !important;
+    transition-delay: 0.5s !important;
     opacity: 1 !important;
 }
 
@@ -576,8 +577,8 @@ h1{
 
 .position-finale {
     opacity: 1;
-    transition: 0.8s;
-    transition-delay: 0.7s;
+    transition: 0.4s;
+    transition-delay: 0.5s;
 }
 
 
@@ -872,6 +873,9 @@ label{
     transition: 0.5s;
 }
 
+.link-inscription {
+    text-decoration: underline;
+}
 
 input::placeholder{
 
@@ -887,7 +891,7 @@ input::placeholder{
 .form-group-ins input {
     width: 80%;
     padding-bottom: 2%;
-    margin-top: 7%;
+    margin-top: 6%;
     border: 0;
     border-radius: 0;
     border-bottom: 3px solid black;
@@ -896,7 +900,7 @@ input::placeholder{
 #form-ins h2{
     font-size: 1.9vw;
     line-height: 2.8vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     text-transform: uppercase;
 
 }
@@ -925,9 +929,9 @@ input::placeholder{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8vw;
-    margin-left: 29vw;
+    margin-right: 48%;
     cursor: pointer;
-    margin-top: 6%;
+    margin-top: 4%;
     transition: 0.5s;
     -webkit-appearance: none;
 }
@@ -1001,16 +1005,57 @@ input::placeholder {
     font-size: 0.9vw;
 }
 
+
+@media not all and (min-resolution:.001dpcm) { @media
+{
+    .safari_only {
+
+        #check-box {
+            display: flex;
+            margin-top: 3%;
+            margin-left: 0;
+        }
+
+        #submit-ins {
+            width: 100%;
+            margin-top: 6%;
+            margin-left: -18%;
+            -webkit-appearance: none;
+        }
+
+    }
+}}
+
+
 .section-profil{
     display: flex;
 }
+
 .left-bar{
     position: absolute;
     left: 0;
     background-color: #f6f6f6;
     height: 100VH;
-    width: 12vw;
+    width: 14vw;
 }
+
+.left-bar-mobile {
+    display: none;
+}
+
+.left-bar-mobile button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.7s;
+    height: 5vh;
+    margin-top: 16%;
+}
+
 .left-bar button{
     display: block;
     background-color: transparent;
@@ -1021,20 +1066,34 @@ input::placeholder {
     opacity: 0.7;
     transition: 0.7s;
     height: 5vh;
-
+    margin-top: 16%;
+    margin-left: 10%;
 }
+
 .cont-btn-profil{
     position: relative;
     display: flex;
     width: 100%;
 }
 
-.side-color{
+.side-color {
     position: absolute;
     background-color: #679bd7;
-    left: 0;
-    height: 5vh;
+    left: 0%;
+    top: 28%;
+    width: 5%;
+    height: 8vh;
 }
+
+.orange {
+    background-color: #fda229 !important;
+
+}
+
+.blue {
+    color: #679bd7 !important;
+}
+
 .left-bar button:hover{
     opacity: 1;
     transition: 0.7s;
@@ -1058,8 +1117,6 @@ input::placeholder {
     left: 2vw;
 }
 
-
-
 .complete-profil{
     width: 70%;
 }
@@ -1080,28 +1137,32 @@ input::placeholder {
 .profil-container h2{
     color: #fda229;
     margin-bottom: 3%;
+    font-size: 1.5vw;
+    margin-top: 3%;
 }
 .no-visible-form {
     visibility: hidden;
 }
 .section-profil input{
     width: 100%;
-    padding: 0.5vw;
-    border: 1px solid black;
+    padding: 0.4vw;
+    border: 0.5px solid black;
 }
 .section-profil textarea{
     width: 100%;
     padding: 0.5vw;
-    border: 1px solid black;
+    border: 0.5px solid black;
     resize: none;
     height: 12vh;
 }
 .section-profil form{
-    width: 60%;
+    width: 70%;
 }
+
 .section-profil label{
-    margin-bottom: 3%;
-    margin-top: 3%;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: 1.2vw;
 }
 .section-profil select:after{
     padding: 0.5vw;
@@ -1114,9 +1175,9 @@ input::placeholder {
 }
 #ident-ent h3{
     margin-bottom: 3%;
+    font-size: 1.5vw;
 }
 .image-right{
-
     width: 30vw;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1128,10 +1189,10 @@ input::placeholder {
     top: 0;
 }
 #image-right-art{
-    background-image: url(../img/IMG1-HOME.jpg);
+    background-image: url(../img/IMG-ESPACE-ARTISTE.jpg);
 }
 #image-right-ent{
-    background-image: url(../img/IMG2-HOME-ENTREPRISE.jpg);
+    background-image: url(../img/IMG-ESPACE-ENTREPRISE.jpg);
 }
 .save{
     background-color: #fff;
@@ -1150,8 +1211,8 @@ input::placeholder {
     position: absolute;
     right: -1vw;
     margin-top: 2%;
-
 }
+
 .btn-form-profil{
     position: relative;
     margin-top: 1vw;
@@ -1159,4 +1220,15 @@ input::placeholder {
 .side-visible{
     width: 0.4vw;
     transition: 0.7s;
+}
+
+.h3-profil {
+    font-size: 1vw;
+    font-weight: 500;
+    margin-top: -3%;
+}
+
+.profil-container a {
+    text-decoration: none;
+    color: black;
 }
