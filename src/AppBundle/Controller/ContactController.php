@@ -34,7 +34,7 @@ public function contactAction(Request $request)
         $message =\Swift_Message::newInstance()
             ->setSubject('Support from submissions')
             ->setFrom($data['from'])
-            ->setTo('alex.s95120@gmail.com')
+            ->setTo('alexandre-smagghe@outlook.com')
             ->setBody(
                 $form->getData()['message'],
                 'text/plain'

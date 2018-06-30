@@ -8,7 +8,7 @@ use AppBundle\Form\InfoArtisteType;
 use AppBundle\Form\InfoEntType;
 use AppBundle\Form\ProfilEntType;
 use AppBundle\Form\RealisationsType;
-use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -91,7 +91,7 @@ class ProfilController extends Controller
                 $this->getParameter('upload_files'),
                 $fileName);
 
-                $editUser = $form_ent->getData();
+                $editUser = $form_real->getData();
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();

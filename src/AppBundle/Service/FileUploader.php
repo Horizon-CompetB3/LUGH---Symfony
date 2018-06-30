@@ -2,6 +2,7 @@
 namespace AppBundle\Service;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use AppBundle\Entity\User;
 
 class FileUploader
 {
