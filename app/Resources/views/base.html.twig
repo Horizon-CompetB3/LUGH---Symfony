@@ -123,7 +123,13 @@
     <a href="">Artiste</a>
     <a href="">Galerie</a>
     <a href="">Contact</a>
-    <a href="/login">Se connecter</a>
+    {% if is_granted('ROLE_USER') == false  %}
+    <a href="/login">Connexion</a>
+    {% endif %}
+    {% if is_granted('ROLE_USER') == true  %}
+    <a href="/profil">Mon Espace</a>
+    <a href="/logout">Déconnexion</a>
+    {% endif %}
     <div id="rs-mobile">
         <a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a>
         <a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a>

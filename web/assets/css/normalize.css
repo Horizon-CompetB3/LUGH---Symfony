@@ -583,9 +583,18 @@
         padding: 1.3vw;
     }
 
+    #profil_ent_secteur {
+        font-size: 3.1vw;
+    }
+
     #ident-ent h3 {
         margin-bottom: 3%;
         font-size: 4.5vw;
+    }
+
+    .orange-background-mobile {
+        background-color: #fda229 !important;
+        width: 100% !important;
     }
 
     .save {
@@ -632,7 +641,7 @@
     .side-color {
         position: absolute;
         background-color: #679bd7;
-        left: 0%;
+        left: -5%;
         top: 87%;
         width: 88%;
         height: 1vh;
@@ -662,6 +671,14 @@
         width: 45%;
     }
 
+    #image-right-ent {
+        width: 40%;
+    }
+
+    #image-right-art {
+        width: 40%;
+    }
+
     #connexion-section-2 {
         width: 45%;
     }
@@ -673,6 +690,18 @@
         top: 8%;
         height: 80vh;
         margin-top: 10vh;
+    }
+
+    .profil-container{
+        margin-left: 17%;
+    }
+
+    .form-group-ins button {
+        margin-right: 54%;
+    }
+
+    .form-group-co button {
+        margin-left: 35%;
     }
 
 }
@@ -700,6 +729,14 @@
     }
 
     #connexion-section-2 {
+        width: 37%;
+    }
+
+    #image-right-ent {
+        width: 37%;
+    }
+
+    #image-right-art {
         width: 37%;
     }
 
@@ -737,7 +774,21 @@
     }
 
     .form-group-co button {
-        margin-left: 19vw;
+        margin-left: 17vw;
     }
+
+
+    .profil-container{
+        margin-left: 18%;
+    }
+
+    .form-group-ins button {
+        margin-right: 51%;
+    }
+
+    .form-group-co button {
+        margin-left: 37%;
+    }
+
 
 }

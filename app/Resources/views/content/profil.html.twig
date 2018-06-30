@@ -22,30 +22,31 @@
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
             <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormComp()" class="side-button-profil">Informations</button>
-                <div id="side-info-art" class="side-color orange"></div>
+                <button onclick="diplayNoneFormComp()" id="side-button-info-art" class="side-button-profil left-button-active">Informations</button>
+                <div id="side-info-art" class="side-color orange-background "></div>
             </div>
             <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormInfo()" class="side-button-profil">Profil Artiste</button>
-                <div id="side-pro-art" class="side-color orange none"></div>
+                <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">Profil Artiste</button>
+                <div id="side-pro-art" class="side-color orange-background  none"></div>
             </div>
             <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormRea()" class="side-button-profil">Réalisations</button>
-                <div id="side-rea-art" class="side-color orange none"></div>
+                <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">Réalisations</button>
+                <div id="side-rea-art" class="side-color orange-background  none"></div>
             </div>
 
             {% endif %}
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
                 <div class="cont-btn-profil">
-                    <button onclick="diplayNoneFormInfoEnt()" class="side-button-profil">Informations</button>
+                    <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent" class="side-button-profil left-button-active">Informations</button>
                     <div id="side-info-ent" class="side-color"></div>
                 </div>
             <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormProEnt()" class="side-button-profil">Profil Entreprise</button>
+                <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil Entreprise</button>
                 <div id="side-pro-ent" class="side-color none"></div>
             </div>
             {% endif %}
         </div>
+        <a href="/logout" class="deconnexion"><img class="img-deconnexion" src="{{ asset('assets/img/deconnexion.png') }}" alt="déconnexion>">Déconnexion</a>
     </div>
 
 
@@ -53,33 +54,33 @@
 
 
         <div class="profil-container">
-            <a href="/" ><h3 class="h3-profil">< Retour au site</h3></a>
+            <a href="/" ><img class="img-fleche-gauche" src="{{ asset('assets/img/fleche-gauche.png') }}" alt="flèche gauche>"<h3 class="h3-profil">Revenir au site</h3></a>
 
             <div class="left-bar-mobile">
 
                     {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
                         <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormComp()" class="side-button-profil">Informations</button>
-                        <div id="side-info-art-mobile" class="side-color orange"></div>
+                        <button onclick="diplayNoneFormComp()" id="side-button-info-art" class="side-button-profil left-button-active">Informations</button>
+                        <div id="side-info-art-mobile" class="side-color orange-background-mobile"></div>
                         </div>
                 <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormInfo()" class="side-button-profil">Profil Artiste</button>
-                        <div id="side-pro-art-mobile" class="side-color orange none"></div>
+                        <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">Profil Artiste</button>
+                        <div id="side-pro-art-mobile" class="side-color orange-background-mobile none"></div>
                 </div>
                 <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormRea()" class="side-button-profil">Réalisations</button>
-                        <div id="side-rea-art-mobile" class="side-color orange none"></div>
+                        <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">Réalisations</button>
+                        <div id="side-rea-art-mobile" class="side-color orange-background-mobile none"></div>
                 </div>
 
                     {% endif %}
 
                     {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
                 <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormInfoEnt()" class="side-button-profil">Informations</button>
+                <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent" class="side-button-profil left-button-active">Informations</button>
                     <div id="side-info-ent-mobile" class="side-color"></div>
                 </div>
                 <div class="cont-btn-profil">
-                    <button onclick="diplayNoneFormProEnt()" class="side-button-profil">Profil Entreprise</button>
+                    <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil Entreprise</button>
                     <div id="side-pro-ent-mobile" class="side-color none"></div>
                 </div>
                     {% endif %}
@@ -124,15 +125,15 @@
                                    value="{{ app.user.email }}"/>
                         </div>
                         <div>
-                            <label for="complete_artiste_adresse" class="required">Adresse</label>
-                            <input type="text" id="user_input_autocomplete_address" name="complete_artiste[adresse]"
-                                   value="{{ app.user.adresse }}"/>
+                            <label for="complete_artiste_telephone" class="required">Telephone</label>
+                            <input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]"
+                                   value="{{ app.user.telephone }}"/>
                         </div>
                     </div>
                     <div>
-                        <label for="complete_artiste_telephone" class="required">Telephone</label>
-                        <input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]"
-                               value="{{ app.user.telephone }}"/>
+                        <label for="complete_artiste_adresse" class="required">Adresse</label>
+                        <input type="text" id="user_input_autocomplete_address" name="complete_artiste[adresse]"
+                               value="{{ app.user.adresse }}"/>
                     </div>
                     <div class="btn-form-profil">
                         <button type="submit" id="complete_artiste_save" name="complete_artiste[save]" class="save">
@@ -354,6 +355,9 @@
             document.getElementById('side-info-art-mobile').classList.add('none');
             document.getElementById('side-pro-art-mobile').classList.add('none');
             document.getElementById('side-rea-art-mobile').classList.remove('none');
+            document.getElementById('side-button-info-art').classList.remove('left-button-active');
+            document.getElementById('side-button-pro-art').classList.remove('left-button-active');
+            document.getElementById('side-button-rea-art').classList.add('left-button-active');
         }
 
         function diplayNoneFormComp() {
@@ -369,6 +373,9 @@
             document.getElementById('side-info-art-mobile').classList.remove('none');
             document.getElementById('side-pro-art-mobile').classList.add('none');
             document.getElementById('side-rea-art-mobile').classList.add('none');
+            document.getElementById('side-button-info-art').classList.add('left-button-active');
+            document.getElementById('side-button-pro-art').classList.remove('left-button-active');
+            document.getElementById('side-button-rea-art').classList.remove('left-button-active');
         }
 
         function diplayNoneFormInfo() {
@@ -384,6 +391,9 @@
             document.getElementById('side-info-art-mobile').classList.add('none');
             document.getElementById('side-pro-art-mobile').classList.remove('none');
             document.getElementById('side-rea-art-mobile').classList.add('none');
+            document.getElementById('side-button-info-art').classList.remove('left-button-active');
+            document.getElementById('side-button-pro-art').classList.add('left-button-active');
+            document.getElementById('side-button-rea-art').classList.remove('left-button-active');
 
 
         }
@@ -397,6 +407,8 @@
             document.getElementById('side-pro-ent').classList.remove('none');
             document.getElementById('side-info-ent-mobile').classList.add('none');
             document.getElementById('side-pro-ent-mobile').classList.remove('none');
+            document.getElementById('side-button-info-ent').classList.remove('left-button-active');
+            document.getElementById('side-button-pro-ent').classList.add('left-button-active');
         }
         function diplayNoneFormInfoEnt(){
             document.getElementById('profil-ent').classList.add('none');
@@ -406,6 +418,8 @@
             document.getElementById('h2-pro-ent').classList.add('none');
             document.getElementById('side-info-ent').classList.remove('none');
             document.getElementById('side-pro-ent').classList.add('none');
+            document.getElementById('side-button-info-ent').classList.add('left-button-active');
+            document.getElementById('side-button-pro-ent').classList.remove('left-button-active');
             document.getElementById('side-info-ent-mobile').classList.remove('none');
             document.getElementById('side-pro-ent-mobile').classList.add('none');
         }
@@ -415,7 +429,6 @@
             document.getElementById('side-info-ent').classList.add('side-visible')
 
         };
-
 
 
 
