@@ -101,7 +101,6 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-
             // ... persist the $product variable or any other work
 
             return $this->redirect($this->generateUrl('home'));
