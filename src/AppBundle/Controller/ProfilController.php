@@ -91,15 +91,16 @@ class ProfilController extends Controller
                 $this->getParameter('upload_files'),
                 $fileName);
 
-                $editUser = $form_ent->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($editUser);
-            $em->flush();
+
             ;
 
             // updates the 'brochure' property to store the PDF file name
             // instead of its contents
             $user->setRealisations($fileName);
+            $editUser = $form_real->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($editUser);
+            $em->flush();
 
             // ... persist the $product variable or any other work
 

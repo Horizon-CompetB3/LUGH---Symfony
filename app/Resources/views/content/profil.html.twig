@@ -15,38 +15,47 @@
                     </g>
                 </svg>
             </div>
-            <div>
-                <img src="{{ asset('uploads/' ~ app.user.photo_profil) }}">
-            </div>
+
             <div class="card-title">{{ app.user.username }}</div>
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
-            <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormComp()" id="side-button-info-art" class="side-button-profil left-button-active">Informations</button>
-                <div id="side-info-art" class="side-color orange-background "></div>
-            </div>
-            <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">Profil Artiste</button>
-                <div id="side-pro-art" class="side-color orange-background  none"></div>
-            </div>
-            <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">Réalisations</button>
-                <div id="side-rea-art" class="side-color orange-background  none"></div>
-            </div>
+                <div class="cont-btn-profil">
+                    <button onclick="diplayNoneFormComp()" id="side-button-info-art"
+                            class="side-button-profil left-button-active">Informations
+                    </button>
+                    <div id="side-info-art" class="side-color orange-background "></div>
+                </div>
+                <div class="cont-btn-profil">
+                    <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">Profil
+                        Artiste
+                    </button>
+                    <div id="side-pro-art" class="side-color orange-background  none"></div>
+                </div>
+                <div class="cont-btn-profil">
+                    <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">
+                        Réalisations
+                    </button>
+                    <div id="side-rea-art" class="side-color orange-background  none"></div>
+                </div>
 
             {% endif %}
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
                 <div class="cont-btn-profil">
-                    <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent" class="side-button-profil left-button-active">Informations</button>
+                    <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent"
+                            class="side-button-profil left-button-active">Informations
+                    </button>
                     <div id="side-info-ent" class="side-color"></div>
                 </div>
-            <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil Entreprise</button>
-                <div id="side-pro-ent" class="side-color none"></div>
-            </div>
+                <div class="cont-btn-profil">
+                    <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil
+                        Entreprise
+                    </button>
+                    <div id="side-pro-ent" class="side-color none"></div>
+                </div>
             {% endif %}
         </div>
-        <a href="/logout" class="deconnexion"><img class="img-deconnexion" src="{{ asset('assets/img/deconnexion.png') }}" alt="déconnexion>">Déconnexion</a>
+        <a href="/logout" class="deconnexion"><img class="img-deconnexion"
+                                                   src="{{ asset('assets/img/deconnexion.png') }}" alt="déconnexion>">Déconnexion</a>
     </div>
 
 
@@ -54,36 +63,48 @@
 
 
         <div class="profil-container">
-            <a href="/" ><img class="img-fleche-gauche" src="{{ asset('assets/img/fleche-gauche.png') }}" alt="flèche gauche>"<h3 class="h3-profil">Revenir au site</h3></a>
+            <a href="/"><img class="img-fleche-gauche" src="{{ asset('assets/img/fleche-gauche.png') }}"
+                             alt="flèche gauche>"
+                <h3 class="h3-profil">Revenir au site</h3></a>
 
             <div class="left-bar-mobile">
 
-                    {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
-                        <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormComp()" id="side-button-info-art" class="side-button-profil left-button-active">Informations</button>
+                {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
+                    <div class="cont-btn-profil">
+                        <button onclick="diplayNoneFormComp()" id="side-button-info-art"
+                                class="side-button-profil left-button-active">Informations
+                        </button>
                         <div id="side-info-art-mobile" class="side-color orange-background-mobile"></div>
-                        </div>
-                <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">Profil Artiste</button>
+                    </div>
+                    <div class="cont-btn-profil">
+                        <button onclick="diplayNoneFormInfo()" id="side-button-pro-art" class="side-button-profil">
+                            Profil Artiste
+                        </button>
                         <div id="side-pro-art-mobile" class="side-color orange-background-mobile none"></div>
-                </div>
-                <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">Réalisations</button>
+                    </div>
+                    <div class="cont-btn-profil">
+                        <button onclick="diplayNoneFormRea()" id="side-button-rea-art" class="side-button-profil">
+                            Réalisations
+                        </button>
                         <div id="side-rea-art-mobile" class="side-color orange-background-mobile none"></div>
-                </div>
+                    </div>
 
-                    {% endif %}
+                {% endif %}
 
-                    {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
-                <div class="cont-btn-profil">
-                <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent" class="side-button-profil left-button-active">Informations</button>
-                    <div id="side-info-ent-mobile" class="side-color"></div>
-                </div>
-                <div class="cont-btn-profil">
-                    <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil Entreprise</button>
-                    <div id="side-pro-ent-mobile" class="side-color none"></div>
-                </div>
-                    {% endif %}
+                {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
+                    <div class="cont-btn-profil">
+                        <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent"
+                                class="side-button-profil left-button-active">Informations
+                        </button>
+                        <div id="side-info-ent-mobile" class="side-color"></div>
+                    </div>
+                    <div class="cont-btn-profil">
+                        <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">
+                            Profil Entreprise
+                        </button>
+                        <div id="side-pro-ent-mobile" class="side-color none"></div>
+                    </div>
+                {% endif %}
 
             </div>
 
@@ -197,20 +218,31 @@
                                 <select id="profil_ent_secteur" name="profil_ent[secteur]">
                                     <option value="Agroalimentaire">Agroalimentaire</option>
                                     <option value="Banque / Assurance">Banque / Assurance</option>
-                                    <option value="Bois / Papier / Carton / Imprimerie">Bois / Papier / Carton / Imprimerie</option>
-                                    <option value="BTP / Matériaux de construction">BTP / Matériaux de construction</option>
+                                    <option value="Bois / Papier / Carton / Imprimerie">Bois / Papier / Carton /
+                                        Imprimerie
+                                    </option>
+                                    <option value="BTP / Matériaux de construction">BTP / Matériaux de construction
+                                    </option>
                                     <option value="Chimie / Parachimie">Chimie / Parachimie</option>
-                                    <option value="Commerce / Négoce / Distribution">Commerce / Négoce / Distribution</option>
-                                    <option value="Édition / Communication / Multimédia">Édition / Communication / Multimédia</option>
+                                    <option value="Commerce / Négoce / Distribution">Commerce / Négoce / Distribution
+                                    </option>
+                                    <option value="Édition / Communication / Multimédia">Édition / Communication /
+                                        Multimédia
+                                    </option>
                                     <option value="Électronique / Électricité">Électronique / Électricité</option>
                                     <option value="Études et conseils">Études et conseils</option>
                                     <option value="Industrie pharmaceutique">Industrie pharmaceutique</option>
                                     <option value="Informatique / Télécoms">Informatique / Télécoms</option>
-                                    <option value="Machines et équipements / Automobile">Machines et équipements / Automobile</option>
-                                    <option value="Métallurgie / Travail du métal">Métallurgie / Travail du métal</option>
+                                    <option value="Machines et équipements / Automobile">Machines et équipements /
+                                        Automobile
+                                    </option>
+                                    <option value="Métallurgie / Travail du métal">Métallurgie / Travail du métal
+                                    </option>
                                     <option value="Plastique / Caoutchouc">Plastique / Caoutchouc</option>
                                     <option value="Services aux entreprises">Services aux entreprises</option>
-                                    <option value="Textile / Habillement / Chaussure">Textile / Habillement / Chaussure</option>
+                                    <option value="Textile / Habillement / Chaussure">Textile / Habillement /
+                                        Chaussure
+                                    </option>
                                     <option value="Transports / Logistique">Transports / Logistique</option>
                                     <option value="Autre...">Autre...</option>
                                 </select>
@@ -218,23 +250,28 @@
                             <div>
 
                                 <label for="profil_ent_histoire" class="required">Histoire</label>
-                                <textarea id="profil_ent_histoire" name="profil_ent[histoire]" required="required"></textarea>
+                                <textarea id="profil_ent_histoire" name="profil_ent[histoire]"
+                                          required="required"></textarea>
                             </div>
                             <div>
 
                                 <label for="profil_ent_identite" class="required">Identité</label>
-                                <textarea id="profil_ent_identite" name="profil_ent[identite]" required="required"></textarea>
+                                <textarea id="profil_ent_identite" name="profil_ent[identite]"
+                                          required="required"></textarea>
                             </div>
                             <div>
                                 <label for="profil_ent_activite" class="required">Activite</label>
-                                <textarea id="profil_ent_activite" name="profil_ent[activite]" required="required"></textarea>
+                                <textarea id="profil_ent_activite" name="profil_ent[activite]"
+                                          required="required"></textarea>
                             </div>
 
                             <div class="btn-form-profil">
-                                <button type="submit" id="profil_ent_save" name="profil_ent[save]" class="save">Enregistrer</button>
+                                <button type="submit" id="profil_ent_save" name="profil_ent[save]" class="save">
+                                    Enregistrer
+                                </button>
                             </div>
                             {{ form_row(form_profil_ent._token) }}
-                            </div>
+                        </div>
                     </form>
 
                 </div>
@@ -249,22 +286,48 @@
                 <div id="image-right-art" class="background-right img-fadein image-right"></div>
 
 
+                <div id="real-content" class="none">
+                   <!-- <form id="form-realisations" name="realisations" method="post"
+                          enctype="multipart/form-data">
+                        <div id="realisations">
+                            <div id="form-content-real">
+                                <label id="label_real" for="realisations_realisations"
+                                       class="file_label">+</label>
 
-                <form id="form-realisations" class="none" name="realisations" method="post"
-                      enctype="multipart/form-data">
-                    <div id="realisations">
-                        <div>
-                            <label for="realisations_realisations" class="required">Realisations (jpg file)</label>
-                            <input type="file" id="realisations_realisations" name="realisations[realisations]"
-                                   required="required"/>
+                                <input type="file" id="realisations_realisations" name="realisations[realisations]"
+                                        placeholder="+"/>
+                                <button type="submit" id="realisations_save" name="realisations[save]" class="save">
+                                    Enregistrer
+                                </button>
+                            </div>
+
                         </div>
-                        <div class="btn-form-profil">
-                            <button type="submit" id="realisations_save" name="realisations[save]" class="save">Enregistrer
-                            </button>
+                    </form>-->
+
+                    {{ form(form_real) }}
+                    {{ form_widget(form_real._token) }}
+
+                    <div id="img-real">
+                        <div class="container-img">
+                            <div class="div-img">
+                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
+                            <div class="div-img">
+                                <img src="{{ asset('uploads/' ~ app.user.realisations2) }}">                            </div>
+
                         </div>
-                        {{ form_row(form_real._token) }}
+                        <div class="container-img">
+                            <div class="div-img">
+                                <img src="{{ asset('uploads/' ~ app.user.realisations3) }}">
+                            </div>
+                            <div class="div-img">
+                                <img src="{{ asset('uploads/' ~ app.user.realisations4) }}">                            </div>
+                        </div>
+
                     </div>
-                </form>
+
+                </div>
+
+
 
                 <form id="info_artiste" name="info_artiste" method="post" class="none">
                     <div id="info_artiste">
@@ -284,16 +347,13 @@
                                       required="required"></textarea>
                         </div>
                         <div class="btn-form-profil">
-                            <button type="submit" id="info_artiste_save" name="info_artiste[save]" class="save">Enregistrer
+                            <button type="submit" id="info_artiste_save" name="info_artiste[save]" class="save">
+                                Enregistrer
                             </button>
                         </div>
                         <input type="hidden" id="info_artiste__token" name="info_artiste[_token]"/>
                     </div>
                 </form>
-                <div>
-
-                    <img src="{{ asset('uploads/' ~ app.user.realisations) }}">
-                </div>
 
 
             {% endif %}
@@ -345,7 +405,7 @@
         function diplayNoneFormRea() {
             document.getElementById('complete_artiste').classList.add('none');
             document.getElementById('info_artiste').classList.add('none');
-            document.getElementById('form-realisations').classList.remove('none')
+            document.getElementById('real-content').classList.remove('none')
             document.getElementById('h2-info-art').classList.add('none');
             document.getElementById('h2-pro-art').classList.add('none');
             document.getElementById('h2-rea-art').classList.remove('none');
@@ -363,7 +423,7 @@
         function diplayNoneFormComp() {
             document.getElementById('complete_artiste').classList.remove('none');
             document.getElementById('info_artiste').classList.add('none');
-            document.getElementById('form-realisations').classList.add('none');
+            document.getElementById('real-content').classList.add('none');
             document.getElementById('h2-info-art').classList.remove('none');
             document.getElementById('h2-pro-art').classList.add('none');
             document.getElementById('h2-rea-art').classList.add('none');
@@ -381,7 +441,7 @@
         function diplayNoneFormInfo() {
             document.getElementById('info_artiste').classList.remove('none');
             document.getElementById('complete_artiste').classList.add('none');
-            document.getElementById('form-realisations').classList.add('none');
+            document.getElementById('real-content').classList.add('none');
             document.getElementById('h2-info-art').classList.add('none');
             document.getElementById('h2-pro-art').classList.remove('none');
             document.getElementById('h2-rea-art').classList.add('none');
@@ -397,7 +457,8 @@
 
 
         }
-        function diplayNoneFormProEnt(){
+
+        function diplayNoneFormProEnt() {
             document.getElementById('profil-ent').classList.remove('none');
             document.getElementById('complete_artiste').classList.add('none');
             document.getElementById('ident-ent').classList.add('none');
@@ -410,7 +471,8 @@
             document.getElementById('side-button-info-ent').classList.remove('left-button-active');
             document.getElementById('side-button-pro-ent').classList.add('left-button-active');
         }
-        function diplayNoneFormInfoEnt(){
+
+        function diplayNoneFormInfoEnt() {
             document.getElementById('profil-ent').classList.add('none');
             document.getElementById('complete_artiste').classList.remove('none');
             document.getElementById('ident-ent').classList.remove('none');
@@ -425,11 +487,11 @@
         }
 
         var btnprofil = document.getElementById('side-info-ent');
-        if($("#side-info-ent").is('none')){
+        if ($("#side-info-ent").is('none')) {
             document.getElementById('side-info-ent').classList.add('side-visible')
 
-        };
-
+        }
+        ;
 
 
     </script>

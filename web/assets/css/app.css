@@ -1010,9 +1010,9 @@ input::placeholder {
 }
 
 
-@media not all and (min-resolution:.001dpcm) { @media
-{
-    .safari_only {
+@media not all and (min-resolution:.001dpcm) {
+    @media {
+        .safari_only {
 
         #check-box {
             display: flex;
@@ -1028,8 +1028,9 @@ input::placeholder {
         }
 
     }
-}}
+}
 
+}
 
 .section-profil{
     display: flex;
@@ -1297,4 +1298,62 @@ input::placeholder {
     position: absolute;
     width: 65%;
     top: 7%;
+}
+
+
+#realisations_realisations {  display: none}
+
+.file_label {
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 3vw;
+    width: 3vw;
+    height: 3vw;
+    line-height: 40px;
+    background-color: #fda229;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.3s ease-in-out
+}
+
+.file_label:hover {
+    background-color: #f39c12;
+    color: #ffffff;
+}
+.fa {
+    margin-right: 5px
+}
+#label_real{
+    font-size: 3vw;
+}
+
+.div-img{
+    width: 30%;
+}
+.container-img{
+    display: flex;
+    justify-content: space-between;
+}
+.div-img img{
+    width: 100%;
+}
+#img-real{
+    width: 80%;
+}
+#realisations{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#realisations_save{
+    position: initial;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+#form-content-real{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }

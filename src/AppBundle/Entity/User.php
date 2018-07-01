@@ -66,8 +66,11 @@ class User implements UserInterface, \Serializable
      */
     public $photo_profil;
     /**
-     * @ORM\Column(type="string", nullable=true)
-     * @Assert\File(mimeTypes={ "image/jpeg" })
+     * @ORM\Column(name="filename" type="string", nullable=true)
+     */
+    public $real_name;
+/**
+    * @UploadableField(name='filename", path="web/uploads")
      */
     public $realisations;
 
