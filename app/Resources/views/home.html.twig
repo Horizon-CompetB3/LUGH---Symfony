@@ -7,27 +7,34 @@
 
 
         <section id="first-section" class="first-section section" data-midnight="default" data-anchor="slide1">
-            <div id="first-section-content">
+            <div class="first-section-content position-finale">
                 <h1>LUGH</h1>
                 <h2>La plateforme créative qui réunit<br>
                     <span class="orange">artistes</span> et <span class="blue">entreprises</span></h2>
+                <p>Dynamiser la communication d'entreprise par l’art : c’est le pari
+                    de Lugh, plateforme de mise en relation entre artistes et entreprises.
+                    Créée par deux passionnés de la création, Lugh vous permet de trouver
+                    l’artiste qu’il vous faut pour créer une oeuvre d’art personnalisée à
+                    exposer dans vos bureaux. </p>
                 <div id="div-btn-artent">
-                    <a href="#slide2" class="js-scrollTo">Je suis une entreprise</a>
-                    <a href="#slide3" class="js-scrollTo">Je suis un artiste</a>
+                    <a onClick="_gaq.push(['_trackEvent', 'Bouton Entreprise Home', 'Clic', 'Lugh']);" href="#slide2" class="js-scrollTo">Je suis une entreprise</a>
+                    <a onClick="_gaq.push(['_trackEvent', 'Bouton Artiste Home', 'Clic', 'Lugh']);" href="#slide3" class="js-scrollTo">Je suis un artiste</a>
                 </div>
 
             </div>
-            <div id="first-section-content-2" class="background-right"></div>
+            <div id="first-section-content-2" class="background-right img-fadein"></div>
         </section>
 
         <section id="second-section" class="section reveal" data-midnight="white" data-anchor="slide2">
 
             <div class="second-section-content">
-                <h3>CHOISISSEZ L’ART<br>
-                    POUR ÊTRE UNIQUE !</h3>
-                <p>Avec Lugh, trouvez le <span class="blue">projet artistique</span> qui correspond à votre entreprise pour véhiculer et mettre en avant vos <span class="blue">valeurs</span>.
+                <h3>Choisissez l’art pour <br>
+                    rendre votre entreprise unique !</h3>
+                <p>Exposez dans vos <span class="blue">bureaux</span> une oeuvre à l’image de votre <span class="blue">culture d’entreprise</span> ! Déposez votre appel à projet directement sur notre plateforme et recevez des propositions d’artistes.
 
-                    <br>  <br>Déposez un appel à projet en ligne et sélectionnez la meilleure proposition pour vos locaux. Bénéficiez ainsi d’une oeuvre qui vous ressemble et vecteur de communication.</p>
+                    <br>  <br>L’équipe Lugh vous conseille gratuitement pour faire entrer la créativité dans vos bureaux !
+
+                </p>
                 <div class="div-btn-proj">
                     <button>Déposer un projet</button>
                 </div>
@@ -80,21 +87,43 @@
                                 informé de l’actualité </h3>
                             <div class="mc-field-group">
                                 <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Votre e-mail">
-                                <input type="submit" value="envoyer" name="subscribe" id="mc-embedded-subscribe" class="button">
                             </div>
                             <div id="mce-responses" class="clear">
                                 <div class="response" id="mce-error-response" style="display:none"></div>
                                 <div class="response" id="mce-success-response" style="display:none"></div>
                             </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                            <div class="clear"><input id="mc-embedded-subscribe" type="submit" value="Envoyer" name="subscribe" id="mc-embedded-subscribe" class="button" onClick="_gaq.push(['_trackEvent', 'Inscription Newsletter', 'Clic', 'Lugh']);"></div>
                         </div>
                     </form>
                 </div>
-
+                <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
                 <!--End mc_embed_signup-->
+
             </div>
             <div id="fourth-section-content-2" class="background-right"></div>
 
+            <footer id="footer">
+                <div id="copyright">
+                    <ul>
+                        <li>© Lugh</li>
+                        <li>Presse</li>
+                        <li>Livre Blanc</li>
+                        <li><a href="/mentions">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div id="rs">
+                    <ul>
+                        <li><a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/lugh_france/">instagram</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/lugh-entreprise/">linkedin</a></li>
+                        <li><a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a></li>
+                    </ul>
+                </div>
+            </footer>
+
         </section>
     </div>
+
 
 {% endblock %}

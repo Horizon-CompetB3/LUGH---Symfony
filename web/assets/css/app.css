@@ -16,10 +16,10 @@ body{
 .sidebar {
     position: absolute;
     z-index: 300;
-    right: 12%;
-    top: 3%;
+    right: 6%;
+    top: 6%;
     height: 80vh;
-    margin-top: 10vh;
+    width: 30%;
 }
 
 .sidebar nav ul {
@@ -32,7 +32,8 @@ body{
     display: block;
     list-style: none;
     padding: 0;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
+    margin-top: 1vh;
 }
 /*
 .sidebar nav ul li a {
@@ -59,7 +60,7 @@ body{
     display: block;
     text-decoration: none;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 6px 20px;
     position: relative;
     color: #000;
     font-size: 0.8vw;
@@ -68,17 +69,18 @@ body{
 }
 
 .singe-entreprise {
-    width: 10%;
-    padding: 2%;
+    width: 9%;
+    padding: 1%;
 }
 
 .link-entreprise {
     display: none;
     text-decoration: none;
-    margin: -1%;
+    margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
+    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -93,17 +95,18 @@ body{
 }
 
 .singe-artiste {
-    width: 10%;
-    padding: 2%;
+    width: 9%;
+    padding: 1%;
 }
 
 .link-artiste {
     display: none;
     text-decoration: none;
-    margin: -1%;
+    margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
+    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -118,17 +121,18 @@ body{
 }
 
 .singe-galerie {
-    width: 10%;
-    padding: 2%;
+    width: 9%;
+    padding: 1%;
 }
 
 .link-galerie {
     display: none;
     text-decoration: none;
-    margin: -1%;
+    margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
+    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -142,18 +146,19 @@ body{
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
 
-.singe-connexion {
-    width: 10%;
-    padding: 2%;
+.singe-home {
+    width: 9%;
+    padding: 1%;
 }
 
-.link-connexion {
+.link-home {
     display: none;
     text-decoration: none;
-    margin: -1%;
+    margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
+    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -168,17 +173,18 @@ body{
 }
 
 .singe-contact {
-    width: 10%;
-    padding: 2%;
+    width: 9%;
+    padding: 1%;
 }
 
 .link-contact {
     display: none;
     text-decoration: none;
-    margin: -1%;
+    margin: -2%;
     padding: 10px 20px;
     position: relative;
     color: #000;
+    height: 8vh;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -199,6 +205,29 @@ body{
 .link-active {
     display: block;
 }
+
+
+.link-connexion {
+    text-decoration: none;
+    margin: -2%;
+    padding: 10px 20px;
+    position: relative;
+    color: #000;
+    height: 14vh;
+    text-align: right;
+    font-size: 0.8vw;
+    text-transform:  uppercase;
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+    transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+
 
 /*
 .sidebar nav ul li a::after {
@@ -223,8 +252,6 @@ body{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
-
-
 .sidebar nav ul li a:hover:after {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -232,7 +259,6 @@ body{
     -o-transform: translateX(0);
     transform: translateX(0)
 }
-
 .sidebar nav ul li a:hover div {
     opacity: 0;
     -webkit-transform: translateX(3.125vw) rotate(180deg);
@@ -243,140 +269,6 @@ body{
     width: 50%;
 }*/
 
-#div-projet {
-    background-color: white;
-    color: #000;
-    width: 55%;
-    height: 100vh;
-    font-size: 30px;
-    line-height: 10vh;
-    font-weight: 700;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left: -60%;
-    z-index: 201;
-    transition: 0.7s;
-    visibility: hidden;
-    opacity: 1;
-}
-
-.nav-projet:hover + #div-projet {
-    transition: 0.7s;
-    visibility: visible;
-    left: 0;
-}
-
-
-
-#div-voir {
-    background-color: white;
-    color: #000;
-    width: 55%;
-    height: 100vh;
-    font-size: 30px;
-    line-height: 10vh;
-    font-weight: 700;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left: -60%;
-    z-index: 201;
-    transition: 0.7s;
-    visibility: hidden;
-    opacity: 1;
-}
-
-.nav-voir:hover + #div-voir {
-    transition: 0.7s;
-    visibility: visible;
-    left: 0;
-}
-
-
-
-
-#div-connexion {
-    background-color: white;
-    color: #000;
-    width: 55%;
-    height: 100vh;
-    font-size: 30px;
-    line-height: 10vh;
-    font-weight: 700;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left: -60%;
-    z-index: 201;
-    transition: 0.7s;
-    visibility: hidden;
-    opacity: 1;
-}
-
-.nav-connexion:hover + #div-connexion {
-    transition: 0.7s;
-    visibility: visible;
-    left: 0;
-}
-
-#div-galerie {
-    background-color: white;
-    color: #000;
-    width: 55%;
-    height: 100vh;
-    font-size: 30px;
-    line-height: 10vh;
-    font-weight: 700;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left: -60%;
-    z-index: 201;
-    transition: 0.7s;
-    visibility: hidden;
-    opacity: 1;
-}
-
-.nav-galerie:hover + #div-galerie {
-    transition: 0.7s;
-    visibility: visible;
-    left: 0;
-}
-
-#div-contact {
-    background-color: white;
-    color: #000;
-    width: 55%;
-    height: 100vh;
-    font-size: 30px;
-    line-height: 10vh;
-    font-weight: 700;
-    padding-left: 1vw;
-    padding-top: 1vw;
-    text-transform: uppercase;
-    position: fixed;
-    top: 0;
-    left: -60%;
-    z-index: 201;
-    transition: 0.7s;
-    visibility: hidden;
-    opacity: 1;
-}
-
-.nav-contact:hover + #div-contact {
-    transition: 0.7s;
-    visibility: visible;
-    left: 0;
-}
 
 .all-content {
     width: 100%;
@@ -415,7 +307,7 @@ h1{
 #div-logo{
     width: 7%;
     margin: auto;
-    position: absolute;
+    position: fixed;
     top: 2vw;
     left: 2vw;
 }
@@ -425,27 +317,42 @@ h1{
     display: flex;
 }
 
-#first-section-content{
+.first-section-content{
     margin-top: auto;
     margin-bottom: auto;
     width: 70%;
     margin-left: 3vw;
+    opacity: 0;
+    transition: 0.2s;
 
 }
-#first-section-content h2{
+.first-section-content h2{
     font-size: 1.8vw;
     line-height: 2.8vw;
     font-weight: 600;
 }
+
+.first-section-content p{
+    font-size: 1vw;
+    line-height: 1.5vw;
+    width: 50%;
+    font-weight: 500;
+    margin-top: 2%;
+}
+
 #first-section-content-2{
     background-image: url("../img/IMG1-HOME.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.4s;
 }
+
 #div-btn-artent{
     margin-top: 3vw;
     justify-content: space-between;
+    -webkit-appearance: none;
 }
 #div-btn-artent a{
     background-color: #fff;
@@ -461,10 +368,29 @@ h1{
     text-decoration: none;
     color: #000;
     outline: none;
-
+    transition: 0.5s;
 }
+
+#div-btn-artent a:hover{
+    background-color: black;
+    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    margin-right: 2vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    outline: none;
+    transition: 0.5s;
+}
+
 .div-btn-proj{
     margin-top: 3vw;
+    -webkit-appearance: none;
 
 }
 .div-btn-proj button{
@@ -478,7 +404,14 @@ h1{
     font-size: 0.8vw;
     margin-right: 2vw;
     cursor: pointer;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
 
+.div-btn-proj button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
 }
 
 .second-section-content{
@@ -487,7 +420,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .third-section-content{
@@ -496,7 +429,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .five-section-content{
@@ -505,7 +438,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .fourth-section-content{
@@ -514,7 +447,7 @@ h1{
     width: 70%;
     margin-left: 3vw;
     opacity: 0;
-    transition: 1s;
+    transition: 0.2s;
 }
 
 .connexion-section-content{
@@ -530,6 +463,7 @@ h1{
     font-size: 1.9vw;
     line-height: 2.8vw;
     margin-bottom: 3vw;
+    text-transform: uppercase;
 }
 
 .third-section-content h3{
@@ -585,24 +519,38 @@ h1{
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s;
 }
 #third-section-content-2{
     background-image: url("../img/IMG4-HOME-ARTISTE.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s;
 }
 #five-section-content-2{
     background-image: url("../img/IMG3-HOME-GALLERIE.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s;
 }
 #fourth-section-content-2{
     background-image: url("../img/IMG5-HOME-NEWSLETTER.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.img-fadein {
+    transition: 0.4s !important;
+    transition-delay: 0.5s !important;
+    opacity: 1 !important;
 }
 
 #connexion-section-2{
@@ -630,7 +578,7 @@ h1{
 
 .position-finale {
     opacity: 1;
-    transition: 1s;
+    transition: 0.4s;
     transition-delay: 0.5s;
 }
 
@@ -677,6 +625,7 @@ form h3{
     border-bottom: 3px solid black;
     width: 30%;
     padding: 0.8%;
+    -webkit-appearance: none;
 }
 
 ::placeholder{
@@ -698,9 +647,20 @@ form h3{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8vw;
-    margin-left: 1vw;
+    margin-top: 3%;
     cursor: pointer;
+    transition: 0.5s;
+    -webkit-appearance: none;
 }
+
+#mc-embedded-subscribe:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+
+
 #clear{
     position: relative;
     width: 54%;
@@ -709,16 +669,21 @@ form h3{
 }
 
 #mc_embed_signup_scroll{
-margin-left: 3vw;
+    margin-left: 3vw;
 }
 
 #copyright {
-    width: 40%;
+    width: 50%;
+}
+
+#copyright a{
+    color: black;
+    text-decoration: none;
 }
 
 #rs {
-    width: 60%;
-    margin-left: 30%;
+    width: 50%;
+    margin-left: 17%;
 }
 
 #rs a{
@@ -796,6 +761,9 @@ label{
 
 .form-group-co{
     margin-top: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
 }
 
 
@@ -863,10 +831,17 @@ label{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8vw;
-    margin-left: 20vw;
+    margin-left: 37%;
     cursor: pointer;
+    transition: 0.5s;
+    -webkit-appearance: none;
 }
 
+.form-group-co button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
 
 .link-co{
     text-decoration: underline;
@@ -900,9 +875,11 @@ label{
 .link-co:hover .underline{
     width: 50%;
     transition: 0.5s;
-
 }
 
+.link-inscription {
+    text-decoration: underline;
+}
 
 input::placeholder{
 
@@ -918,7 +895,7 @@ input::placeholder{
 .form-group-ins input {
     width: 80%;
     padding-bottom: 2%;
-    margin-top: 7%;
+    margin-top: 6%;
     border: 0;
     border-radius: 0;
     border-bottom: 3px solid black;
@@ -927,7 +904,7 @@ input::placeholder{
 #form-ins h2{
     font-size: 1.9vw;
     line-height: 2.8vw;
-    margin-bottom: 3vw;
+    margin-bottom: 2vw;
     text-transform: uppercase;
 
 }
@@ -956,10 +933,20 @@ input::placeholder{
     font-weight: 700;
     text-transform: uppercase;
     font-size: 0.8vw;
-    margin-left: 29vw;
+    margin-right: 48%;
     cursor: pointer;
-    margin-top: 6%;
+    margin-top: 4%;
+    transition: 0.5s;
+    -webkit-appearance: none;
 }
+
+.form-group-ins button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+
 #footer{
     display: flex;
 }
@@ -973,7 +960,7 @@ input::placeholder{
 .closeButton {
     display: none;
 }
-#button-burger {
+.button-burger {
     display: none;
 }
 
@@ -999,40 +986,167 @@ input::placeholder {
     width: 100%;
     margin-top: 6%;
     margin-left: -15%;
-}
-.fp-viewing-slide2{
-    background-color: red;
+    -webkit-appearance: none;
 }
 
-/* PAGE PROFIL */
+
+#title-ml{
+    font-family: "Montserrat-Regular", sans-serif;
+    color: #000;
+    font-size: 1.6vw;
+    font-weight: 700;
+    margin-top: 8%;
+}
+
+#section-ml {
+    width: 70%;
+    margin-left: 5%;
+}
+
+#text-ml {
+    font-family: "Montserrat-Regular", sans-serif;
+    color: #000;
+    font-size: 0.9vw;
+}
+
+
+@media not all and (min-resolution:.001dpcm) {
+    @media {
+        .safari_only {
+
+        #check-box {
+            display: flex;
+            margin-top: 3%;
+            margin-left: 0;
+        }
+
+        #submit-ins {
+            width: 100%;
+            margin-top: 6%;
+            margin-left: -18%;
+            -webkit-appearance: none;
+        }
+
+    }
+}
+
+}
 
 .section-profil{
     display: flex;
 }
+
 .left-bar{
     position: absolute;
     left: 0;
     background-color: #f6f6f6;
-    height: 100VH;
-    width: 15vw;
+    height: 100vh;
+    width: 14vw;
 }
+
+.left-bar-mobile {
+    display: none;
+}
+
+.left-bar-mobile button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin: auto;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.7s;
+    height: 5vh;
+    margin-top: 16%;
+}
+
 .left-bar button{
     display: block;
     background-color: transparent;
     border: none;
     margin: auto;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.7s;
+    height: 5vh;
+    margin-top: 16%;
 }
+
+.cont-btn-profil{
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-left: 2%;
+    margin-top: 10%;
+}
+
+.img-fleche-gauche {
+    width: 1%;
+    margin-right: 2%;
+}
+
+.img-deconnexion {
+    width: 7%;
+    margin-right: 5%;
+}
+
+.deconnexion {
+    display: block;
+    position: absolute;
+    bottom: 2%;
+    left: 8%;
+    text-decoration: none;
+    color: black;
+    font-size: 1.3vw;
+    font-weight: 500;
+    opacity: 1;
+}
+
+.deconnexion:hover {
+    opacity: 0.7;
+    transition: 0.4s;
+}
+
+.side-color {
+    position: absolute;
+    background-color: #679bd7;
+    left: -2%;
+    top: 28%;
+    width: 5%;
+    height: 8vh;
+}
+
+.orange-background {
+    background-color: #fda229 !important;
+
+}
+
+.blue {
+    color: #679bd7 !important;
+}
+
+
+.left-button-active{
+    opacity: 1 !important;
+    font-weight: 600 !important;
+}
+
 .content-left{
     margin: auto;
-    width: 80%;
+    width: 100%;
     margin-top: 6vh;
     text-align: center;
 }
+
 .profil-container{
     width: 55%;
-    height: 70vh;
+    height: auto;
     margin: auto;
+    margin-left: 21%;
 }
+
 #div-logo-profil{
     width: 80%;
     margin: auto;
@@ -1040,22 +1154,18 @@ input::placeholder {
     left: 2vw;
 }
 
-
-
 .complete-profil{
     width: 70%;
 }
 .flex-form div{
     width: 45%;
 }
-.complete-profil input{
-    padding: 0.5vw;
-    width: 100%;
-    border: 1px solid black;
-}
+
 .complete-profil label{
     margin-bottom: 2%;
 }
+
+
 .flex-form{
     display: flex;
     justify-content: space-between;
@@ -1066,7 +1176,184 @@ input::placeholder {
 .profil-container h2{
     color: #fda229;
     margin-bottom: 3%;
+    font-size: 2.2vw;
+    font-weight: 600;
 }
-.no-visible-form{
+
+.no-visible-form {
     visibility: hidden;
+}
+
+.section-profil input{
+    width: 100%;
+    padding: 0.4vw;
+    border: 0.5px solid black;
+}
+
+.section-profil textarea{
+    width: 100%;
+    padding: 0.5vw;
+    border: 0.5px solid black;
+    resize: none;
+    height: 12vh;
+}
+
+.section-profil form{
+    width: 70%;
+}
+
+.section-profil label{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    font-size: 1.2vw;
+}
+
+.section-profil select:after{
+    padding: 0.5vw;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+#ident-ent{
+    margin-top: 10vh;
+}
+
+#ident-ent h3{
+    margin-bottom: 3%;
+    font-size: 1.5vw;
+}
+
+.image-right{
+    width: 30vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.4s;
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+}
+
+#image-right-art{
+    background-image: url(../img/IMG-ESPACE-ARTISTE.jpg);
+}
+
+#image-right-ent{
+    background-image: url(../img/IMG-ESPACE-ENTREPRISE.jpg);
+}
+
+.save{
+    background-color: #fff;
+    padding: 4vw;
+    padding-top: 0.7vw;
+    padding-bottom: 0.7vw;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    transition: 0.5s;
+    position: absolute;
+    right: -1vw;
+    margin-top: 2%;
+}
+
+.save:hover{
+    background-color: #000;
+    color: #fff;
+    transition: 0.4s;
+}
+
+#profil_ent_secteur {
+    width: 50%;
+    color: grey;
+    font-size: 1.1vw;
+    padding: 1%;
+}
+
+.btn-form-profil{
+    position: relative;
+    margin-top: 1vw;
+}
+
+.side-visible{
+    width: 0.4vw;
+    transition: 0.7s;
+}
+
+.h3-profil {
+    font-size: 1.3vw;
+    font-weight: 600;
+    margin-top: -3%;
+}
+
+.profil-container a {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    width: 65%;
+    top: 7%;
+}
+
+
+#realisations_realisations {  display: none}
+
+.file_label {
+    display: block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 3vw;
+    width: 3vw;
+    height: 3vw;
+    line-height: 40px;
+    background-color: #fda229;
+    color: #FFF;
+    text-align: center;
+    padding: 5px;
+    transition: all 0.3s ease-in-out
+}
+
+.file_label:hover {
+    background-color: #f39c12;
+    color: #ffffff;
+}
+.fa {
+    margin-right: 5px
+}
+#label_real{
+    font-size: 3vw;
+}
+
+.div-img{
+    width: 30%;
+}
+.container-img{
+    display: flex;
+    justify-content: space-between;
+}
+.div-img img{
+    width: 100%;
+}
+#img-real{
+    width: 80%;
+}
+#realisations{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+#realisations_save{
+    position: initial;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+#form-content-real{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
 }
