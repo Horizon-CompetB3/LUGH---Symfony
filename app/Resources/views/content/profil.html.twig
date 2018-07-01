@@ -287,7 +287,7 @@
 
 
                 <div id="real-content" class="none">
-                   <!-- <form id="form-realisations" name="realisations" method="post"
+                   <form id="form-realisations" name="realisations" method="post"
                           enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
@@ -302,9 +302,7 @@
                             </div>
 
                         </div>
-                    </form>-->
-
-                    {{ form(form_real) }}
+                    </form>
                     {{ form_widget(form_real._token) }}
 
                     <div id="img-real">
@@ -312,15 +310,15 @@
                             <div class="div-img">
                                 <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
                             <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations2) }}">                            </div>
+                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
 
                         </div>
                         <div class="container-img">
                             <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations3) }}">
+                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">
                             </div>
                             <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations4) }}">                            </div>
+                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
                         </div>
 
                     </div>
