@@ -2,7 +2,7 @@
 
 namespace AppBundle\Form;
 
-use AppBundle\Entity\User;
+use AppBundle\Entity\Images;
 use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -18,9 +18,10 @@ class RealisationsType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('realisations', FileType::class, array(
+            ->add('file', FileType::class, array(
                 'label' => 'Realisations (jpg file)',
-                'data_class'=>null))
+                'data_class'=>null,
+            ))
             ->add('save', SubmitType::class, array(
         'attr' => array('class' => 'save')));
 
@@ -29,7 +30,7 @@ class RealisationsType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => User::class,
+            'data_class' => Images::class,
         ));
     }
 }

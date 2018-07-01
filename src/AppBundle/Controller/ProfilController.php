@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 use AppBundle\Entity\User;
+use AppBundle\Entity\Images;
 use AppBundle\Form\CompleteArtisteType;
 use AppBundle\Form\CompleteEntrepriseType;
 use AppBundle\Form\InfoArtisteType;
@@ -68,21 +69,20 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('profil');
         }
 
         //
 
-        $user = $this->getUser();
-        $entityManager = $this->getDoctrine()->getManager();
-        $user = $entityManager->getRepository(User::class)->find($user->getId());
-        $form_real = $this->createForm(RealisationsType::class, $user);
+        $images = new Images();
+
+        $form_real = $this->createForm(RealisationsType::class, $images);
         $form_real->handleRequest($request);
 
         if ($form_real->isSubmitted() && $form_real->isValid()) {
             // $file stores the uploaded PDF file
             /** @var Symfony\Component\HttpFoundation\File\UploadedFile $file */
-            $file = $user->getRealisations();
+            $file = $images->getFile();
 
             $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
 
@@ -96,15 +96,14 @@ class ProfilController extends Controller
 
             // updates the 'brochure' property to store the PDF file name
             // instead of its contents
-            $user->setRealisations($fileName);
+            $images->setFile($fileName);
             $editUser = $form_real->getData();
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-
             // ... persist the $product variable or any other work
 
-            return $this->redirect($this->generateUrl('home'));
+            return $this->redirect($this->generateUrl('profil'));
         }
 
         //
@@ -124,7 +123,7 @@ class ProfilController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($editUser);
                 $em->flush();
-                return $this->redirectToRoute('home');
+                return $this->redirectToRoute('profil');
             }
 
             //

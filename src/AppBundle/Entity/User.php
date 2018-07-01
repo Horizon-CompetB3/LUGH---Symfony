@@ -8,6 +8,9 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * User
+ *
+ * @ORM\Table(name="User")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
@@ -66,10 +69,69 @@ class User implements UserInterface, \Serializable
      */
     public $photo_profil;
     /**
-     * @ORM\Column(type="string", nullable=true)
-     * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
+    * @ORM\OneToMany(targetEntity="Images", mappedBy="file")
      */
     public $realisations;
+
+    /**
+     * @return mixed
+     */
+    public function getRealisations2()
+    {
+        return $this->realisations2;
+    }
+
+    /**
+     * @param mixed $realisations2
+     */
+    public function setRealisations2($realisations2)
+    {
+        $this->realisations2 = $realisations2;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRealisations3()
+    {
+        return $this->realisations3;
+    }
+
+    /**
+     * @param mixed $realisations3
+     */
+    public function setRealisations3($realisations3)
+    {
+        $this->realisations3 = $realisations3;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRealisations4()
+    {
+        return $this->realisations4;
+    }
+
+    /**
+     * @param mixed $realisations4
+     */
+    public function setRealisations4($realisations4)
+    {
+        $this->realisations4 = $realisations4;
+    }/**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Image(mimeTypes={ "image/jpeg" })
+     */
+    public $realisations2;/**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Image(mimeTypes={ "image/jpeg" })
+     */
+    public $realisations3;/**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\Image(mimeTypes={ "image/jpeg" })
+     */
+    public $realisations4;
 
     /**
      * @return mixed

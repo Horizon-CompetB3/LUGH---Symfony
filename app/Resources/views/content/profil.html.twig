@@ -64,7 +64,7 @@
 
         <div class="profil-container">
             <a href="/"><img class="img-fleche-gauche" src="{{ asset('assets/img/fleche-gauche.png') }}"
-                             alt="flèche gauche>"
+                             alt="flèche gauche>">
                 <h3 class="h3-profil">Revenir au site</h3></a>
 
             <div class="left-bar-mobile">
@@ -287,7 +287,7 @@
 
 
                 <div id="real-content" class="none">
-                   <form id="form-realisations" name="realisations" method="post"
+                    {#<form id="form-realisations" name="realisations" method="post"
                           enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
@@ -296,32 +296,37 @@
 
                                 <input type="file" id="realisations_realisations" name="realisations[realisations]"
                                         placeholder="+"/>
+                                {{ form_widget(form_real._token) }}
                                 <button type="submit" id="realisations_save" name="realisations[save]" class="save">
                                     Enregistrer
                                 </button>
                             </div>
 
                         </div>
-                    </form>
-                    {{ form_widget(form_real._token) }}
+                    </form>#}
+                    {{ form_start(form_real) }}
+                    {{ form_widget(form_real) }}
+                    {{ form_end(form_real) }}
 
-                    <div id="img-real">
+
+                    {% if is_granted("ROLE_USER") == true and app.user.realisations != "" %}
+                  {#  <div id="img-real">
                         <div class="container-img">
                             <div class="div-img">
                                 <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
                             <div class="div-img">
                                 <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
-
                         </div>
-                        <div class="container-img">
+                       #}{# <div class="container-img">
                             <div class="div-img">
                                 <img src="{{ asset('uploads/' ~ app.user.realisations) }}">
                             </div>
                             <div class="div-img">
                                 <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
-                        </div>
+                        </div>#}{#
 
-                    </div>
+                    </div>#}
+                    {% endif %}
 
                 </div>
 
