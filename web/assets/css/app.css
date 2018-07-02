@@ -337,7 +337,7 @@ h1{
 }
 
 .first-section-content p{
-    font-size: 1vw;
+    font-size: 1.2vw;
     line-height: 1.5vw;
     width: 50%;
     font-weight: 500;
@@ -360,7 +360,7 @@ h1{
 }
 #div-btn-artent a{
     background-color: #fff;
-    padding: 2%;
+    padding: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     border: 3px solid black;
@@ -375,9 +375,41 @@ h1{
     transition: 0.5s;
 }
 
+#div-btn-addprojet a{
+    background-color: #fff;
+    padding: 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    margin-right: 2vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    transition: 0.5s;
+}
+
+.h2-contact {
+    font-size: 2.8vw !important;
+    line-height: 3.8vw !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+}
+
+.p-contact {
+    font-size: 1.2vw !important;
+    line-height: 1.5vw !important;
+    width: 65% !important;
+    font-weight: 500 !important;
+    margin-top: 6% !important;
+}
+
 #div-btn-artent a:hover{
     background-color: black;
-    padding: 2%;
+    padding: 7%;
     padding-top: 1%;
     padding-bottom: 1%;
     border: 3px solid black;
@@ -518,6 +550,9 @@ h1{
 
 
 
+
+
+
 #second-section-content-2{
     background-image: url("../img/IMG2-HOME-ENTREPRISE.jpg");
     width: 30%;
@@ -559,6 +594,20 @@ h1{
 
 #connexion-section-2{
     background-image: url("../img/IMG-CONNEXION.jpg");
+    width: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#add-projet-section-2 {
+     background-image: url("../img/IMG1-ADDPROJET.jpg");
+     width: 30%;
+     background-size: 100%;
+     background-repeat: no-repeat;
+ }
+
+#add-projet-section-3 {
+    background-image: url("../img/IMG2-ADDPROJET.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1153,7 +1202,7 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-top: 1%;
-    margin-bottom: 4%;
+    margin-bottom: 3%;
 }
 
 .profil-container h2{
@@ -1350,35 +1399,55 @@ input::placeholder {
      width: 100%;
      margin-top: 3%;
  }
-.form-group-contact input {
-    width: 100%;
-    padding-bottom: 1%;
-    border: 0;
-    border-radius: 0;
-    border-bottom: 3px solid black;
+
+.input-addprojet {
+    width: 100% !important;
 }
+
+.p-addprojet {
+    margin-bottom: 3% !important;
+}
+
+
+.form-group-contact input {
+     width: 50%;
+     padding-bottom: 1%;
+     border: 0;
+     border-radius: 0;
+     border-bottom: 3px solid black;
+ }
+
 .form-group-contact textarea {
     width: 100%;
     padding-bottom: 1%;
     resize: none;
+    margin-top: 6%;
     border-radius: 0;
     height: 15vh;
     border: 3px solid black;
 }
+
 .form-group-contact-btn button{
     background-color: #fff;
-    width: 15vw;
+    width: 17vw;
+    color: #000;
     padding: 7%;
-    padding-top: 1.2%;
-    padding-bottom: 1.2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
     border: 3px solid black;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 0.8vw;
+    font-size: 1vw;
     cursor: pointer;
     transition: 0.5s;
     -webkit-appearance: none;
 }
+
+.form-group-contact-btn :hover{
+    background-color: #000;
+    color: #fff;
+}
+
 .form-group-contact-btn{
     width: 100%;
     margin-top: 3%;
@@ -1391,4 +1460,8 @@ input::placeholder {
     color: white;
     transition: 0.5s;
     -webkit-appearance: none;
+}
+
+.h3-addprojet {
+    margin-top: 4%;
 }

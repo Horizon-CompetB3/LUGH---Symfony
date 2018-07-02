@@ -25,6 +25,37 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
+
+<div id="nav-mobile" class="nav-mobile">
+    <div class="closeButton">&times</div>
+    <a href="">Home</a>
+    <a href="">Entreprise</a>
+    <a href="">Artiste</a>
+    <a href="">Galerie</a>
+    <a href="">Contact</a>
+    {%
+
+        if is_granted('ROLE_USER') == false  %}
+        <a href="/login">Connexion</a>
+    {% endif %}
+    {% if is_granted('ROLE_USER') == true  %}
+        <a href="/profil">Mon Espace</a>
+        <a href="/logout">Déconnexion</a>
+    {% endif %}
+    <div id="rs-mobile">
+        <a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a>
+        <a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a>
+        <a target="_blank" href="https://www.instagram.com/lugh_france/">instagram</a>
+        <a target="_blank" href="https://www.linkedin.com/company/lugh-entreprise/">linkedin</a>
+        <a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a>
+    </div>
+</div>
+<div class="button-burger">
+    <div class="nav-burger">&#9776;</div>
+</div>
+
+
+
 <script type="text/javascript">
 
     var gaq = gaq || [];
@@ -49,6 +80,8 @@
 
 {% block javascripts %}
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
 
 
 {% endblock %}
