@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
@@ -23,23 +24,24 @@ public function contactAction(Request $request)
         ->add('from', EmailType::class)
         ->add('message', TextareaType::class)
         ->add('send', SubmitType::class)
-        ->getForm()
-
-    ;
+        ->getForm();
 
     $form->handleRequest($request);
     if ($form->isSubmitted() && $form->isValid()) {
         $data = $form->getData();
         dump($data);
-        $message =\Swift_Message::newInstance()
-            ->setSubject('Support from submissions')
+        $mailer = $this->get('mailer');
+
+        $message = \Swift_Message::newInstance()
+            ->setSubject('Dépot de Projet - LUGH')
             ->setFrom($data['from'])
-            ->setTo('alex.s95120@gmail.com')
+            ->setTo('agence.horizon11@gmail.com')
             ->setBody(
                 $form->getData()['message'],
                 'text/plain'
-            );
-        $this->get('mailer')->send($message);
+            )
+        ;
+        $mailer->send($message);
     }
 
     return $this->render('content/contact.html.twig', [

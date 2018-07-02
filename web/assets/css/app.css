@@ -7,6 +7,9 @@ body{
     position: relative;
 
 }
+input{
+    outline: none;
+}
 
 .section{
     height: 100vh;
@@ -330,6 +333,7 @@ h1{
     font-size: 1.8vw;
     line-height: 2.8vw;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .first-section-content p{
@@ -1010,27 +1014,6 @@ input::placeholder {
 }
 
 
-@media not all and (min-resolution:.001dpcm) {
-    @media {
-        .safari_only {
-
-        #check-box {
-            display: flex;
-            margin-top: 3%;
-            margin-left: 0;
-        }
-
-        #submit-ins {
-            width: 100%;
-            margin-top: 6%;
-            margin-left: -18%;
-            -webkit-appearance: none;
-        }
-
-    }
-}
-
-}
 
 .section-profil{
     display: flex;
@@ -1356,4 +1339,56 @@ input::placeholder {
     position: relative;
     display: flex;
     justify-content: space-between;
+}
+
+/* Contact */
+#form-contact{
+    width: 80%;
+    margin-top: 3%;
+}
+.form-group-contact{
+     width: 100%;
+     margin-top: 3%;
+ }
+.form-group-contact input {
+    width: 100%;
+    padding-bottom: 1%;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 3px solid black;
+}
+.form-group-contact textarea {
+    width: 100%;
+    padding-bottom: 1%;
+    resize: none;
+    border-radius: 0;
+    height: 15vh;
+    border: 3px solid black;
+}
+.form-group-contact-btn button{
+    background-color: #fff;
+    width: 15vw;
+    padding: 7%;
+    padding-top: 1.2%;
+    padding-bottom: 1.2%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+.form-group-contact-btn{
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-group-contact button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    -webkit-appearance: none;
 }

@@ -1,9 +1,87 @@
-{% extends "base-2.html.twig" %}
+{% extends "base.html.twig" %}
 {% block layout_content %}
 
-    {{ form(form) }}
+
+
+    <div id="fullpage">
+
+
+        <section id="first-section" class="first-section section" data-midnight="default" data-anchor="slide1">
+            <div class="first-section-content position-finale">
+               <h2>Demander l’oeuvre<br>
+                    qui vous <span class="blue">ressemble</span> !
+                </h2>
+                <h3>
+                    Décrivez, choisissez, exposez !
+                </h3>
+
+                <p>Confiez votre projet à un artiste pour une œuvre qui vous ressemble. La demande de dépôt est totalement gratuite
+                    et sans engagement  </p>
+                <div id="div-btn-artent">
+                    <a onClick="_gaq.push(['_trackEvent', 'Bouton Entreprise Home', 'Clic', 'Lugh']);" href="#slide2" class="js-scrollTo">Commencer</a>
+                     </div>
+
+            </div>
+            <div id="first-section-content-2" class="background-right img-fadein"></div>
+        </section>
+
+        <section id="second-section" class="section reveal" data-midnight="white" data-anchor="slide2">
+
+            <div class="second-section-content">
+                <h3>Décrivez votre oeuvre</h3>
+                <p>Explicitez avec détail ce que vous attendez de l’artiste.
+                    Le type d’oeuvre ou le thème de celle-ci, les dimensions
+                    du lieu qui accueillera ainsi que toutes informations
+                    que vous jugerez utile
+                </p>
+                <form id="form-contact" name="form" method="post">
+                    <div id="form">
+                        <div class="flex-form">
+                        {#<div class="form-group-contact">#}
+                            {#<input type="text" id="form_nom" name="form[nom]" placeholder="Nom" required="required"/>#}
+                        {#</div >#}
+                            <div class="form-group-contact">
+                                <input type="email" id="form_from" name="form[from]" placeholder="Votre e-mail"/>
+                            </div>
+                        </div>
+
+                        <div class="form-group-contact">
+                            <textarea id="form_message" name="form[message]" placeholder="Votre message" required="required">
+                            </textarea>
+                        </div>
+                        <div class="form-group-contact-btn">
+                            <button type="submit" id="form_send" name="form[send]">Envoyer</button>
+                        </div>
+                        <input type="hidden" id="form__token" name="form[_token]"
+                               value="Wkn2RyjtpT12FgDdC3oR_I_UgOUzEq_GPaV1r8odKmc"/></div>
+                </form>
+
+            </div>
+            <div id="second-section-content-2" class="background-right"></div>
+            <footer id="footer">
+                <div id="copyright">
+                    <ul>
+                        <li>© Lugh</li>
+                        <li>Presse</li>
+                        <li>Livre Blanc</li>
+                        <li><a href="/mentions">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div id="rs">
+                    <ul>
+                        <li><a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/lugh_france/">instagram</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/lugh-entreprise/">linkedin</a></li>
+                        <li><a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+        </section>
+
+
+    </div>
 
 
 {% endblock %}
-
-
