@@ -44,7 +44,7 @@ class AddProjetController extends Controller
             $mailer->send($message);
         }
 
-        return $this->render('content/contact.html.twig', [
+        return $this->render('Registration/addprojet.html.twig', [
 
             'form' => $form->createView()
         ]);

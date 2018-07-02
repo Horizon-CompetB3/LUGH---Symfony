@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactController extends Controller
@@ -21,6 +22,7 @@ public function contactAction(Request $request)
 {
 
     $form = $this->createFormBuilder()
+        ->add('nom', TextType::class)
         ->add('from', EmailType::class)
         ->add('message', TextareaType::class)
         ->add('send', SubmitType::class)
@@ -33,12 +35,13 @@ public function contactAction(Request $request)
         $mailer = $this->get('mailer');
 
         $message = \Swift_Message::newInstance()
-            ->setSubject('Dépot de Projet - LUGH')
+            ->setSubject('Demande de contact')
             ->setFrom($data['from'])
             ->setTo('agence.horizon11@gmail.com')
-            ->setBody(
-                $form->getData()['message'],
-                'text/plain'
+            ->setBody(array( $form->getData()['message'],
+                    'text/plain',
+                    $data['nom'])
+
             )
         ;
         $mailer->send($message);
