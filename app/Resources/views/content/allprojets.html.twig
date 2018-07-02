@@ -1,7 +1,42 @@
+{% extends "base.html.twig" %}
+{% block layout_content %}
 
+    <section id="first-section" class="first-section section" data-midnight="default" data-anchor="slide1">
+        <div class="first-section-allprojets position-finale">
+            <p>Vous trouverez ici les projets des entreprises qui ont besoin de faire appel à votre talent pour mettre en avant leurs valeurs et donner un nouvel élan à leur communication. </p>
+            {% for projet in projets %}
+                <div>
+                    <div class="flex-form">
+                        <div class="card-header">{{ projet.name }}</div>
+                        <div class="card-header">{{ projet.type }}</div>
+                    </div>
+                    <div class="flex-form">
+                        <div>
+                            <p>Type: {{ projet.type }}</p>
+                            <p>Thème: {{ projet.theme }}</p>
+                            <p>Orientation : {{ projet.orientation }}</p>
 
-    {% for projet in projets %}
-        <div>
-                <div class="card-header">{{ projet.name }}</div>
+                        </div>
+                        <div>
+
+                            <p>{{ projet.description }}</p>
+                        </div>
+
+                    </div>
+                    <div class="flex-form">
+                        <div><p>lieu</p>
+                        <p>date</p>
+                        </div>
+                        <div>
+                            <button>Voir le Projet</button>
+                            <button>Faire une proposition</button>
+                        </div>
+                    </div>
+
+                </div>
+            {% endfor %}
+
         </div>
-    {% endfor %}
+        <div id="first-section-allprojets-2" class="background-right img-fadein"></div>
+    </section>
+{% endblock %}

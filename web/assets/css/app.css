@@ -1392,3 +1392,24 @@ input::placeholder {
     transition: 0.5s;
     -webkit-appearance: none;
 }
+
+
+/* PAGE ALL PROJETS */
+
+.first-section-allprojets {
+    margin-top: 8%;
+    margin-bottom: auto;
+    width: 40%;
+    margin-left: 3vw;
+}
+#first-section-allprojets-2{
+    background-image: url("../img/IMG1-HOME.jpg");
+    width: 30vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    transition: 0.4s;
+}
