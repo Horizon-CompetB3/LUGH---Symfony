@@ -1,7 +1,7 @@
 {% extends "base.html.twig" %}
 {% block layout_content %}
 
-
+    <form name="candidatures" method="post">
 
     <div id="fullpage">
 
@@ -27,15 +27,13 @@
 
             <div class="second-section-content">
                 <h2>Etape 1 : Décrivez votre proposition</h2>
-                <form name="candidatures" method="post">
                     <div id="candidatures">
                         <div>
-                            <label for="candidatures_titre" class="required">Titre</label>
-                            <input type="text" id="candidatures_titre" name="candidatures[titre]" required="required" />
+                            <input type="text" class="border-bottom" id="candidatures_titre" name="candidatures[titre]" required="required" />
                         </div>
                         <div>
-                            <label for="candidatures_type" class="required">Type</label>
-                            <input type="text" id="candidatures_type" name="candidatures[type]" required="required" />
+
+                            <input type="text" id="candidatures_type" class="border-bottom" name="candidatures[type]" required="required" />
                         </div>
                         <div>
                             <label for="candidatures_theme" class="required">Theme</label>
@@ -54,7 +52,6 @@
 
 
             </div>
-                </form>
             </div>
             <div id="second-section-content-2" class="background-right"></div>
         </section>
@@ -73,7 +70,7 @@
         <section id="five-section" class="section reveal" data-midnight="white" data-anchor="slide4">
 
             <div class="five-section-content">
-                <form name="candidatures" method="post">
+
                 <div>
                     <label for="candidatures_nom" class="required">Nom</label>
                     <input type="text" id="candidatures_nom" name="candidatures[nom]" required="required" />
@@ -121,7 +118,6 @@
                 <div><button type="submit" id="candidatures_save" name="candidatures[save]" class="save">Save</button>
                 </div>
                 <input type="hidden" id="candidatures__token" name="candidatures[_token]" value="aDB0uhhMsV8EuugCMeGxrgx6pj8yIsShJ2WH07FwUbI" />
-            </form>
             </div>
 
 
@@ -129,7 +125,6 @@
         </section>
         <section id="fourth-section" class="section reveal" data-midnight="white" data-anchor="slide5">
             <div class="fourth-section-content">
-                <form name="candidatures" method="post">
 
                     <div>
                         <label for="candidatures_presentation" class="required">Presentation</label>
@@ -142,7 +137,7 @@
                     <div><button type="submit" id="candidatures_save" name="candidatures[save]" class="save">Save</button>
                     </div>
                     <input type="hidden" id="candidatures__token" name="candidatures[_token]" value="aDB0uhhMsV8EuugCMeGxrgx6pj8yIsShJ2WH07FwUbI" />
-                </form>
+
             </div>
             <div id="fourth-section-content-2" class="background-right"></div>
 
@@ -168,6 +163,7 @@
 
         </section>
     </div>
+    </form>
 
 
 {% endblock %}

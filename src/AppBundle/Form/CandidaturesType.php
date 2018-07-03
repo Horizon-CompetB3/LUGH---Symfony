@@ -13,6 +13,7 @@ use AppBundle\Entity\Candidatures;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -24,10 +25,21 @@ class CandidaturesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('type', TextType::class)
+            ->add('type', ChoiceType::class, array(
+                'choices'  => array(
+                    'Céramique' => 'Céramique',
+                    'Plastique' => 'Plastique',
+                    'Peinture' => 'Peinture',
+                )))
             ->add('titre', TextType::class)
             ->add('croquis', TextType::class)
-            ->add('orientation', TextType::class)
+            ->add('orientation',ChoiceType::class,
+                array('choices' => array(
+                    'Paysage' => 'paysage',
+                    'Aucune' => 'aucune',
+                    'Portrait' => 'Portrait',
+                ),
+                    'choices_as_values' => true,'multiple'=>false,'expanded'=>true))
             ->add('description_candidature', TextareaType::class)
             ->add('theme', TextareaType::class)
             ->add('nom', TextType::class)
