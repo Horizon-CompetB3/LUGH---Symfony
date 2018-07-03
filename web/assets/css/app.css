@@ -393,18 +393,19 @@ h1{
 }
 
 .h2-contact {
-    font-size: 2.8vw !important;
-    line-height: 3.8vw !important;
+    font-size: 2.5vw !important;
+    line-height: 3.5vw !important;
     font-weight: 600 !important;
     text-transform: uppercase !important;
+    margin-top: 8% !important;
 }
 
 .p-contact {
-    font-size: 1.2vw !important;
+    font-size: 1.1vw !important;
     line-height: 1.5vw !important;
     width: 65% !important;
     font-weight: 500 !important;
-    margin-top: 6% !important;
+    margin-top: 3% !important;
 }
 
 #div-btn-artent a:hover{
@@ -1409,7 +1410,7 @@ display: flex;
 }
 .form-group-contact{
      width: 100%;
-     margin-top: 3%;
+     margin-top: 1%;
  }
 
 .input-addprojet {
