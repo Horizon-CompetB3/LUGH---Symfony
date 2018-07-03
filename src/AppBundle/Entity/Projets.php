@@ -15,8 +15,26 @@ class Projets
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Candidatures", cascade={"persist"})
      */
-    private $id;
+
+    private $id_projet;
+
+    /**
+     * @return mixed
+     */
+    public function getIdProjet()
+    {
+        return $this->id_projet;
+    }
+
+    /**
+     * @param mixed $id_projet
+     */
+    public function setIdProjet($id_projet)
+    {
+        $this->id_projet = $id_projet;
+    }
 
     /**
      * @ORM\Column(type="string", length=55, unique=true)
@@ -46,8 +64,7 @@ class Projets
 
 
     /**
-     * @ORM\Column(type="string")
-     * @Assert\NotBlank(message="Please, upload the product brochure as a jpg file.")
+     * @ORM\Column(type="string", nullable=true)
      * @Assert\File(mimeTypes={ "image/jpeg", "image/png" })
      */
     private $image;
@@ -73,10 +90,7 @@ class Projets
     private $profondeur;
 
 
-    public function getId()
-    {
-        return $this->id;
-    }
+
 
     /**
      * @return mixed
