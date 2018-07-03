@@ -344,15 +344,18 @@
 
 
                 <div id="real-content" class="none">
-                    <form id="form-realisations" name="realisations" method="post"
-                          enctype="multipart/form-data">
+
+
+                   <form id="form-realisations" name="realisations" method="post" enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
                                 <label id="label_real" for="realisations_realisations"
                                        class="file_label none">+</label>
 
                                 <input type="file" id="realisations_realisations" name="realisations[realisations]"
-                                       placeholder="+"/>
+
+                                        placeholder="+"/>
+                               
                                 {{ form_widget(form_real._token) }}
 
                                 <button type="submit" id="realisations_save" name="realisations[save]" class="save">
@@ -363,7 +366,6 @@
 
                         </div>
                     </form>
-
 
 
                     {% if is_granted("ROLE_USER") == true and app.user.realisations != "" %}

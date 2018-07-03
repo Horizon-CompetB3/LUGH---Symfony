@@ -79,6 +79,22 @@
         left: 0;
     }
 
+    #add-projet-section-2 {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    #add-projet-section-3 {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     #connexion-section-2 {
         width: 100%;
         height: 30%;
@@ -128,6 +144,24 @@
         padding-bottom: 4%;
         border: 2px solid black;
         text-align: center;
+    }
+
+    .h3-addprojet {
+        margin-top: 10%;
+    }
+
+    #div-btn-addprojet a {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 3.4vw;
+        padding: 6%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border: 2px solid black;
+        text-align: center;
+        width: 50%;
     }
 
     .first-section-content h2 {
@@ -647,6 +681,67 @@
         height: 1vh;
     }
 
+
+    .form-group-contact-btn {
+        width: 100%;
+        margin-top: 3%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .form-group-contact input {
+        width: 100%;
+        padding-bottom: 1%;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 2px solid black;
+    }
+
+    #form-contact {
+        width: 95%;
+        margin-top: 3%;
+    }
+
+    .form-group-contact textarea {
+        width: 100%;
+        padding-bottom: 1%;
+        resize: none;
+        border-radius: 0;
+        height: 13vh;
+        border: 2px solid black;
+        margin-top: 3%;
+    }
+
+    .form-group-contact-btn button {
+        background-color: #fff;
+        width: 40vw;
+        padding: 6%;
+        padding-top: 3.2%;
+        padding-bottom: 3.2%;
+        border: 2px solid black;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 2.5vw;
+        cursor: pointer;
+        transition: 0.5s;
+        -webkit-appearance: none;
+    }
+
+    .h2-contact {
+        font-size: 4vw !important;
+        line-height: 5vw !important;
+        font-weight: 700 !important;
+        text-transform: uppercase !important;
+    }
+
+    .p-contact {
+        font-size: 3vw !important;
+        line-height: 4vw !important;
+        width: 97% !important;
+        font-weight: 500 !important;
+        margin-top: 2% !important;
+    }
+
 }
 
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
@@ -680,6 +775,14 @@
     }
 
     #connexion-section-2 {
+        width: 45%;
+    }
+
+    #add-projet-section-2 {
+        width: 45%;
+    }
+
+    #add-projet-section-3 {
         width: 45%;
     }
 
@@ -729,6 +832,14 @@
     }
 
     #connexion-section-2 {
+        width: 37%;
+    }
+
+    #add-projet-section-2 {
+        width: 37%;
+    }
+
+    #add-projet-section-3 {
         width: 37%;
     }
 
