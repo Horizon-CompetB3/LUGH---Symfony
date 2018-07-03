@@ -8,7 +8,7 @@ Pour l'installer il vous suffit de cloner le repository avec la commande "git cl
 
 Lancer l'installation des bundle avec composer => 'composer install' (Ouais ils se sont pas foulé pour cette commande)
 
-Il va vous demander la configuration du fichiers paramerters.yml => indiqué lui toutes les infos necessaires pour la connection à votre server MySQL.
+Il va vous demander la configuration du fichiers paramerters.yml => indiqué lui toutes les infos necessaires pour la connexion à votre server MySQL.
 
 Faire un petit "php bin/console doctrine:schema:upadate --force" des familles pour creer la base de données
 
