@@ -287,7 +287,9 @@
 
 
                 <div id="real-content" class="none">
+
                    <form id="form-realisations" name="realisations" method="post"
+
                           enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
@@ -296,6 +298,7 @@
 
                                 <input type="file" id="realisations_realisations" name="realisations[realisations]"
                                         placeholder="+"/>
+                                {{ form_widget(form_real._token) }}
                                 <button type="submit" id="realisations_save" name="realisations[save]" class="save">
                                     Enregistrer
                                 </button>
@@ -303,7 +306,10 @@
 
                         </div>
                     </form>
+
                     {{ form_widget(form_real._token) }}
+
+
 
                     <div id="img-real">
                         <div class="container-img">

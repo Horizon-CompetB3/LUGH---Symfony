@@ -68,6 +68,7 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", nullable=true)
      * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
+     * @Assert\Image(mimeTypes={ "image/jpeg" })
      */
     public $realisations;
 
