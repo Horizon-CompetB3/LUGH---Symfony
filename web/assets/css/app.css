@@ -1018,13 +1018,18 @@ input::placeholder {
 .section-profil{
     display: flex;
 }
-
+.deco-img{
+    width: 10%;
+}
+.deco-txt{
+    width: 80%;
+}
 .left-bar{
     position: absolute;
     left: 0;
     background-color: #f6f6f6;
     height: 100vh;
-    width: 14vw;
+    width: 9vw;
 }
 
 .left-bar-mobile {
@@ -1066,25 +1071,23 @@ input::placeholder {
 }
 
 .img-fleche-gauche {
-    width: 1%;
     margin-right: 2%;
+    height: 3vh;
 }
 
 .img-deconnexion {
-    width: 7%;
-    margin-right: 5%;
+    width: 100%;
 }
 
 .deconnexion {
-    display: block;
     position: absolute;
     bottom: 2%;
     left: 8%;
     text-decoration: none;
     color: black;
-    font-size: 1.3vw;
     font-weight: 500;
-    opacity: 1;
+display: flex;
+    justify-content: space-between;
 }
 
 .deconnexion:hover {
@@ -1153,13 +1156,14 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-top: 1%;
-    margin-bottom: 4%;
+    margin-bottom: 2vh;
 }
 
 .profil-container h2{
     color: #fda229;
     margin-bottom: 3%;
-    font-size: 2.2vw;
+    margin-top: 6%;
+    font-size: 1.5vw;
     font-weight: 600;
 }
 
@@ -1178,7 +1182,7 @@ input::placeholder {
     padding: 0.5vw;
     border: 0.5px solid black;
     resize: none;
-    height: 12vh;
+    height: 9vh;
 }
 
 .section-profil form{
@@ -1187,8 +1191,8 @@ input::placeholder {
 
 .section-profil label{
     margin-bottom: 2%;
+    font-size: 0.8vw;
     margin-top: 2%;
-    font-size: 1.2vw;
 }
 
 .section-profil select:after{
@@ -1197,9 +1201,16 @@ input::placeholder {
     background-color: transparent;
     border-radius: 0;
 }
+.flex-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0.8vw;
+    width: 100%;
+    margin-top: 3%;
+}
 
 #ident-ent{
-    margin-top: 10vh;
+    height: 45%;
 }
 
 #ident-ent h3{
@@ -1241,7 +1252,6 @@ input::placeholder {
     color: #000;
     outline: none;
     transition: 0.5s;
-    position: absolute;
     right: -1vw;
     margin-top: 2%;
 }
@@ -1272,22 +1282,23 @@ input::placeholder {
 .h3-profil {
     font-size: 1.3vw;
     font-weight: 600;
-    margin-top: -3%;
 }
 
 .profil-container a {
     text-decoration: none;
     color: black;
     position: absolute;
+    display: flex;
     width: 65%;
     top: 7%;
 }
 
-
-#realisations_realisations {  display: none}
+#realisations_realisations{
+    border: none;
+}
 
 .file_label {
-    display: block;
+    display: none;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 3vw;

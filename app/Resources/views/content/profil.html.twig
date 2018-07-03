@@ -54,8 +54,7 @@
                 </div>
             {% endif %}
         </div>
-        <a href="/logout" class="deconnexion"><img class="img-deconnexion"
-                                                   src="{{ asset('assets/img/deconnexion.png') }}" alt="déconnexion>">Déconnexion</a>
+        <a href="/logout" class="deconnexion"><div class="deco-img"><img class="img-deconnexion" src="{{ asset('assets/img/deconnexion.png') }}" alt="déconnexion>"></div><div class="deco-txt"><h4>Déconnexion</h4></div></a>
     </div>
 
 
@@ -64,7 +63,7 @@
 
         <div class="profil-container">
             <a href="/"><img class="img-fleche-gauche" src="{{ asset('assets/img/fleche-gauche.png') }}"
-                             alt="flèche gauche>"
+                             alt="flèche gauche">
                 <h3 class="h3-profil">Revenir au site</h3></a>
 
             <div class="left-bar-mobile">
@@ -93,15 +92,11 @@
 
                 {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
                     <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent"
-                                class="side-button-profil left-button-active">Informations
-                        </button>
+                        <button onclick="diplayNoneFormInfoEnt()" id="side-button-info-ent" class="side-button-profil left-button-active">Informations</button>
                         <div id="side-info-ent-mobile" class="side-color"></div>
                     </div>
                     <div class="cont-btn-profil">
-                        <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">
-                            Profil Entreprise
-                        </button>
+                        <button onclick="diplayNoneFormProEnt()" id="side-button-pro-ent" class="side-button-profil">Profil Entreprise</button>
                         <div id="side-pro-ent-mobile" class="side-color none"></div>
                     </div>
                 {% endif %}
@@ -125,53 +120,44 @@
 
             {% endif %}
 
-            <form id="complete_artiste" name="complete_artiste" method="post">
-                <div>
-                    <div class="flex-form">
-                        <div>
-                            <label for="complete_artiste_nom" class="required">Nom</label>
-                            <input type="text" id="complete_artiste_nom" name="complete_artiste[nom]"
-                                   value="{{ app.user.nom }}"/>
-                        </div>
-                        <div>
-                            <label for="complete_artiste_prenom" class="required">Prenom</label>
-                            <input type="text" id="complete_artiste_prenom" name="complete_artiste[prenom]"
-                                   value="{{ app.user.prenom }}"/>
-                        </div>
-                    </div>
-                    <div class="flex-form">
-                        <div>
-                            <label for="complete_artiste_email" class="required">Email</label>
-                            <input type="email" id="complete_artiste_email" name="complete_artiste[email]"
-                                   value="{{ app.user.email }}"/>
-                        </div>
-                        <div>
-                            <label for="complete_artiste_telephone" class="required">Telephone</label>
-                            <input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]"
-                                   value="{{ app.user.telephone }}"/>
-                        </div>
-                    </div>
-                    <div>
-                        <label for="complete_artiste_adresse" class="required">Adresse</label>
-                        <input type="text" id="user_input_autocomplete_address" name="complete_artiste[adresse]"
-                               value="{{ app.user.adresse }}"/>
-                    </div>
-                    <div class="btn-form-profil">
-                        <button type="submit" id="complete_artiste_save" name="complete_artiste[save]" class="save">
-                            Enregistrer
-                        </button>
-                    </div>
-                    {{ form_row(form_art._token) }}
-                </div>
-            </form>
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 1 %}
 
                 <div id="image-right-ent" class="background-right img-fadein image-right"></div>
-                <div id="ident-ent">
-                    <h3>Identification de l’entreprise</h3>
+                <div id="ident-ent" class="">
+
                     <form name="info_ent" method="post">
                         <div id="info_ent">
+                                <div class="flex-form">
+                                    <div>
+                                        <label for="complete_artiste_nom" class="required">Nom</label>
+                                        <input type="text" id="complete_artiste_nom" name="info_ent[nom]"
+                                               value="{{ app.user.nom }}"/>
+                                    </div>
+                                    <div>
+                                        <label for="complete_artiste_prenom" class="required">Prenom</label>
+                                        <input type="text" id="complete_artiste_prenom" name="info_ent[prenom]"
+                                               value="{{ app.user.prenom }}"/>
+                                    </div>
+                                </div>
+                                <div class="flex-form">
+                                    <div>
+                                        <label for="complete_artiste_email" class="required">Email</label>
+                                        <input type="email" id="complete_artiste_email" name="info_ent[email]"
+                                               value="{{ app.user.email }}"/>
+                                    </div>
+                                    <div>
+                                        <label for="complete_artiste_telephone" class="required">Telephone</label>
+                                        <input type="text" id="complete_artiste_telephone" name="info_ent[telephone]"
+                                               value="{{ app.user.telephone }}"/>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="complete_artiste_adresse" class="required">Adresse</label>
+                                    <input type="text" id="user_input_autocomplete_address" name="info_ent[adresse]"
+                                           value="{{ app.user.adresse }}"/>
+                                </div>
+                            <h3>Identification de l’entreprise</h3>
                             <div class="flex-form">
                                 <div>
                                     <label for="info_ent_raison_sociale" class="required">Raison sociale</label>
@@ -191,22 +177,22 @@
                                            value=""/>
                                 </div>
                                 <div>
-                                    <label for="info_ent_telephone_ent" class="required">Telephone ent</label>
+                                    <label for="info_ent_telephone_ent" class="required">Telephone</label>
                                     <input type="text" id="info_ent_telephone_ent" name="info_ent[telephone_ent]"
                                            required="required" value=""/>
                                 </div>
                             </div>
                             <div>
-                                <label for="info_ent_adresse_ent" class="required">Adresse ent</label>
+                                <label for="info_ent_adresse_ent" class="required">Adresse</label>
                                 <input type="text" id="info_ent_adresse_ent" name="info_ent[adresse_ent]"
                                        required="required" value=""/>
                             </div>
-                            <div class="btn-form-profil">
+                            {{ form_row(form_info_ent._token) }}
+                            <div class="btn-form-profil flex-btn">
                                 <button type="submit" id="info_ent_save" name="info_ent[save]" class="save">Enregistrer
                                 </button>
                             </div>
-                            <input type="hidden" id="info_ent__token" name="info_ent[_token]"
-                                   value="lBi3gZ3sdeTjN5iLzP58GcTr4Z_42ZWI5XMEG9mQYuA"/></div>
+                        </div>
                     </form>
 
                 </div>
@@ -265,7 +251,7 @@
                                           required="required"></textarea>
                             </div>
 
-                            <div class="btn-form-profil">
+                            <div class="btn-form-profil flex-btn">
                                 <button type="submit" id="profil_ent_save" name="profil_ent[save]" class="save">
                                     Enregistrer
                                 </button>
@@ -281,47 +267,115 @@
             {% endif %}
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
+            {#<form  id="complete_artiste" name="complete_artiste" method="post">#}
+                {#<div class="flex-form">#}
+                    {#<div>#}
+                        {#<label for="complete_artiste_nom" class="required">Nom</label>#}
+                        {#<input type="text" id="complete_artiste_nom" name="art[nom]"#}
+                               {#value="{{ app.user.nom }}"/>#}
+                    {#</div>#}
+                    {#<div>#}
+                        {#<label for="complete_artiste_prenom" class="required">Prenom</label>#}
+                        {#<input type="text" id="complete_artiste_prenom" name="art[prenom]"#}
+                               {#value="{{ app.user.prenom }}"/>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div class="flex-form">#}
+                    {#<div>#}
+                        {#<label for="complete_artiste_email" class="required">Email</label>#}
+                        {#<input type="email" id="complete_artiste_email" name="art[email]"#}
+                               {#value="{{ app.user.email }}"/>#}
+                    {#</div>#}
+                    {#<div>#}
+                        {#<label for="complete_artiste_telephone" class="required">Telephone</label>#}
+                        {#<input type="text" id="complete_artiste_telephone" name="art[telephone]"#}
+                               {#value="{{ app.user.telephone }}"/>#}
+                    {#</div>#}
+                {#</div>#}
+                {#<div>#}
+                    {#<label for="complete_artiste_adresse" class="required">Adresse</label>#}
+                    {#<input type="text" id="user_input_autocomplete_address" name="art[adresse]"#}
+                           {#value="{{ app.user.adresse }}"/>#}
+                {#</div>#}
+                {#{{ form_row(form_art._token) }}#}
+                {#<div class="btn-form-profil">#}
+                    {#<button type="submit" id="info_artiste_save" name="art[save]" class="save">#}
+                        {#Enregistrer#}
+                    {#</button>#}
+                {#</div>#}
+            {#</form>#}
 
+                <form name="complete_artiste" method="post">
+                    <div id="complete_artiste">
+                        <div class="flex-form">
+                        <div>
+                            <label for="complete_artiste_nom" class="required">Nom</label>
+                            <input type="text" id="complete_artiste_nom" name="complete_artiste[nom]" required="required"/>
+                        </div>
+                        <div>
+                            <label for="complete_artiste_prenom" class="required">Prenom</label>
+                            <input type="text" id="complete_artiste_prenom" name="complete_artiste[prenom]" required="required"/>
+                        </div>
+                        </div>
+                        <div id="complete_artiste">
+                        <div>
+                            <label for="complete_artiste_email" class="required">Email</label>
+                            <input type="email" id="complete_artiste_email" name="complete_artiste[email]" required="required" value="alexandre-smagghe@outlook.com"/>
+                        </div>
+                        <div>
+                            <label for="complete_artiste_adresse" class="required">Adresse</label>
+                            <input type="text" id="complete_artiste_adresse" name="complete_artiste[adresse]" required="required"/>
+                        </div>
+                        </div>
+                        <div>
+                            <label for="complete_artiste_telephone" class="required">Telephone</label><input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]" required="required"/>
+                        </div>
+                        <div class="flex-btn">
+                            <button type="submit" id="complete_artiste_save" name="complete_artiste[save]" class="save">
+                                Enregistrer
+                            </button>
+                        </div>
+                        {{ form_row(form_art._token) }}
+                    </div>
+                </form>
+                {#{{ form(form_art) }}#}
 
                 <div id="image-right-art" class="background-right img-fadein image-right"></div>
 
 
                 <div id="real-content" class="none">
-                   <form id="form-realisations" name="realisations" method="post"
+                    <form id="form-realisations" name="realisations" method="post"
                           enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
                                 <label id="label_real" for="realisations_realisations"
-                                       class="file_label">+</label>
+                                       class="file_label none">+</label>
 
                                 <input type="file" id="realisations_realisations" name="realisations[realisations]"
-                                        placeholder="+"/>
+                                       placeholder="+"/>
+                                {{ form_widget(form_real._token) }}
+
                                 <button type="submit" id="realisations_save" name="realisations[save]" class="save">
                                     Enregistrer
                                 </button>
+
                             </div>
 
                         </div>
                     </form>
-                    {{ form_widget(form_real._token) }}
 
-                    <div id="img-real">
-                        <div class="container-img">
-                            <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
-                            <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
 
-                        </div>
-                        <div class="container-img">
-                            <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">
-                            </div>
-                            <div class="div-img">
-                                <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
-                        </div>
 
-                    </div>
+                    {% if is_granted("ROLE_USER") == true and app.user.realisations != "" %}
+                        <div id="img-real">
+                              <div class="container-img">
+                                  <div class="div-img">
+                                      <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
+                                  {#<div class="div-img">#}
+                                      {#<img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>#}
+                              </div>
+                          </div>
+                    {% endif %}
 
                 </div>
 
@@ -344,12 +398,12 @@
                             <textarea id="info_artiste_experience" name="info_artiste[experience]"
                                       required="required"></textarea>
                         </div>
-                        <div class="btn-form-profil">
+                        {{ form_row(form_info._token) }}
+                        <div class="btn-form-profil flex-btn">
                             <button type="submit" id="info_artiste_save" name="info_artiste[save]" class="save">
                                 Enregistrer
                             </button>
                         </div>
-                        <input type="hidden" id="info_artiste__token" name="info_artiste[_token]"/>
                     </div>
                 </form>
 
@@ -363,134 +417,5 @@
 
     </section>
 
-    <!-- Include Google Maps JS API -->
-    <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCPx9-c7_wRoUlBnzW4Ws0BSyKcSPqMA2k">
-    </script>
 
-    <!-- Custom JS code to bind to Autocomplete API -->
-    <!-- find it here: https://github.com/lewagon/google-place-autocomplete/blob/gh-pages/autocomplete.js -->
-    <!-- We'll detail this file in the article -->
-    <script type="text/javascript">
-        function initializeAutocomplete(id) {
-            var element = document.getElementById(id);
-            if (element) {
-                var autocomplete = new google.maps.places.Autocomplete(element, {types: ['geocode']});
-                google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
-            }
-        }
-
-        function onPlaceChanged() {
-            var place = this.getPlace();
-
-            // console.log(place);  // Uncomment this line to view the full object returned by Google API.
-
-            for (var i in place.address_components) {
-                var component = place.address_components[i];
-                for (var j in component.types) {  // Some types are ["country", "political"]
-                    var type_element = document.getElementById(component.types[j]);
-                    if (type_element) {
-                        type_element.value = component.long_name;
-                    }
-                }
-            }
-        }
-
-        google.maps.event.addDomListener(window, 'load', function () {
-            initializeAutocomplete('user_input_autocomplete_address');
-        });
-
-        function diplayNoneFormRea() {
-            document.getElementById('complete_artiste').classList.add('none');
-            document.getElementById('info_artiste').classList.add('none');
-            document.getElementById('real-content').classList.remove('none')
-            document.getElementById('h2-info-art').classList.add('none');
-            document.getElementById('h2-pro-art').classList.add('none');
-            document.getElementById('h2-rea-art').classList.remove('none');
-            document.getElementById('side-info-art').classList.add('none');
-            document.getElementById('side-pro-art').classList.add('none');
-            document.getElementById('side-rea-art').classList.remove('none');
-            document.getElementById('side-info-art-mobile').classList.add('none');
-            document.getElementById('side-pro-art-mobile').classList.add('none');
-            document.getElementById('side-rea-art-mobile').classList.remove('none');
-            document.getElementById('side-button-info-art').classList.remove('left-button-active');
-            document.getElementById('side-button-pro-art').classList.remove('left-button-active');
-            document.getElementById('side-button-rea-art').classList.add('left-button-active');
-        }
-
-        function diplayNoneFormComp() {
-            document.getElementById('complete_artiste').classList.remove('none');
-            document.getElementById('info_artiste').classList.add('none');
-            document.getElementById('real-content').classList.add('none');
-            document.getElementById('h2-info-art').classList.remove('none');
-            document.getElementById('h2-pro-art').classList.add('none');
-            document.getElementById('h2-rea-art').classList.add('none');
-            document.getElementById('side-info-art').classList.remove('none');
-            document.getElementById('side-pro-art').classList.add('none');
-            document.getElementById('side-rea-art').classList.add('none');
-            document.getElementById('side-info-art-mobile').classList.remove('none');
-            document.getElementById('side-pro-art-mobile').classList.add('none');
-            document.getElementById('side-rea-art-mobile').classList.add('none');
-            document.getElementById('side-button-info-art').classList.add('left-button-active');
-            document.getElementById('side-button-pro-art').classList.remove('left-button-active');
-            document.getElementById('side-button-rea-art').classList.remove('left-button-active');
-        }
-
-        function diplayNoneFormInfo() {
-            document.getElementById('info_artiste').classList.remove('none');
-            document.getElementById('complete_artiste').classList.add('none');
-            document.getElementById('real-content').classList.add('none');
-            document.getElementById('h2-info-art').classList.add('none');
-            document.getElementById('h2-pro-art').classList.remove('none');
-            document.getElementById('h2-rea-art').classList.add('none');
-            document.getElementById('side-info-art').classList.add('none');
-            document.getElementById('side-pro-art').classList.remove('none');
-            document.getElementById('side-rea-art').classList.add('none');
-            document.getElementById('side-info-art-mobile').classList.add('none');
-            document.getElementById('side-pro-art-mobile').classList.remove('none');
-            document.getElementById('side-rea-art-mobile').classList.add('none');
-            document.getElementById('side-button-info-art').classList.remove('left-button-active');
-            document.getElementById('side-button-pro-art').classList.add('left-button-active');
-            document.getElementById('side-button-rea-art').classList.remove('left-button-active');
-
-
-        }
-
-        function diplayNoneFormProEnt() {
-            document.getElementById('profil-ent').classList.remove('none');
-            document.getElementById('complete_artiste').classList.add('none');
-            document.getElementById('ident-ent').classList.add('none');
-            document.getElementById('h2-info-ent').classList.add('none');
-            document.getElementById('h2-pro-ent').classList.remove('none');
-            document.getElementById('side-info-ent').classList.add('none');
-            document.getElementById('side-pro-ent').classList.remove('none');
-            document.getElementById('side-info-ent-mobile').classList.add('none');
-            document.getElementById('side-pro-ent-mobile').classList.remove('none');
-            document.getElementById('side-button-info-ent').classList.remove('left-button-active');
-            document.getElementById('side-button-pro-ent').classList.add('left-button-active');
-        }
-
-        function diplayNoneFormInfoEnt() {
-            document.getElementById('profil-ent').classList.add('none');
-            document.getElementById('complete_artiste').classList.remove('none');
-            document.getElementById('ident-ent').classList.remove('none');
-            document.getElementById('h2-info-ent').classList.remove('none');
-            document.getElementById('h2-pro-ent').classList.add('none');
-            document.getElementById('side-info-ent').classList.remove('none');
-            document.getElementById('side-pro-ent').classList.add('none');
-            document.getElementById('side-button-info-ent').classList.add('left-button-active');
-            document.getElementById('side-button-pro-ent').classList.remove('left-button-active');
-            document.getElementById('side-info-ent-mobile').classList.remove('none');
-            document.getElementById('side-pro-ent-mobile').classList.add('none');
-        }
-
-        var btnprofil = document.getElementById('side-info-ent');
-        if ($("#side-info-ent").is('none')) {
-            document.getElementById('side-info-ent').classList.add('side-visible')
-
-        }
-        ;
-
-
-    </script>
 {% endblock %}

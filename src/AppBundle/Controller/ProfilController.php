@@ -48,7 +48,7 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('profil');
         }
 
         //
@@ -68,7 +68,7 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('profil');
         }
 
         //
@@ -101,10 +101,9 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-
             // ... persist the $product variable or any other work
 
-            return $this->redirect($this->generateUrl('home'));
+            return $this->redirect($this->generateUrl('profil'));
         }
 
         //
@@ -124,7 +123,7 @@ class ProfilController extends Controller
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($editUser);
                 $em->flush();
-                return $this->redirectToRoute('home');
+                return $this->redirectToRoute('profil');
             }
 
             //
