@@ -812,48 +812,43 @@
 @media only screen and (min-width: 1680px) {
 
     #first-section-content-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #second-section-content-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #third-section-content-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #fourth-section-content-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #five-section-content-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #connexion-section-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #add-projet-section-2 {
-        width: 37%;
+        width: 30vw;
     }
 
     #add-projet-section-3 {
-        width: 37%;
+        width: 30vw;
     }
 
     #image-right-ent {
-        width: 37%;
+        width: 30vw;
     }
 
     #image-right-art {
-        width: 37%;
-    }
-
-
-    .sidebar {
-        right: 10%;
+        width: 30vw;
     }
 
     .link-home {

@@ -22,7 +22,10 @@ class AddProjetController extends Controller
     {
 
         $form = $this->createFormBuilder()
+
             ->add('from', EmailType::class)
+            ->add('nom', EmailType::class)
+            ->add('prenom', EmailType::class)
             ->add('message', TextareaType::class)
             ->add('send', SubmitType::class)
             ->getForm();
@@ -34,7 +37,7 @@ class AddProjetController extends Controller
             $mailer = $this->get('mailer');
 
             $message = \Swift_Message::newInstance()
-                ->setSubject('Dépot de Projet - LUGH')
+                ->setSubject('Dépot de Projet - LUGH - nom :' . $data['nom'] . '- prénom :' . $data['prenom'])
                 ->setFrom($data['from'])
                 ->setTo('agence.horizon11@gmail.com')
                 ->setBody(
@@ -43,6 +46,7 @@ class AddProjetController extends Controller
                 )
             ;
             $mailer->send($message);
+            echo '<script>alert ("Votre demande a bien été transmis")</script>';
         }
 
         return $this->render('Registration/addprojet.html.twig', [

@@ -3,7 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-use AppBundle\Entity\Document;
+
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Security\Core\User\UserInterface;
 
@@ -65,8 +65,27 @@ class User implements UserInterface, \Serializable
      * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
      */
     public $photo_profil;
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
+     */
+    public $realisations;
 
+    /**
+     * @return mixed
+     */
+    public function getRealisations()
+    {
+        return $this->realisations;
+    }
 
+    /**
+     * @param mixed $realisations
+     */
+    public function setRealisations($realisations)
+    {
+        $this->realisations = $realisations;
+    }
     /**
      * @ORM\Column(type="boolean")
      */
@@ -75,57 +94,6 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(name="is_active", type="boolean", nullable=true)
      */
     private $isActive;
-
-    /**
-     * Many Documents have one (the same) Folder
-     * @ORM\OneToMany(targetEntity="Document", mappedBy="folder", cascade={"persist"}, orphanRemoval=true)
-     */
-    private $documents;
-
-    /**
-     * Add document
-     *
-     * @param AppBundle\Entity\Document $document
-     *
-     * @return User
-     */
-    public function addDocument(AppBundle\Entity\Document $document)
-    {
-        // Bidirectional Ownership
-        $document->setFolder($this);
-
-        $this->documents[] = $document;
-
-        return $this;
-    }
-
-    /**
-     * Remove document
-     *
-     * @param AppBundle\Entity\Document $document
-     */
-    public function removeDocument(AppBundle\Entity\Document $document)
-    {
-        $this->documents->removeElement($document);
-    }
-
-    /**
-     * Get documents
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getDocuments()
-    {
-        return $this->documents;
-    }
-
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->documents = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * @return mixed

@@ -77,13 +77,13 @@ input{
 }
 
 .link-entreprise {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -95,21 +95,40 @@ input{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-entreprise {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-entreprise {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-artiste {
     width: 9%;
     padding: 1%;
+    transition: 0.7s;
 }
 
+
+
 .link-artiste {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -121,6 +140,22 @@ input{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-artiste {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-artiste {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-galerie {
@@ -129,13 +164,13 @@ input{
 }
 
 .link-galerie {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -148,20 +183,35 @@ input{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
+.sidebar nav ul li a:hover .link-galerie {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-galerie {
+    opacity: 0.7;
+    transition: 0.4s;
 
+}
 .singe-home {
     width: 9%;
     padding: 1%;
 }
 
 .link-home {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -173,6 +223,22 @@ input{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-home {
+     visibility: visible;
+     opacity: 1;
+     height: 8vh;
+     transition-delay: 0.4s;
+     -webkit-transform: rotate(270deg);
+     -moz-transform: rotate(270deg);
+     -ms-transform: rotate(270deg);
+     -o-transform: rotate(270deg);
+     transform: rotate(270deg);
+ }
+.sidebar nav ul li a:hover .singe-home {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-contact {
@@ -181,13 +247,13 @@ input{
 }
 
 .link-contact {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -200,13 +266,33 @@ input{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
+.sidebar nav ul li a:hover .link-contact {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-contact {
+    opacity: 0.7;
+    transition: 0.4s;
+
+}
 
 .singe-active {
     display: none;
 }
 
 .link-active {
-    display: block;
+    padding: 10px 20px;
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.5s;
 }
 
 
@@ -337,11 +423,12 @@ h1{
 }
 
 .first-section-content p{
-    font-size: 1.2vw;
-    line-height: 1.5vw;
+    font-size: 1vw;
+    line-height: 1.3vw;
     width: 50%;
     font-weight: 500;
     margin-top: 2%;
+
 }
 
 #first-section-content-2{
@@ -391,21 +478,24 @@ h1{
     outline: none;
     transition: 0.5s;
 }
-
-.h2-contact {
-    font-size: 2.8vw !important;
-    line-height: 3.8vw !important;
-    font-weight: 600 !important;
-    text-transform: uppercase !important;
+.larg-form{
+    width: 70%;
 }
 
-.p-contact {
-    font-size: 1.2vw !important;
-    line-height: 1.5vw !important;
-    width: 65% !important;
-    font-weight: 500 !important;
-    margin-top: 6% !important;
-}
+/*.h2-contact {*/
+    /*font-size: 2.8vw !important;*/
+    /*line-height: 3.8vw !important;*/
+    /*font-weight: 600 !important;*/
+    /*text-transform: uppercase !important;*/
+/*}*/
+
+/*.p-contact {*/
+    /*font-size: 1.2vw !important;*/
+    /*line-height: 1.5vw !important;*/
+    /*width: 65% !important;*/
+    /*font-weight: 500 !important;*/
+    /*margin-top: 6% !important;*/
+/*}*/
 
 #div-btn-artent a:hover{
     background-color: black;
@@ -1430,10 +1520,10 @@ display: flex;
  }
 
 .form-group-contact textarea {
-    width: 100%;
+    width: 70%;
     padding-bottom: 1%;
     resize: none;
-    margin-top: 6%;
+    margin-top: 3vh;
     border-radius: 0;
     height: 15vh;
     border: 3px solid black;
@@ -1461,7 +1551,7 @@ display: flex;
 }
 
 .form-group-contact-btn{
-    width: 100%;
+    width: 70%;
     margin-top: 3%;
     display: flex;
     justify-content: flex-end;
@@ -1476,7 +1566,7 @@ display: flex;
 
 
 .h3-addprojet {
-    margin-top: 4%;
+    margin-top: 4%;}
 
 
 /* PAGE ALL PROJETS */
