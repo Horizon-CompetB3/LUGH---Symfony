@@ -49,7 +49,7 @@ class ProfilController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($editUser);
             $em->flush();
-            return $this->redirectToRoute('home');
+            return $this->redirectToRoute('profil');
         }
 
         //

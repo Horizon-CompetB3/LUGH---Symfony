@@ -7,6 +7,9 @@ body{
     position: relative;
 
 }
+input{
+    outline: none;
+}
 
 .section{
     height: 100vh;
@@ -74,13 +77,13 @@ body{
 }
 
 .link-entreprise {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -92,21 +95,40 @@ body{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-entreprise {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-entreprise {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-artiste {
     width: 9%;
     padding: 1%;
+    transition: 0.7s;
 }
 
+
+
 .link-artiste {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -118,6 +140,22 @@ body{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-artiste {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-artiste {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-galerie {
@@ -126,13 +164,13 @@ body{
 }
 
 .link-galerie {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -145,20 +183,35 @@ body{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
+.sidebar nav ul li a:hover .link-galerie {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-galerie {
+    opacity: 0.7;
+    transition: 0.4s;
 
+}
 .singe-home {
     width: 9%;
     padding: 1%;
 }
 
 .link-home {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -170,6 +223,22 @@ body{
     -webkit-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
+}
+.sidebar nav ul li a:hover .link-home {
+     visibility: visible;
+     opacity: 1;
+     height: 8vh;
+     transition-delay: 0.4s;
+     -webkit-transform: rotate(270deg);
+     -moz-transform: rotate(270deg);
+     -ms-transform: rotate(270deg);
+     -o-transform: rotate(270deg);
+     transform: rotate(270deg);
+ }
+.sidebar nav ul li a:hover .singe-home {
+    opacity: 0.7;
+    transition: 0.4s;
+
 }
 
 .singe-contact {
@@ -178,13 +247,13 @@ body{
 }
 
 .link-contact {
-    display: none;
+    visibility: hidden;
     text-decoration: none;
+    height: 0;
     margin: -2%;
-    padding: 10px 20px;
     position: relative;
     color: #000;
-    height: 8vh;
+    opacity: 0;
     font-size: 0.8vw;
     text-transform:  uppercase;
     writing-mode: vertical-lr;
@@ -197,13 +266,33 @@ body{
     -moz-transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
     transition: all .5s cubic-bezier(0.6, 0, 0.5, 1);
 }
+.sidebar nav ul li a:hover .link-contact {
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.4s;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.sidebar nav ul li a:hover .singe-contact {
+    opacity: 0.7;
+    transition: 0.4s;
+
+}
 
 .singe-active {
     display: none;
 }
 
 .link-active {
-    display: block;
+    padding: 10px 20px;
+    visibility: visible;
+    opacity: 1;
+    height: 8vh;
+    transition-delay: 0.5s;
 }
 
 
@@ -330,14 +419,16 @@ h1{
     font-size: 1.8vw;
     line-height: 2.8vw;
     font-weight: 600;
+    text-transform: uppercase;
 }
 
 .first-section-content p{
     font-size: 1vw;
-    line-height: 1.5vw;
+    line-height: 1.3vw;
     width: 50%;
     font-weight: 500;
     margin-top: 2%;
+
 }
 
 #first-section-content-2{
@@ -356,7 +447,7 @@ h1{
 }
 #div-btn-artent a{
     background-color: #fff;
-    padding: 2%;
+    padding: 5%;
     padding-top: 1%;
     padding-bottom: 1%;
     border: 3px solid black;
@@ -371,9 +462,44 @@ h1{
     transition: 0.5s;
 }
 
+#div-btn-addprojet a{
+    background-color: #fff;
+    padding: 7%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.8vw;
+    margin-right: 2vw;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    outline: none;
+    transition: 0.5s;
+}
+.larg-form{
+    width: 70%;
+}
+
+/*.h2-contact {*/
+    /*font-size: 2.8vw !important;*/
+    /*line-height: 3.8vw !important;*/
+    /*font-weight: 600 !important;*/
+    /*text-transform: uppercase !important;*/
+/*}*/
+
+/*.p-contact {*/
+    /*font-size: 1.2vw !important;*/
+    /*line-height: 1.5vw !important;*/
+    /*width: 65% !important;*/
+    /*font-weight: 500 !important;*/
+    /*margin-top: 6% !important;*/
+/*}*/
+
 #div-btn-artent a:hover{
     background-color: black;
-    padding: 2%;
+    padding: 7%;
     padding-top: 1%;
     padding-bottom: 1%;
     border: 3px solid black;
@@ -514,6 +640,9 @@ h1{
 
 
 
+
+
+
 #second-section-content-2{
     background-image: url("../img/IMG2-HOME-ENTREPRISE.jpg");
     width: 30%;
@@ -555,6 +684,20 @@ h1{
 
 #connexion-section-2{
     background-image: url("../img/IMG-CONNEXION.jpg");
+    width: 30%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#add-projet-section-2 {
+     background-image: url("../img/IMG1-ADDPROJET.jpg");
+     width: 30%;
+     background-size: 100%;
+     background-repeat: no-repeat;
+ }
+
+#add-projet-section-3 {
+    background-image: url("../img/IMG2-ADDPROJET.jpg");
     width: 30%;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -1010,6 +1153,7 @@ input::placeholder {
 }
 
 
+<<<<<<< HEAD
 /*
 @media not all and (min-resolution:.001dpcm) {
     @media {
@@ -1033,17 +1177,24 @@ input::placeholder {
 
 }
 */
+=======
+>>>>>>> c1dedfce86f313197e9169a3b374ae0d6dabf14e
 
 .section-profil{
     display: flex;
 }
-
+.deco-img{
+    width: 10%;
+}
+.deco-txt{
+    width: 80%;
+}
 .left-bar{
     position: absolute;
     left: 0;
     background-color: #f6f6f6;
     height: 100vh;
-    width: 14vw;
+    width: 9vw;
 }
 
 .left-bar-mobile {
@@ -1085,25 +1236,23 @@ input::placeholder {
 }
 
 .img-fleche-gauche {
-    width: 1%;
     margin-right: 2%;
+    height: 3vh;
 }
 
 .img-deconnexion {
-    width: 7%;
-    margin-right: 5%;
+    width: 100%;
 }
 
 .deconnexion {
-    display: block;
     position: absolute;
     bottom: 2%;
     left: 8%;
     text-decoration: none;
     color: black;
-    font-size: 1.3vw;
     font-weight: 500;
-    opacity: 1;
+display: flex;
+    justify-content: space-between;
 }
 
 .deconnexion:hover {
@@ -1172,13 +1321,15 @@ input::placeholder {
     display: flex;
     justify-content: space-between;
     margin-top: 1%;
-    margin-bottom: 4%;
+    margin-bottom: 2vh;
+
 }
 
 .profil-container h2{
     color: #fda229;
     margin-bottom: 3%;
-    font-size: 2.2vw;
+    margin-top: 6%;
+    font-size: 1.5vw;
     font-weight: 600;
 }
 
@@ -1197,7 +1348,7 @@ input::placeholder {
     padding: 0.5vw;
     border: 0.5px solid black;
     resize: none;
-    height: 12vh;
+    height: 9vh;
 }
 
 .section-profil form{
@@ -1206,8 +1357,8 @@ input::placeholder {
 
 .section-profil label{
     margin-bottom: 2%;
+    font-size: 0.8vw;
     margin-top: 2%;
-    font-size: 1.2vw;
 }
 
 .section-profil select:after{
@@ -1216,9 +1367,16 @@ input::placeholder {
     background-color: transparent;
     border-radius: 0;
 }
+.flex-btn{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 0.8vw;
+    width: 100%;
+    margin-top: 3%;
+}
 
 #ident-ent{
-    margin-top: 10vh;
+    height: 45%;
 }
 
 #ident-ent h3{
@@ -1260,7 +1418,6 @@ input::placeholder {
     color: #000;
     outline: none;
     transition: 0.5s;
-    position: absolute;
     right: -1vw;
     margin-top: 2%;
 }
@@ -1291,7 +1448,10 @@ input::placeholder {
 .h3-profil {
     font-size: 1.3vw;
     font-weight: 600;
+<<<<<<< HEAD
     margin-top: auto;
+=======
+>>>>>>> c1dedfce86f313197e9169a3b374ae0d6dabf14e
 }
 
 
@@ -1302,17 +1462,23 @@ form{
     text-decoration: none;
     color: black;
     position: absolute;
+<<<<<<< HEAD
     width: 30%;
+=======
+    display: flex;
+    width: 65%;
+>>>>>>> c1dedfce86f313197e9169a3b374ae0d6dabf14e
     top: 7%;
     height: 1.5vw;
     display: flex;
 }
 
-
-#realisations_realisations {  display: none}
+#realisations_realisations{
+    border: none;
+}
 
 .file_label {
-    display: block;
+    display: none;
     margin-top: 2%;
     margin-bottom: 2%;
     border-radius: 100%;
@@ -1365,6 +1531,7 @@ form{
     justify-content: space-between;
 }
 
+<<<<<<< HEAD
 .filename{
     display: flex;
     justify-content: center;
@@ -1389,4 +1556,168 @@ form{
     width:100%;
     opacity:0;
     z-index:1;
+=======
+/* Contact */
+#form-contact{
+    width: 80%;
+    margin-top: 3%;
+}
+.form-group-contact{
+     width: 100%;
+     margin-top: 3%;
+ }
+
+.input-addprojet {
+    width: 100% !important;
+}
+
+.p-addprojet {
+    margin-bottom: 3% !important;
+}
+
+
+.form-group-contact input {
+     width: 50%;
+     padding-bottom: 1%;
+     border: 0;
+     border-radius: 0;
+     border-bottom: 3px solid black;
+ }
+
+.form-group-contact textarea {
+    width: 70%;
+    padding-bottom: 1%;
+    resize: none;
+    margin-top: 3vh;
+    border-radius: 0;
+    height: 15vh;
+    border: 3px solid black;
+}
+
+.form-group-contact-btn button{
+    background-color: #fff;
+    width: 17vw;
+    color: #000;
+    padding: 7%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1vw;
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+
+.form-group-contact-btn :hover{
+    background-color: #000;
+    color: #fff;
+}
+
+.form-group-contact-btn{
+    width: 70%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-group-contact button:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+    -webkit-appearance: none;
+}
+
+
+.h3-addprojet {
+    margin-top: 4%;}
+
+
+/* PAGE ALL PROJETS */
+
+.first-section-allprojets {
+    margin-top: 8%;
+    margin-bottom: auto;
+    width: 40%;
+    margin-left: 3vw;
+}
+#first-section-allprojets-2{
+    background-image: url("../img/IMG1-HOME.jpg");
+    width: 30vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 1;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    transition: 0.4s;
+}
+
+
+/* ERROR PAGES */
+
+.section-error{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10vw;
+}
+.section-error p{
+
+    font-weight: 600;
+    font-size: 2.5vw;
+
+}
+.section-error h2{
+    font-weight: 600;
+    font-size: 4vh;
+    line-height: 4vh;
+    margin-left: 1vw;
+}
+#singe-404{
+    height: 4vh;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.section-error a{
+    background-color: #fff;
+    padding: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border: 3px solid black;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+    /* margin-right: 2vw; */
+    display: block;
+    cursor: pointer;
+    transition: 0.5s;
+    width: 20%;
+    text-align: center;
+    margin-top: 10vh;
+    -webkit-appearance: none;
+    text-decoration: none;
+    color: black;
+}
+
+
+.section-error a:hover {
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+.flex-error{
+    display: flex;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+#first-section-error-2{
+    background-image: url("../img/erreur.jpg");
+    width: 30vw;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+>>>>>>> c1dedfce86f313197e9169a3b374ae0d6dabf14e
 }

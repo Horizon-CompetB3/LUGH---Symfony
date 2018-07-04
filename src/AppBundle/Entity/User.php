@@ -121,7 +121,11 @@ class User implements UserInterface, \Serializable
         $this->realisations4 = $realisations4;
     }/**
      * @ORM\Column(type="string", nullable=true)
+<<<<<<< HEAD
      * @Assert\Image(mimeTypes={ "image/jpeg" })
+=======
+     * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
+>>>>>>> c1dedfce86f313197e9169a3b374ae0d6dabf14e
      */
     public $realisations2;/**
      * @ORM\Column(type="string", nullable=true)

@@ -1,0 +1,169 @@
+{% extends "base.html.twig" %}
+{% block layout_content %}
+
+    <form name="candidatures" method="post">
+
+    <div id="fullpage">
+
+
+        <section id="first-section" class="first-section section" data-midnight="default" data-anchor="slide1">
+            <div class="first-section-content position-finale">
+                <h2>Proposez votre talent !</h2>
+
+                <p>Proposez, créez, exposez !
+                    Vous souhaitez travailler avec une entreprise et des valeurs qui vous motive ?
+                    Indiquez votre proposition et vos conseils pour travailler
+                    sur le projet qui vous inspire. Ajouter des croquis pour immerger l’entreprise dans vos projections. Enfin, vérifiez
+                    vos informations personnelles. </p>
+                <div id="div-btn-artent">
+                    <a onClick="_gaq.push(['_trackEvent', 'Bouton Entreprise Home', 'Clic', 'Lugh']);" href="#slide2" class="js-scrollTo">commecer</a>
+                </div>
+            </div>
+
+            <div id="first-section-content-2" class="background-right img-fadein"></div>
+        </section>
+
+        <section id="second-section" class="section reveal" data-midnight="white" data-anchor="slide2">
+
+            <div class="second-section-content">
+                <h2>Etape 1 : Décrivez votre proposition</h2>
+                    <div id="candidatures">
+                        <div>
+                            <input type="text" class="border-bottom" id="candidatures_titre" name="candidatures[titre]" required="required" />
+                        </div>
+                        <div>
+
+                            <input type="text" id="candidatures_type" class="border-bottom" name="candidatures[type]" required="required" />
+                        </div>
+                        <div>
+                            <label for="candidatures_theme" class="required">Theme</label>
+                            <textarea id="candidatures_theme" name="candidatures[theme]" required="required"></textarea>
+                        </div>
+                        <div>
+                            <label for="candidatures_description_candidature" class="required">Description candidature</label>
+                            <textarea id="candidatures_description_candidature" name="candidatures[description_candidature]" required="required"></textarea>
+                        </div>
+                        <div>
+                            <label for="candidatures_orientation" class="required">Orientation</label>
+                            <input type="text" id="candidatures_orientation" name="candidatures[orientation]" required="required" />
+                        </div>
+
+
+
+
+            </div>
+            </div>
+            <div id="second-section-content-2" class="background-right"></div>
+        </section>
+        <section id="third-section" class="section reveal" data-midnight="black" data-anchor="slide3">
+
+            <div class="third-section-content">
+                <form name="candidatures" method="post">
+                    <div>
+                        <label for="candidatures_croquis" class="required">Croquis</label>
+                        <input type="text" id="candidatures_croquis" name="candidatures[croquis]" required="required" />
+                    </div>
+                </form>
+            </div>
+            <div id="third-section-content-2" class="background-right"></div>
+        </section>
+        <section id="five-section" class="section reveal" data-midnight="white" data-anchor="slide4">
+
+            <div class="five-section-content">
+
+                <div>
+                    <label for="candidatures_nom" class="required">Nom</label>
+                    <input type="text" id="candidatures_nom" name="candidatures[nom]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_prenom" class="required">Prenom</label>
+                    <input type="text" id="candidatures_prenom" name="candidatures[prenom]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_telephone_candidature" class="required">Telephone candidature</label>
+                    <input type="text" id="candidatures_telephone_candidature" name="candidatures[telephone_candidature]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_date_de_naissance" class="required">Date de naissance</label>
+                    <input type="text" id="candidatures_date_de_naissance" name="candidatures[date_de_naissance]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_specialite" class="required">Specialite</label>
+                    <input type="text" id="candidatures_specialite" name="candidatures[specialite]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_formation" class="required">Formation</label>
+                    <input type="text" id="candidatures_formation" name="candidatures[formation]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_site" class="required">Site</label>
+                    <input type="text" id="candidatures_site" name="candidatures[site]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_behance" class="required">Behance</label>
+                    <input type="text" id="candidatures_behance" name="candidatures[behance]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_autre" class="required">Autre</label>
+                    <input type="text" id="candidatures_autre" name="candidatures[autre]" required="required" />
+                </div>
+                <div>
+                    <label for="candidatures_presentation" class="required">Presentation</label>
+                    <textarea id="candidatures_presentation" name="candidatures[presentation]" required="required"></textarea>
+                </div>
+                <div>
+                    <label for="candidatures_reference" class="required">Reference</label>
+                    <textarea id="candidatures_reference" name="candidatures[reference]" required="required"></textarea>
+                </div>
+                <div><button type="submit" id="candidatures_save" name="candidatures[save]" class="save">Save</button>
+                </div>
+                <input type="hidden" id="candidatures__token" name="candidatures[_token]" value="aDB0uhhMsV8EuugCMeGxrgx6pj8yIsShJ2WH07FwUbI" />
+            </div>
+
+
+            <div id="five-section-content-2" class="background-right"></div>
+        </section>
+        <section id="fourth-section" class="section reveal" data-midnight="white" data-anchor="slide5">
+            <div class="fourth-section-content">
+
+                    <div>
+                        <label for="candidatures_presentation" class="required">Presentation</label>
+                        <textarea id="candidatures_presentation" name="candidatures[presentation]" required="required"></textarea>
+                    </div>
+                    <div>
+                        <label for="candidatures_reference" class="required">Reference</label>
+                        <textarea id="candidatures_reference" name="candidatures[reference]" required="required"></textarea>
+                    </div>
+                    <div><button type="submit" id="candidatures_save" name="candidatures[save]" class="save">Save</button>
+                    </div>
+                    <input type="hidden" id="candidatures__token" name="candidatures[_token]" value="aDB0uhhMsV8EuugCMeGxrgx6pj8yIsShJ2WH07FwUbI" />
+
+            </div>
+            <div id="fourth-section-content-2" class="background-right"></div>
+
+            <footer id="footer">
+                <div id="copyright">
+                    <ul>
+                        <li>© Lugh</li>
+                        <li>Presse</li>
+                        <li>Livre Blanc</li>
+                        <li><a href="/mentions">Mentions Légales</a></li>
+                    </ul>
+                </div>
+                <div id="rs">
+                    <ul>
+                        <li><a target="_blank" href="https://twitter.com/Hello_lugh">twitter</a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/Lugh-art-sur-commande-en-entreprise-567883830278473/">facebook</a></li>
+                        <li><a target="_blank" href="https://www.instagram.com/lugh_france/">instagram</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/lugh-entreprise/">linkedin</a></li>
+                        <li><a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a></li>
+                    </ul>
+                </div>
+            </footer>
+
+        </section>
+    </div>
+    </form>
+
+
+{% endblock %}

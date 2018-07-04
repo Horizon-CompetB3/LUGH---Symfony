@@ -23,7 +23,7 @@ class RealisationsType extends AbstractType
                 'data_class'=>null,
             ))
             ->add('save', SubmitType::class, array(
-        'attr' => array('class' => 'save')));
+                'attr' => array('class' => 'save')));
 
     }
 
