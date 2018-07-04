@@ -118,6 +118,14 @@
         left: 0;
     }
 
+    #first-section-allprojets-2 {
+        width: 100%;
+        height: 30%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
 
     h1 {
         font-size: 4.5vw;
@@ -742,7 +750,95 @@
         margin-top: 2% !important;
     }
 
+
+    #p-allprojet {
+        font-size: 3.5vw;
+        font-weight: 500;
+        margin-bottom: 5%;
+    }
+
+    .first-section-allprojets {
+        margin-top: 60%;
+        margin-bottom: auto;
+        width: 85%;
+        margin-left: 7%;
+    }
+
+    .projet-info p {
+        font-size: 2.8vw;
+        font-weight: 400;
+        padding-right: 5%;
+    }
+
+    .projet-description p {
+        font-size: 3.3vw;
+        margin-top: 3%;
+        font-weight: 500;
+    }
+
+    .colonne-1 {
+        display: none;
+    }
+
+    .colonne-2 {
+        width: 95% !important;
+    }
+
+    .button-projet {
+        background-color: #fff;
+        padding: 6%;
+        width: 70%;
+        padding-top: 3%;
+        padding-bottom: 3%;
+        border: 2px solid black;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 2.8vw;
+        margin-right: 2vw;
+        cursor: pointer;
+        transition: 0.5s;
+        -webkit-appearance: none;
+        display: block;
+        margin-top: 5%;
+    }
+
+    .button-orange {
+        border: 2px solid #fda229 !important;
+        color: #fda229 !important;
+    }
+
+    .projet-type {
+        font-size: 3.5vw;
+        font-weight: 600;
+    }
+
+    .logo-allprojet-mobile {
+        position: absolute !important;
+    }
+
+    #div-projet {
+        margin-top: 6%;
+        margin-bottom: 12%;
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
 
@@ -786,6 +882,10 @@
         width: 45%;
     }
 
+    #first-section-allprojets-2 {
+        width: 40%;
+    }
+
     .sidebar {
         position: absolute;
         z-index: 300;
@@ -793,6 +893,10 @@
         top: 8%;
         height: 80vh;
         margin-top: 10vh;
+    }
+
+    .sidebar-allprojet {
+        right: 16% !important;
     }
 
     .profil-container{
@@ -851,9 +955,17 @@
         width: 37%;
     }
 
+    #first-section-allprojets-2 {
+        width: 37%;
+    }
+
 
     .sidebar {
         right: 10%;
+    }
+
+    .sidebar-allprojet {
+        right: 12% !important;
     }
 
     .link-home {

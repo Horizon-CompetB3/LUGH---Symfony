@@ -50,7 +50,7 @@
         <a target="_blank" href="https://medium.com/@lugh.entreprise">medium</a>
     </div>
 </div>
-<div class="button-burger">
+<div class="button-burger button-burger-active">
     <div class="nav-burger">&#9776;</div>
 </div>
 
@@ -83,7 +83,14 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
 
-
+<script>
+    $('.nav-burger').on('click', function() {
+        $('.nav-mobile').addClass('burger-active');
+    });
+    $('.closeButton').on('click', function() {
+        $('.nav-mobile').removeClass('burger-active');
+    });
+</script>
 
 {% endblock %}
 </body>
