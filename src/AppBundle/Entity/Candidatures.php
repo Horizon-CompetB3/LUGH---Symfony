@@ -4,6 +4,8 @@ namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\CandidaturesRepository")
  */
@@ -38,9 +40,10 @@ class Candidatures
      */
     private $orientation;
     /**
-     * @ORM\Column(type="string", length=150)
+     * @ORM\Column(type="string", nullable=true)
+     * @Assert\File(maxSize = "20048k", mimeTypes={ "image/jpeg" })
      */
-    private $croquis;
+    public $croquis;
     /**
      * @ORM\Column(type="string", length=150)
      */

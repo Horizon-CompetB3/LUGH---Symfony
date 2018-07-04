@@ -8,3 +8,9 @@ logout:
 _errors:
     resource: '@TwigBundle/Resources/config/routing/errors.xml'
     prefix: /_error
+
+all-projets:
+    path:      /all-projets/{id_projet}
+    defaults:
+        _controller: AppBundle:AllProjetsController:pageprojets
+        page:        1

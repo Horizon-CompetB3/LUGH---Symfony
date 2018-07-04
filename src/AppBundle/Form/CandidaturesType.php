@@ -13,6 +13,7 @@ use AppBundle\Entity\Candidatures;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -32,7 +33,9 @@ class CandidaturesType extends AbstractType
                     'Peinture' => 'Peinture',
                 )))
             ->add('titre', TextType::class)
-            ->add('croquis', TextType::class)
+            ->add('croquis', FileType::class, array(
+                'label' => 'Realisations (jpg file)',
+                'data_class'=>null))
             ->add('orientation',ChoiceType::class,
                 array('choices' => array(
                     'Paysage' => 'paysage',
@@ -41,7 +44,7 @@ class CandidaturesType extends AbstractType
                 ),
                     'choices_as_values' => true,'multiple'=>false,'expanded'=>true))
             ->add('description_candidature', TextareaType::class)
-            ->add('theme', TextareaType::class)
+            ->add('theme', TextType::class)
             ->add('nom', TextType::class)
             ->add('prenom', TextType::class)
             ->add('telephone_candidature', TextType::class)
