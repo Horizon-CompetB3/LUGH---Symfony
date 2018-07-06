@@ -38,13 +38,14 @@ public function contactAction(Request $request)
             ->setSubject('Demande de contact')
             ->setFrom($data['from'])
             ->setTo('agence.horizon11@gmail.com')
-            ->setBody(array( $form->getData()['message'],
-                    'text/plain',
-                    $data['nom'])
-
+            ->setBody(
+                $form->getData()['message'],
+                'text/plain'
             )
         ;
         $mailer->send($message);
+        $request->getSession()->getFlashBag()->add('notice', 'Votre demande a bien été enregistrée');
+        return $this->redirectToRoute('home');
     }
 
     return $this->render('content/contact.html.twig', [

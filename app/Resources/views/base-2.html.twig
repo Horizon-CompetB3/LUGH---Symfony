@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
         <link rel="stylesheet" href="{{ asset('assets/css/normalize.css') }}">
+        <link rel="icon" type="image/png" href="/web/favicon-lugh.png"/>
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
                 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -80,15 +81,49 @@
 
 {% block javascripts %}
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
-    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/profil.js') }}"></script>
     <script src="{{ asset('assets/js/jquery.fullpage.min.js') }}"></script>
+    <!-- Include Google Maps JS API -->
+    <script type="text/javascript"
+            src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCPx9-c7_wRoUlBnzW4Ws0BSyKcSPqMA2k">
+    </script>
 
+    <!-- Custom JS code to bind to Autocomplete API -->
+    <!-- find it here: https://github.com/lewagon/google-place-autocomplete/blob/gh-pages/autocomplete.js -->
+    <!-- We'll detail this file in the article -->
+    <script type="text/javascript" src="autocomplete.js"></script>
 <script>
     $('.nav-burger').on('click', function() {
         $('.nav-mobile').addClass('burger-active');
     });
     $('.closeButton').on('click', function() {
         $('.nav-mobile').removeClass('burger-active');
+    });
+
+
+    function initializeAutocomplete(a) {
+        var b = document.getElementById(a);
+        if (b) {
+            var c = new google.maps.places.Autocomplete(b, {types: ['geocode']});
+            google.maps.event.addListener(c, 'place_changed', onPlaceChanged)
+        }
+    }
+
+    function onPlaceChanged() {
+        var a = this.getPlace();
+        for (var i in a.address_components) {
+            var b = a.address_components[i];
+            for (var j in b.types) {
+                var c = document.getElementById(b.types[j]);
+                if (c) {
+                    c.value = b.long_name
+                }
+            }
+        }
+    }
+
+    google.maps.event.addDomListener(window, 'load', function () {
+        initializeAutocomplete('user_input_autocomplete_address')
     });
 </script>
 

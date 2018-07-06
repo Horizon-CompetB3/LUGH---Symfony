@@ -9,14 +9,11 @@ use Symfony\Component\HttpFoundation\Request;
 class EntrepriseController extends Controller
 {
     /**
-     * @Route("/entreprise", name="entreprise")
+     * @Route("/construct", name="construct")
      */
     public function index()
     {
-        return $this->json([
-            'message' => 'Welcome to your new controller!',
-            'path' => 'src/Controller/EntrepriseController.php',
-        ]);
+        return $this->render('construct.html.twig');
     }
 
 

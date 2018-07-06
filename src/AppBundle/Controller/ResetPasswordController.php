@@ -23,7 +23,7 @@ class ResetPasswordController extends Controller
 {
 
     /**
-     * @Route("/emailcheck", name="forgotpassword")
+     * @Route("/emailcheck", name="emailcheck")
      * @param Request $request
      * @param Swift_Mailer $mailer
      * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response

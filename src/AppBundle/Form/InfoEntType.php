@@ -21,11 +21,11 @@ class InfoEntType extends AbstractType
             //->add('realisations', FileType::class, array('label' => 'Realisations', 'data_class' => null))
             ->add('adresse', TextType::class)
             ->add('telephone',TextType::class)
-            ->add('raison_sociale', TextType::class)
+            ->add('raisonsociale', TextType::class)
             ->add('siren', TextType::class)
             ->add('siret', TextType::class)
-            ->add('telephone_ent', TextType::class)
-            ->add('adresse_ent',TextType::class)
+            ->add('telephoneent', TextType::class)
+            ->add('adresseent',TextType::class)
             ->add('save', SubmitType::class, array(
                 'attr' => array('class' => 'save')));
     }

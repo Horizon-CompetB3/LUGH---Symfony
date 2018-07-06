@@ -5,18 +5,17 @@
         <div class="content-left">
             <div id="div-logo-profil">
                 <a href="/"><svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 252.6 94.4"><title>Fichier 4</title>
-                    <g id="Calque_2" data-name="Calque 2">
-                        <g id="Calque_1-2" data-name="Calque 1">
-                            <path d="M0,4.2H16.2V61H51.3V74.2H0Z"/>
-                            <path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/>
-                            <path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/>
-                            <path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/>
+                        <g id="Calque_2" data-name="Calque 2">
+                            <g id="Calque_1-2" data-name="Calque 1">
+                                <path d="M0,4.2H16.2V61H51.3V74.2H0Z"/>
+                                <path d="M113.1,20.4V74.2H98.3V67.8a20.78,20.78,0,0,1-7.4,5.35A23.36,23.36,0,0,1,81.6,75Q71,75,64.8,68.9T58.6,50.8V20.4H74.2V48.5q0,13,10.9,13a11.74,11.74,0,0,0,9-3.65Q97.49,54.21,97.5,47V20.4Z"/>
+                                <path d="M183.1,20.4V65.2q0,14.8-7.7,22t-22.5,7.2a56.1,56.1,0,0,1-14.8-1.9A32.33,32.33,0,0,1,126.5,87l6.2-11.2a25.36,25.36,0,0,0,8.6,4.45,34.17,34.17,0,0,0,10.4,1.65q8.1,0,12-3.65t3.85-11V64.9q-6.1,6.7-17,6.7A28.49,28.49,0,0,1,137,68.35a24.82,24.82,0,0,1-9.75-9.15,25.58,25.58,0,0,1-3.6-13.6A25.58,25.58,0,0,1,127.2,32,24.82,24.82,0,0,1,137,22.85,28.49,28.49,0,0,1,150.5,19.6q11.7,0,17.8,7.7V20.4ZM163.75,55.15a12.41,12.41,0,0,0,3.95-9.55,12.41,12.41,0,0,0-3.95-9.55,16,16,0,0,0-20.35,0,12.31,12.31,0,0,0-4,9.55,12.31,12.31,0,0,0,4,9.55,16,16,0,0,0,20.35,0Z"/>
+                                <path d="M246.45,25.6q6.15,6,6.15,17.8V74.2H237V45.8q0-6.4-2.8-9.55t-8.1-3.15a12.41,12.41,0,0,0-9.4,3.65q-3.51,3.64-3.5,10.85V74.2H197.6V0h15.6V26a20.59,20.59,0,0,1,7.5-4.75,27.11,27.11,0,0,1,9.6-1.65Q240.29,19.6,246.45,25.6Z"/>
+                            </g>
                         </g>
-                    </g>
-                </svg></a>
+                    </svg></a>
             </div>
 
-            <div class="card-title">{{ app.user.username }}</div>
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
                 <div class="cont-btn-profil">
@@ -128,64 +127,64 @@
 
                     <form name="info_ent" method="post">
                         <div id="info_ent">
-                                <div class="flex-form">
-                                    <div>
-                                        <label for="complete_artiste_nom" class="required">Nom</label>
-                                        <input type="text" id="complete_artiste_nom" name="info_ent[nom]"
-                                               value="{{ app.user.nom }}"/>
-                                    </div>
-                                    <div>
-                                        <label for="complete_artiste_prenom" class="required">Prenom</label>
-                                        <input type="text" id="complete_artiste_prenom" name="info_ent[prenom]"
-                                               value="{{ app.user.prenom }}"/>
-                                    </div>
-                                </div>
-                                <div class="flex-form">
-                                    <div>
-                                        <label for="complete_artiste_email" class="required">Email</label>
-                                        <input type="email" id="complete_artiste_email" name="info_ent[email]"
-                                               value="{{ app.user.email }}"/>
-                                    </div>
-                                    <div>
-                                        <label for="complete_artiste_telephone" class="required">Telephone</label>
-                                        <input type="text" id="complete_artiste_telephone" name="info_ent[telephone]"
-                                               value="{{ app.user.telephone }}"/>
-                                    </div>
+                            <div class="flex-form">
+                                <div>
+                                    <label for="complete_artiste_nom" class="required">Nom</label>
+                                    <input type="text" id="complete_artiste_nom" name="info_ent[nom]"
+                                           value="{{ app.user.nom }}"/>
                                 </div>
                                 <div>
-                                    <label for="complete_artiste_adresse" class="required">Adresse</label>
-                                    <input type="text" id="user_input_autocomplete_address" name="info_ent[adresse]"
-                                           value="{{ app.user.adresse }}"/>
+                                    <label for="complete_artiste_prenom" class="required">Prénom</label>
+                                    <input type="text" id="complete_artiste_prenom" name="info_ent[prenom]"
+                                           value="{{ app.user.prenom }}"/>
                                 </div>
+                            </div>
+                            <div class="flex-form">
+                                <div>
+                                    <label for="complete_artiste_email" class="required">Email</label>
+                                    <input type="email" id="complete_artiste_email" name="info_ent[email]"
+                                           value="{{ app.user.email }}"/>
+                                </div>
+                                <div>
+                                    <label for="complete_artiste_telephone" class="required">Téléphone</label>
+                                    <input type="text" id="complete_artiste_telephone" name="info_ent[telephone]"
+                                           value="{{ app.user.telephone }}"/>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="complete_artiste_adresse" class="required">Adresse</label>
+                                <input type="text" id="user_input_autocomplete_address" name="info_ent[adresse]"
+                                       value="{{ app.user.adresse }}"/>
+                            </div>
                             <h3>Identification de l’entreprise</h3>
                             <div class="flex-form">
                                 <div>
-                                    <label for="info_ent_raison_sociale" class="required">Raison sociale</label>
-                                    <input type="text" id="info_ent_raison_sociale" name="info_ent[raison_sociale]"
-                                           required="required" value=""/>
+                                    <label for="info_ent_raisonsociale" class="required">Raison sociale</label>
+                                    <input type="text" id="info_ent_raisonsociale" name="info_ent[raisonsociale]"
+                                           required="required" value="{{ app.user.raisonsociale }}"/>
                                 </div>
                                 <div>
                                     <label for="info_ent_siren" class="required">Siren</label>
                                     <input type="text" id="info_ent_siren" name="info_ent[siren]" required="required"
-                                           value=""/>
+                                           value="{{ app.user.siren }}"/>
                                 </div>
                             </div>
                             <div class="flex-form">
                                 <div>
                                     <label for="info_ent_siret" class="required">Siret</label>
                                     <input type="text" id="info_ent_siret" name="info_ent[siret]" required="required"
-                                           value=""/>
+                                           value="{{ app.user.siret }}"/>
                                 </div>
                                 <div>
-                                    <label for="info_ent_telephone_ent" class="required">Telephone</label>
-                                    <input type="text" id="info_ent_telephone_ent" name="info_ent[telephone_ent]"
-                                           required="required" value=""/>
+                                    <label for="info_ent_telephoneent" class="required">Téléphone</label>
+                                    <input type="text" id="info_ent_telephoneent" name="info_ent[telephoneent]"
+                                           required="required" value="{{ app.user.telephoneent }}"/>
                                 </div>
                             </div>
                             <div>
-                                <label for="info_ent_adresse_ent" class="required">Adresse</label>
-                                <input type="text" id="info_ent_adresse_ent" name="info_ent[adresse_ent]"
-                                       required="required" value=""/>
+                                <label for="info_ent_adresseent" class="required">Adresse</label>
+                                <input type="text" id="info_ent_adresseent" name="info_ent[adresseent]"
+                                       required="required" value="{{ app.user.adresseent }}"/>
                             </div>
                             {{ form_row(form_info_ent._token) }}
                             <div class="btn-form-profil flex-btn">
@@ -237,18 +236,18 @@
 
                                 <label for="profil_ent_histoire" class="required">Histoire</label>
                                 <textarea id="profil_ent_histoire" name="profil_ent[histoire]"
-                                          required="required"></textarea>
+                                          required="required">{{ app.user.histoire }}</textarea>
                             </div>
                             <div>
 
                                 <label for="profil_ent_identite" class="required">Identité</label>
                                 <textarea id="profil_ent_identite" name="profil_ent[identite]"
-                                          required="required"></textarea>
+                                          required="required">{{ app.user.identite }}</textarea>
                             </div>
                             <div>
-                                <label for="profil_ent_activite" class="required">Activite</label>
+                                <label for="profil_ent_activite" class="required">Activité</label>
                                 <textarea id="profil_ent_activite" name="profil_ent[activite]"
-                                          required="required"></textarea>
+                                          required="required">{{ app.user.activite }}</textarea>
                             </div>
 
                             <div class="btn-form-profil flex-btn">
@@ -267,68 +266,32 @@
             {% endif %}
 
             {% if is_granted("ROLE_USER") == true and app.user.art_ent == 2 %}
-            {#<form  id="complete_artiste" name="complete_artiste" method="post">#}
-                {#<div class="flex-form">#}
-                    {#<div>#}
-                        {#<label for="complete_artiste_nom" class="required">Nom</label>#}
-                        {#<input type="text" id="complete_artiste_nom" name="art[nom]"#}
-                               {#value="{{ app.user.nom }}"/>#}
-                    {#</div>#}
-                    {#<div>#}
-                        {#<label for="complete_artiste_prenom" class="required">Prenom</label>#}
-                        {#<input type="text" id="complete_artiste_prenom" name="art[prenom]"#}
-                               {#value="{{ app.user.prenom }}"/>#}
-                    {#</div>#}
-                {#</div>#}
-                {#<div class="flex-form">#}
-                    {#<div>#}
-                        {#<label for="complete_artiste_email" class="required">Email</label>#}
-                        {#<input type="email" id="complete_artiste_email" name="art[email]"#}
-                               {#value="{{ app.user.email }}"/>#}
-                    {#</div>#}
-                    {#<div>#}
-                        {#<label for="complete_artiste_telephone" class="required">Telephone</label>#}
-                        {#<input type="text" id="complete_artiste_telephone" name="art[telephone]"#}
-                               {#value="{{ app.user.telephone }}"/>#}
-                    {#</div>#}
-                {#</div>#}
-                {#<div>#}
-                    {#<label for="complete_artiste_adresse" class="required">Adresse</label>#}
-                    {#<input type="text" id="user_input_autocomplete_address" name="art[adresse]"#}
-                           {#value="{{ app.user.adresse }}"/>#}
-                {#</div>#}
-                {#{{ form_row(form_art._token) }}#}
-                {#<div class="btn-form-profil">#}
-                    {#<button type="submit" id="info_artiste_save" name="art[save]" class="save">#}
-                        {#Enregistrer#}
-                    {#</button>#}
-                {#</div>#}
-            {#</form>#}
+
 
                 <form name="complete_artiste" method="post">
                     <div id="complete_artiste">
                         <div class="flex-form">
-                        <div>
-                            <label for="complete_artiste_nom" class="required">Nom</label>
-                            <input type="text" id="complete_artiste_nom" name="complete_artiste[nom]" required="required"/>
-                        </div>
-                        <div>
-                            <label for="complete_artiste_prenom" class="required">Prenom</label>
-                            <input type="text" id="complete_artiste_prenom" name="complete_artiste[prenom]" required="required"/>
-                        </div>
+                            <div>
+                                <label for="complete_artiste_nom" class="required">Nom</label>
+                                <input type="text" id="complete_artiste_nom" name="complete_artiste[nom]" required="required" value="{{ app.user.nom }}"/>
+                            </div>
+                            <div>
+                                <label for="complete_artiste_prenom" class="required">Prénom</label>
+                                <input type="text" id="complete_artiste_prenom" name="complete_artiste[prenom]" required="required" value="{{ app.user.prenom }}"/>
+                            </div>
                         </div>
                         <div id="complete_artiste">
-                        <div>
-                            <label for="complete_artiste_email" class="required">Email</label>
-                            <input type="email" id="complete_artiste_email" name="complete_artiste[email]" required="required" value="alexandre-smagghe@outlook.com"/>
+                            <div>
+                                <label for="complete_artiste_email" class="required">Email</label>
+                                <input type="email" id="complete_artiste_email" name="complete_artiste[email]" required="required" value="{{ app.user.email }}"/>
+                            </div>
+                            <div>
+                                <label for="complete_artiste_adresse" class="required">Adresse</label>
+                                <input type="text" id="complete_artiste_adresse" name="complete_artiste[adresse]" required="required" value="{{ app.user.adresse }}"/>
+                            </div>
                         </div>
                         <div>
-                            <label for="complete_artiste_adresse" class="required">Adresse</label>
-                            <input type="text" id="complete_artiste_adresse" name="complete_artiste[adresse]" required="required"/>
-                        </div>
-                        </div>
-                        <div>
-                            <label for="complete_artiste_telephone" class="required">Telephone</label><input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]" required="required"/>
+                            <label for="complete_artiste_telephone" class="required">Téléphone</label><input type="text" id="complete_artiste_telephone" name="complete_artiste[telephone]" required="required" value="{{ app.user.telephone }}"/>
                         </div>
                         <div class="flex-btn">
                             <button type="submit" id="complete_artiste_save" name="complete_artiste[save]" class="save">
@@ -344,18 +307,15 @@
 
 
                 <div id="real-content" class="none">
-
-
-                   <form id="form-realisations" name="realisations" method="post" enctype="multipart/form-data">
+                    <form id="form-realisations" name="realisations" method="post"
+                          enctype="multipart/form-data">
                         <div id="realisations">
                             <div id="form-content-real">
                                 <label id="label_real" for="realisations_realisations"
                                        class="file_label none">+</label>
 
                                 <input type="file" id="realisations_realisations" name="realisations[realisations]"
-
-                                        placeholder="+"/>
-                               
+                                       placeholder="+"/>
                                 {{ form_widget(form_real._token) }}
 
                                 <button type="submit" id="realisations_save" name="realisations[save]" class="save">
@@ -368,15 +328,16 @@
                     </form>
 
 
+
                     {% if is_granted("ROLE_USER") == true and app.user.realisations != "" %}
                         <div id="img-real">
-                              <div class="container-img">
-                                  <div class="div-img">
-                                      <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
-                                  {#<div class="div-img">#}
-                                      {#<img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>#}
-                              </div>
-                          </div>
+                            <div class="container-img">
+                                <div class="div-img">
+                                    <img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>
+                                {#<div class="div-img">#}
+                                {#<img src="{{ asset('uploads/' ~ app.user.realisations) }}">                            </div>#}
+                            </div>
+                        </div>
                     {% endif %}
 
                 </div>
@@ -388,17 +349,17 @@
                         <div>
                             <label for="info_artiste_description" class="required">Description</label>
                             <textarea id="info_artiste_description" name="info_artiste[description]"
-                                      required="required"></textarea>
+                                      required="required">{{ app.user.description }}</textarea>
                         </div>
                         <div>
                             <label for="info_artiste_formation" class="required">Formation</label>
                             <textarea id="info_artiste_formation" name="info_artiste[formation]"
-                                      required="required"></textarea>
+                                      required="required">{{ app.user.formation }}</textarea>
                         </div>
                         <div>
-                            <label for="info_artiste_experience" class="required">Experience</label>
+                            <label for="info_artiste_experience" class="required">Expérience</label>
                             <textarea id="info_artiste_experience" name="info_artiste[experience]"
-                                      required="required"></textarea>
+                                      required="required">{{ app.user.experience }}</textarea>
                         </div>
                         {{ form_row(form_info._token) }}
                         <div class="btn-form-profil flex-btn">

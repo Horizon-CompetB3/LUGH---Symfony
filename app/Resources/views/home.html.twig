@@ -1,8 +1,33 @@
 {% extends "base.html.twig" %}
 {% block layout_content %}
 
-
-
+    <div  id="loader" class="loader">
+        <div class="loader-inner">
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-wrap">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+<div onload="masquernotification()" id="div-load">
+    {% for message in app.flashes('notice') %}
+        <div id="test-popup" class="white-popup mfp-hide pop">
+            <h2>
+            {{ message }}
+            </h2>
+        </div>
+    {% endfor %}
     <div id="fullpage">
 
 
@@ -46,7 +71,7 @@
 
             <div class="third-section-content">
                 <h3>COLLABOREZ AVEC DES ENTREPRISES<br> ET FAITES VOUS CONNAÎTRE !</h3>
-                <p>Votre créativité est précieuse ! Gagnez en notoriété en créant des œuvres en collaboration avec des entreprises qui souhaitent mettre en avant leur valeurs par l’art. Inscrivez-vous sur la plateforme pour répondre aux appels à projet !</p>
+                <p>Votre <span class="orange">créativité</span> est précieuse ! Gagnez en notoriété en créant des œuvres en <span class="orange">collaboration</span> avec des entreprises qui souhaitent mettre en avant leur valeurs par l’art. Inscrivez-vous sur la plateforme pour répondre aux appels à projet !</p>
                 <div class="div-btn-proj">
                     <a href="/add-user"> <button>Je m'inscris</button></a>
                 </div>
@@ -118,6 +143,88 @@
 
         </section>
     </div>
+    <div class="cookie-container ex-1">
+        <a href="https://erhvervsstyrelsen.dk/cookie-loven" target="_blank" alt="View information about delicious cookies" class="fa fa-info"></a>
+        <p>We use cookies to ensure you get the best experience on our website</p>
+        <a href="#" alt="Accept usage" class="fa fa-check"></a>
+    </div>
 
+</div>
 
+    <script>/*
+ * cookie-notice.js
+ */
+
+        void (function (root, factory) {
+            if (typeof define === 'function' && define.amd) define(factory)
+            else if (typeof exports === 'object') module.exports = factory()
+            else root.CookieNotice = factory()
+        }(this, function () {
+            function CookieNotice () {
+                ready(run)
+            }
+
+            CookieNotice.options = {
+                message: '<p>En poursuivant votre navigation sur ce site, vous acceptez l’utilisation de cookies afin de réaliser des statistiques de visites.</p>',
+                dismiss: "J'accepte"
+            }
+
+            function run () {
+                if (window.localStorage.cookieNoticeDismissed) return
+                show()
+            }
+
+            function dismiss () {
+                var notice = document.getElementById('cookie-notice')
+                if (notice) notice.parentNode.removeChild(notice)
+                window.localStorage.cookieNoticeDismissed = true
+            }
+
+            function undismiss () {
+                delete window.localStorage.cookieNoticeDismissed
+            }
+
+            function show () {
+                var $div = document.createElement('div')
+                $div.className = 'cookie-notice'
+                $div.id = 'cookie-notice'
+
+                var $message = document.createElement('div')
+                $message.className = 'cookie-notice-message'
+                $message.innerHTML = CookieNotice.options.message
+                $div.appendChild($message)
+
+                var $dismiss = document.createElement('button')
+                $dismiss.innerHTML = CookieNotice.options.dismiss
+                $dismiss.onclick = dismiss
+                $div.appendChild($dismiss)
+
+                document.body.appendChild($div)
+            }
+
+            function ready (fn) {
+                if (document.readyState === 'complete') {
+                    return fn()
+                } else if (document.addEventListener) {
+                    document.addEventListener('DOMContentLoaded', fn)
+                } else {
+                    document.attachEvent('onreadystatechange', function () {
+                        if (document.readyState === 'interactive') fn()
+                    })
+                }
+            }
+
+            CookieNotice.run = run
+            CookieNotice.dismiss = dismiss
+            CookieNotice.undismiss = undismiss
+
+            return CookieNotice
+        }));
+
+        /*
+         * Run it
+         */
+
+        CookieNotice.undismiss() // just so it always shows up in this demo
+        CookieNotice()</script>
 {% endblock %}

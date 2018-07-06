@@ -19,7 +19,7 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, array('attr' => array('placeholder' => 'Your name'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide your name")),
+                    new NotBlank(array("message" => "Veuillez entrer votre nom")),
                 )
             ))
             ->add('subject', TextType::class, array('attr' => array('placeholder' => 'Subject'),
@@ -29,13 +29,13 @@ class ContactType extends AbstractType
             ))
             ->add('email', EmailType::class, array('attr' => array('placeholder' => 'Your email address'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a valid email")),
-                    new Email(array("message" => "Your email doesn't seems to be valid")),
+                    new NotBlank(array("message" => "Votre email n'est pas valide")),
+                    new Email(array("message" => "Votre email n'est pas valide")),
                 )
             ))
             ->add('message', TextareaType::class, array('attr' => array('placeholder' => 'Your message here'),
                 'constraints' => array(
-                    new NotBlank(array("message" => "Please provide a message here")),
+                    new NotBlank(array("message" => "Le message ne peut être vide")),
                 )
             ))
         ;

@@ -356,7 +356,7 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
-    private $raison_sociale;
+    private $raisonsociale;
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
@@ -368,26 +368,26 @@ class User implements UserInterface, \Serializable
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
-    private $telephone_ent;
+    private $telephoneent;
     /**
      * @ORM\Column(type="string", length=150, nullable=true)
      */
-    private $adresse_ent;
+    private $adresseent;
 
     /**
      * @return mixed
      */
     public function getRaisonSociale()
     {
-        return $this->raison_sociale;
+        return $this->raisonsociale;
     }
 
     /**
-     * @param mixed $raison_sociale
+     * @param mixed $raisonsociale
      */
-    public function setRaisonSociale($raison_sociale)
+    public function setRaisonSociale($raisonsociale)
     {
-        $this->raison_sociale = $raison_sociale;
+        $this->raisonsociale = $raisonsociale;
     }
 
     /**
@@ -427,15 +427,15 @@ class User implements UserInterface, \Serializable
      */
     public function getTelephoneEnt()
     {
-        return $this->telephone_ent;
+        return $this->telephoneent;
     }
 
     /**
-     * @param mixed $telephone_ent
+     * @param mixed $telephoneent
      */
-    public function setTelephoneEnt($telephone_ent)
+    public function setTelephoneEnt($telephoneent)
     {
-        $this->telephone_ent = $telephone_ent;
+        $this->telephoneent = $telephoneent;
     }
 
     /**
@@ -443,15 +443,15 @@ class User implements UserInterface, \Serializable
      */
     public function getAdresseEnt()
     {
-        return $this->adresse_ent;
+        return $this->adresseent;
     }
 
     /**
-     * @param mixed $adresse_ent
+     * @param mixed $adresseent
      */
-    public function setAdresseEnt($adresse_ent)
+    public function setAdresseEnt($adresseent)
     {
-        $this->adresse_ent = $adresse_ent;
+        $this->adresseent = $adresseent;
     }
 
 

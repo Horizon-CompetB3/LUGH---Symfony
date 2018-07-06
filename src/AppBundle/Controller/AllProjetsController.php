@@ -2,41 +2,42 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Candidatures;
 use AppBundle\Repository\ProjetsRepository;
-use AppBundle\Entity\Projets;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Request;
-
 
 class AllProjetsController extends Controller
 {
-    /**
-     * @Route("/all-projets", name="all-projets")
-     */
-    public function allprojets(ProjetsRepository $projetsRepository)
-    {
-        $projets = $projetsRepository->findAll();
-
-        return $this->render('Content/allprojets.html.twig', [
-            'controller_name' => 'AllGamesController',
-            'projets' => $projets
-        ]);
-    }
 
     /**
-     * @Route("/all-projets/{id_projet}", name="projets")
+     * @Route("/candidature", name="candidature")
+     * @param Request $request
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|\Symfony\Component\HttpFoundation\Response
      */
-
-    public function pageprojets(ProjetsRepository $projetsRepository, $id_projet)
+    public function CandidatureAction (Request $request)
     {
-        $projets = $projetsRepository->findOneBy(array('name' => $id_projet));
+// creates a user and gives it some dummy data for this example
+        $candidatures = new Candidatures();
+        $form = $this->createForm(CandidaturesType::class, $candidatures);
+        $form->handleRequest($request);
 
 
+        if ($form->isSubmitted() && $form->isValid()) {
+            $candidatures = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($candidatures);
+            $entityManager->flush();
 
-        return $this->render('Content/projets.html.twig', [
-            'projets' => $projets,
-        ]);
+            return $this->redirectToRoute('profil');
+        }
+
+        return $this->render('log/registration.html.twig', array(
+            'controller_name' => 'AddUserController',
+            'form' => $form->createView(),
+
+        ));
     }
 
 }

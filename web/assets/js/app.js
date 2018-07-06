@@ -1,3 +1,21 @@
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("div-load").style.display = "block";
+}
+function masquernotification()
+{
+    document.getElementById("test-popup").style.opacity = "0";
+}
+window.setTimeout(masquernotification, 5000);
+
+
+
 $(document).ready(function() {
     $('#fullpage').fullpage();
 });
@@ -17,5 +35,3 @@ $('.js-section-scroll').on('click', function(e) {
         scrollTop: $section.offset().top + 'px'
     }, 1000);
 });
-
-

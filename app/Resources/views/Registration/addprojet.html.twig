@@ -57,6 +57,7 @@
 
         <section id="first-section" class="first-section section" data-midnight="default" data-anchor="slide1">
             <div class="first-section-content position-finale">
+
                 <h2>Demander l’oeuvre<br>
                     qui vous <span class="blue">ressemble</span> !
                 </h2>
@@ -77,6 +78,7 @@
         <section id="second-section" class="section reveal" data-midnight="white" data-anchor="slide2">
 
             <div class="second-section-content position-finale">
+                <span class="span-path">Home > Mon espace > Déposer un projet</span>
                 <h3>Décrivez votre oeuvre</h3>
                 <p>Explicitez avec détail ce que vous attendez de l’artiste.
                     Le type d’oeuvre ou le thème de celle-ci, les dimensions
@@ -87,19 +89,19 @@
                     <div id="form">
                         <div class="flex-form larg-form">
                             <div class="form-group-contact">
-                                <input type="text" id="form_nom" name="form[nom]" placeholder="Nom" required="required"/>
+                                <input type="text" class="input-addprojet" id="form_nom" name="form[nom]" placeholder="Nom *" required="required"/>
                             </div>
                             <div class="form-group-contact none">
                                 <input class="input-addprojet none" type="email" id="form_from" name="form[from]" value="{{ app.user.email }}"/>
                             </div>
                             <div class="form-group-contact">
-                                <input class="input-addprojet" type="text" id="form_from" name="form[prenom]" placeholder="Votre prénom"/>
+                                <input class="input-addprojet" type="text" id="form_from" name="form[prenom]" placeholder="Prénom *"/>
                             </div>
                         </div>
 
                         <div class="form-group-contact">
-                            <textarea id="form_message" name="form[message]" required="required">
-                            </textarea>
+                            <label id="label-text">Description détaillée *</label>
+                            <textarea id="form_message" name="form[message]" required="required"></textarea>
                         </div>
                         {{ form_row(form._token) }}
                         <div class="form-group-contact-btn">

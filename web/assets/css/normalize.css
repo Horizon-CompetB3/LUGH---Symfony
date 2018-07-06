@@ -1,14 +1,21 @@
 @media screen and (max-width: 679px) {
+    #rs, .sidebar {
+        display: none
+    }
+
+    #rs-mobile, footer {
+        position: absolute
+    }
+
+    #text-ml, #title-ml {
+        font-family: Montserrat-Regular, sans-serif
+    }
 
     #div-logo {
         width: 20%;
         top: 4vw;
         left: 4vw;
-        z-index: 3;
-    }
-
-    .sidebar {
-        display: none;
+        z-index: 3
     }
 
     #rs-mobile {
@@ -16,310 +23,121 @@
         display: flex;
         flex-direction: row;
         margin: auto;
-        position: absolute;
-        bottom: 12%;
-    }
-
-    #rs {
-        display: none;
+        bottom: 12%
     }
 
     #rs-mobile a {
         font-size: 12px;
         text-decoration: underline;
-        color: #000000;
-        padding: 2%;
+        color: #000;
+        padding: 2%
     }
 
-    #first-section-content-2 {
+    #add-projet-section-2, #add-projet-section-3, #connexion-section-2, #first-section-allprojets-2, #first-section-content-2, #five-section-content-2, #fourth-section-content-2, #image-right-art, #image-right-ent, #second-section-content-2, #third-section-content-2 {
         width: 100%;
         height: 30%;
         position: absolute;
         top: 0;
-        left: 0;
+        left: 0
     }
-
-    #second-section-content-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #third-section-content-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #fourth-section-content-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #five-section-content-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #connexion-section-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #add-projet-section-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #add-projet-section-3 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #connexion-section-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #image-right-art{
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-    #image-right-ent{
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
-    #first-section-allprojets-2 {
-        width: 100%;
-        height: 30%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-
 
     h1 {
-        font-size: 4.5vw;
+        font-size: 4.5vw
     }
 
     h2 {
         font-size: 3.8vw;
         line-height: 4.8vw;
-        line-weight: 500;
+        line-weight: 500
     }
 
-    .first-section-content {
-        margin-left: 7vw;
+    #div-btn-addprojet a, #div-btn-artent a {
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 3.4vw;
+        border: 2px solid #000;
+        display: flex;
+        text-align: center
     }
 
     #div-btn-artent a {
-        display: flex;
         flex-direction: column;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-size: 3.4vw;
-        padding: 6%;
-        padding-top: 4%;
-        padding-bottom: 4%;
-        border: 2px solid black;
-        text-align: center;
+        padding: 4% 6%
     }
 
     .h3-addprojet {
-        margin-top: 10%;
+        margin-top: 10%
     }
 
     #div-btn-addprojet a {
-        display: flex;
         flex-direction: column;
-        margin-top: 10%;
-        margin-bottom: 10%;
-        font-size: 3.4vw;
-        padding: 6%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
-        text-align: center;
-        width: 50%;
+        padding: 3% 6%;
+        width: 50%
     }
 
-    .first-section-content h2 {
+    .first-section-content h2, .five-section-content h3, .fourth-section-content h3, .second-section-content h3, .third-section-content h3 {
         font-size: 4.5vw;
         line-height: 5.5vw;
-        margin-bottom: 3vw;
+        margin-bottom: 3vw
     }
 
-    .second-section-content h3 {
-        font-size: 4.5vw;
-        line-height: 5.5vw;
-        margin-bottom: 3vw;
-    }
-
-    .third-section-content h3 {
-        font-size: 4.5vw;
-        line-height: 5.5vw;
-        margin-bottom: 3vw;
-    }
-
-    .five-section-content h3 {
-        font-size: 4.5vw;
-        line-height: 5.5vw;
-        margin-bottom: 3vw;
-    }
-
-    .fourth-section-content h3 {
-        font-size: 4.5vw;
-        line-height: 5.5vw;
-        margin-bottom: 3vw;
-    }
-
-    .first-section-content p {
+    .first-section-content p, .five-section-content p, .fourth-section-content p, .second-section-content p, .third-section-content p {
         font-size: 3.5vw;
         line-height: 4.5vw;
         width: 100%;
-        font-weight: 500;
+        font-weight: 500
     }
 
-    .second-section-content p {
-        font-size: 3.5vw;
-        line-height: 4.5vw;
-        width: 100%;
-        font-weight: 500;
-    }
-
-    .third-section-content p {
-        font-size: 3.5vw;
-        line-height: 4.5vw;
-        width: 100%;
-        font-weight: 500;
-    }
-
-    .five-section-content p {
-        font-size: 3.5vw;
-        line-height: 4.5vw;
-        width: 100%;
-        font-weight: 500;
-    }
-
-    .fourth-section-content p {
-        font-size: 3.5vw;
-        line-height: 4.5vw;
-        width: 100%;
-        font-weight: 500;
+    #mc-embedded-subscribe, .div-btn-proj button {
+        background-color: #fff;
+        padding: 3% 6%;
+        border: 2px solid #000;
+        font-weight: 700;
+        margin-right: 2vw;
+        cursor: pointer;
+        text-transform: uppercase
     }
 
     .div-btn-proj {
-        margin-top: 9vw;
+        margin-top: 9vw
     }
 
     .div-btn-proj button {
-        background-color: #fff;
-        padding: 6%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 3.4vw;
-        margin-right: 2vw;
-        cursor: pointer;
+        font-size: 3.4vw
     }
 
     .first-section-content {
         margin-top: 63%;
         margin-bottom: auto;
         width: 86%;
-        margin-left: 6vw;
+        margin-left: 6vw
+    }
+    .cookie-notice{
+        display: none;
     }
 
-    .second-section-content {
+    .connexion-section-content, .five-section-content, .fourth-section-content, .second-section-content, .third-section-content {
         margin-top: 70%;
         margin-bottom: auto;
         width: 86%;
-        margin-left: 6vw;
-    }
-
-    .third-section-content {
-        margin-top: 70%;
-        margin-bottom: auto;
-        width: 86%;
-        margin-left: 6vw;
-    }
-
-    .five-section-content {
-        margin-top: 70%;
-        margin-bottom: auto;
-        width: 86%;
-        margin-left: 6vw;
-    }
-
-    .fourth-section-content {
-        margin-top: 70%;
-        margin-bottom: auto;
-        width: 86%;
-        margin-left: 6vw;
-    }
-
-    .connexion-section-content {
-        margin-top: 70%;
-        margin-bottom: auto;
-        width: 86%;
-        margin-left: 6vw;
+        margin-left: 6vw
     }
 
     input::placeholder {
-        font-size: 3.6vw;
+        font-size: 3.6vw
     }
 
     #mc-embedded-subscribe {
-        background-color: #fff;
-        padding: 6%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
-        font-weight: 700;
-        text-transform: uppercase;
         font-size: 3.4vw;
-        margin-right: 2vw;
         margin-top: 13%;
-        cursor: pointer;
-        width: 60%;
+        width: 60%
     }
 
     #mce-EMAIL {
         border: none;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #000;
         width: 80%;
-        padding: 2.8%;
+        padding: 2.8%
     }
 
     footer {
@@ -327,9 +145,8 @@
         display: flex;
         justify-content: space-between;
         background-color: transparent;
-        position: absolute;
         bottom: 3%;
-        color: #000000;
+        color: #000
     }
 
     footer ul {
@@ -338,55 +155,52 @@
         font-weight: 500;
         font-size: 3.3vw;
         padding: 1%;
-        justify-content: space-around;
+        justify-content: space-around
+    }
+
+    .nav-mobile, .none {
+        display: none
     }
 
     #copyright {
         width: 98%;
         font-size: 12px;
-        margin-bottom: 0;
+        margin-bottom: 0
+    }
+
+    .burger-active, .nav-mobile {
+        width: 100%;
+        transition: .5s;
+        position: absolute;
+        top: 0;
+        height: 100vh
     }
 
     .mc-field-group {
-        margin-top: 20%;
-    }
-
-    .none {
-        display: none;
+        margin-top: 20%
     }
 
     .nav-mobile {
-        height: 100vh;
-        width: 100%;
         z-index: 4;
-        top: 0;
         right: -100%;
-        position: absolute;
-        background-color: white;
-        transition: 0.5s;
-        display: none;
+        background-color: #fff;
         text-align: center;
-        padding-top: 20%;
+        padding-top: 20%
     }
 
     .burger-active {
-        height: 100vh;
-        width: 100%;
-        top: 0;
         right: 0;
-        transition: 0.5s;
-        position: absolute;
         z-index: 300;
-        display: block;
+        display: block
     }
 
     .nav-mobile a {
         text-decoration: none;
         font-size: 25px;
-        color: black;
+        color: #000;
         display: block;
-        transition: 0.5s;
-        margin-top: 10%;
+        transition: .5s;
+        margin-top: 10%
     }
 
     .closeButton {
@@ -397,287 +211,257 @@
         font-size: 36px;
         margin-left: 50px;
         color: #818181;
-        display: block;
+        display: block
+    }
+
+    .button-burger, .button-burger-active {
+        top: 0;
+        right: 2%;
+        z-index: 3;
+        position: absolute
     }
 
     .button-burger {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 2%;
-        z-index: 3;
+        display: none
     }
 
     .button-burger-active {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 2%;
-        z-index: 3;
+        display: block
     }
 
     .nav-burger {
         cursor: pointer;
-        font-size: 40px;
+        font-size: 40px
     }
 
-    /* PAGE LOGIN ET INSCRIPTION */
     #form-co {
         width: 80%;
-        margin: auto;
-        margin-top: 4%;
-    }
-
-    #form-ins {
-        width: 20%;
-        margin: auto;
+        margin: 4% auto auto
     }
 
     .form-group-co input {
         border: none;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #000;
         width: 95%;
-        padding: 2.8%;
+        padding: 2.8%
     }
 
     #form-co h2 {
         font-size: 4vw;
         line-height: 5.5vw;
         margin-bottom: 3vw;
-        text-transform: uppercase;
+        text-transform: uppercase
     }
 
-    #section-co {
+    #section-co, #section-ins {
         display: flex;
-        height: 100vh;
-    }
-
-    #section-ins {
-        display: flex;
-        height: 100vh;
+        height: 100vh
     }
 
     .form-group-co button {
         background-color: #fff;
-        padding: 6%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
+        padding: 3% 6%;
+        border: 2px solid #000;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 3.4vw;
         margin-left: 30vw;
         margin-top: 13%;
         cursor: pointer;
-        width: 60%;
+        width: 60%
     }
 
     .link-co {
         text-decoration: underline;
         text-align: right;
-        margin: auto;
-        margin-right: 0;
+        margin: 3% 0 auto auto;
         color: #679bd7;
-        margin-top: 3%;
         display: block;
         width: 51%;
-        font-size: 3vw;
+        font-size: 3vw
     }
 
     .inscription-co {
         text-decoration: none;
-        color: black;
+        color: #000;
         margin-top: 30%;
         display: block;
         width: 100%;
-        font-size: 3.5vw;
+        font-size: 3.5vw
     }
 
     #form-ins {
         width: 80%;
-        margin: auto;
-        margin-top: 4%;
+        margin: 4% auto auto
     }
 
     .form-group-ins input {
         border: none;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #000;
         width: 95%;
         padding: 2.8%;
-        margin-top: 6%;
+        margin-top: 6%
     }
 
     .form-group-ins button {
         background-color: #fff;
-        padding: 6%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
+        padding: 3% 6%;
+        border: 2px solid #000;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 3.4vw;
         margin-left: 30vw;
         margin-top: 13%;
         cursor: pointer;
-        width: 60%;
+        width: 60%
+    }
+
+    #check-box, .div-check {
+        margin-top: 3%;
+        display: flex
     }
 
     #check-box {
-        display: flex;
-        margin-top: 3%;
         margin-left: -10%;
         flex-direction: column;
-        width: 100%;
+        width: 100%
     }
 
     .div-check {
-        display: flex;
         font-size: 3.5vw;
         flex-direction: row;
         width: 89%;
-        margin-top: 3%;
-        margin-left: -12%;
+        margin-left: -12%
     }
 
     #submit-ins {
         width: 100%;
         margin-top: 5%;
-        margin-left: -20%;
+        margin-left: -20%
     }
 
     #section-ml {
         width: 85%;
-        margin: auto;
+        margin: 22% auto auto;
         overflow: scroll;
-        height: 75vh;
-        margin-top: 22%;
+        height: 75vh
     }
 
     #title-ml {
-        font-family: "Montserrat-Regular", sans-serif;
         font-weight: 700;
         color: #000;
         font-size: 5vw;
         margin-top: 8%;
-        text-align: left;
+        text-align: left
     }
 
     #text-ml {
-        font-family: "Montserrat-Regular", sans-serif;
         color: #000;
         font-size: 3.3vw;
-        margin-top: 6%;
+        margin-top: 6%
     }
-
-
-
-    /* PAGE PROFIL */
-
 
     .flex-form {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         margin-top: 1%;
-        margin-bottom: 2%;
+        margin-bottom: 2%
     }
 
     .section-profil label {
         margin-bottom: 3%;
         margin-top: 3%;
         font-size: 3.2vw;
-        font-weight: 600;
+        font-weight: 600
     }
 
     .section-profil form {
-        width: 85%;
+        width: 85%
     }
 
     .profil-container h2 {
         color: #fda229;
         margin-bottom: 3%;
         font-size: 4.5vw;
-        margin-top: 4%;
+        margin-top: 4%
     }
 
     .h3-profil {
         font-size: 3.2vw;
         font-weight: 600;
-        margin-top: 0;
+        margin-top: 0
     }
+
     .profil-container a {
         text-decoration: none;
-        color: black;
+        color: #000
     }
 
     .profil-container {
         width: 100%;
         height: auto;
-        /* margin: auto; */
         margin-top: 60%;
-        margin-left: 10%;
+        margin-left: 10%
     }
 
     .section-profil input {
         width: 100%;
-        padding: 0.5vw;
-        border: 0.5px solid black;
-        padding: 1.3vw;
+        border: .5px solid #000;
+        padding: 1.3vw
     }
 
     #profil_ent_secteur {
-        font-size: 3.1vw;
+        font-size: 3.1vw
     }
 
     #ident-ent h3 {
         margin-bottom: 3%;
-        font-size: 4.5vw;
+        font-size: 4.5vw
     }
 
     .orange-background-mobile {
         background-color: #fda229 !important;
-        width: 100% !important;
+        width: 100% !important
     }
 
     .save {
         background-color: #fff;
-        padding: 8vw;
-        padding-top: 1.7vw;
-        padding-bottom: 1.7vw;
-        border: 1px solid black;
+        padding: 1.7vw 8vw;
+        border: 1px solid #000;
         font-weight: 700;
         text-transform: uppercase;
         font-size: 2.8vw;
         margin-right: -2%;
         margin-bottom: 5%;
-        margin-top: 5%;
+        margin-top: 5%
     }
 
     .flex-form div {
-        width: 100%;
+        width: 100%
     }
 
     .left-bar {
-        display: none;
+        display: none
     }
 
     .left-bar-mobile {
         display: flex;
-        border-bottom: 0.5px solid black;
-        width: 88%;
+        border-bottom: .5px solid #000;
+        width: 88%
     }
 
     .left-bar-mobile button {
         background-color: transparent;
         border: none;
-        outline: none;
+        outline: 0;
         cursor: pointer;
-        opacity: 0.7;
-        transition: 0.7s;
+        opacity: .7;
+        transition: .7s;
         margin: 0;
         font-size: 3.5vw;
         font-weight: 500;
-        padding-right: 5%;
+        padding-right: 5%
     }
 
     .side-color {
@@ -686,15 +470,14 @@
         left: -5%;
         top: 87%;
         width: 88%;
-        height: 1vh;
+        height: 1vh
     }
-
 
     .form-group-contact-btn {
         width: 100%;
         margin-top: 3%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-end
     }
 
     .form-group-contact input {
@@ -702,12 +485,12 @@
         padding-bottom: 1%;
         border: 0;
         border-radius: 0;
-        border-bottom: 2px solid black;
+        border-bottom: 2px solid #000
     }
 
     #form-contact {
         width: 95%;
-        margin-top: 3%;
+        margin-top: 3%
     }
 
     .form-group-contact textarea {
@@ -716,30 +499,31 @@
         resize: none;
         border-radius: 0;
         height: 13vh;
-        border: 2px solid black;
-        margin-top: 3%;
+        border: 2px solid #000;
+        margin-top: 3%
+    }
+
+    .button-projet, .form-group-contact-btn button {
+        background-color: #fff;
+        border: 2px solid #000;
+        cursor: pointer;
+        transition: .5s;
+        -webkit-appearance: none
     }
 
     .form-group-contact-btn button {
-        background-color: #fff;
         width: 40vw;
-        padding: 6%;
-        padding-top: 3.2%;
-        padding-bottom: 3.2%;
-        border: 2px solid black;
+        padding: 3.2% 6%;
         font-weight: 700;
         text-transform: uppercase;
-        font-size: 2.5vw;
-        cursor: pointer;
-        transition: 0.5s;
-        -webkit-appearance: none;
+        font-size: 2.5vw
     }
 
     .h2-contact {
         font-size: 4vw !important;
         line-height: 5vw !important;
         font-weight: 700 !important;
-        text-transform: uppercase !important;
+        text-transform: uppercase !important
     }
 
     .p-contact {
@@ -747,143 +531,80 @@
         line-height: 4vw !important;
         width: 97% !important;
         font-weight: 500 !important;
-        margin-top: 2% !important;
+        margin-top: 2% !important
     }
-
 
     #p-allprojet {
         font-size: 3.5vw;
         font-weight: 500;
-        margin-bottom: 5%;
+        margin-bottom: 5%
     }
 
     .first-section-allprojets {
         margin-top: 60%;
         margin-bottom: auto;
         width: 85%;
-        margin-left: 7%;
+        margin-left: 7%
     }
 
     .projet-info p {
         font-size: 2.8vw;
         font-weight: 400;
-        padding-right: 5%;
+        padding-right: 5%
     }
 
     .projet-description p {
         font-size: 3.3vw;
         margin-top: 3%;
-        font-weight: 500;
+        font-weight: 500
     }
 
     .colonne-1 {
-        display: none;
+        display: none
     }
 
     .colonne-2 {
-        width: 95% !important;
+        width: 95% !important
     }
 
     .button-projet {
-        background-color: #fff;
-        padding: 6%;
+        padding: 3% 6%;
         width: 70%;
-        padding-top: 3%;
-        padding-bottom: 3%;
-        border: 2px solid black;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 2.8vw;
         margin-right: 2vw;
-        cursor: pointer;
-        transition: 0.5s;
-        -webkit-appearance: none;
         display: block;
-        margin-top: 5%;
+        margin-top: 5%
     }
 
     .button-orange {
         border: 2px solid #fda229 !important;
-        color: #fda229 !important;
+        color: #fda229 !important
     }
 
     .projet-type {
         font-size: 3.5vw;
-        font-weight: 600;
+        font-weight: 600
     }
 
     .logo-allprojet-mobile {
-        position: absolute !important;
+        position: absolute !important
     }
 
     #div-projet {
         margin-top: 6%;
-        margin-bottom: 12%;
+        margin-bottom: 12%
     }
-
-
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media only screen and (min-width: 680px) and (max-width: 1024px) {
-
-    #first-section-content-2 {
-        width: 45%;
+    #add-projet-section-2, #add-projet-section-3, #connexion-section-2, #first-section-content-2, #five-section-content-2, #fourth-section-content-2, #second-section-content-2, #third-section-content-2 {
+        width: 45%
     }
 
-    #second-section-content-2 {
-        width: 45%;
-    }
-
-    #third-section-content-2 {
-        width: 45%;
-    }
-
-    #fourth-section-content-2 {
-        width: 45%;
-    }
-
-    #five-section-content-2 {
-        width: 45%;
-    }
-
-    #image-right-ent {
-        width: 40%;
-    }
-
-    #image-right-art {
-        width: 40%;
-    }
-
-    #connexion-section-2 {
-        width: 45%;
-    }
-
-    #add-projet-section-2 {
-        width: 45%;
-    }
-
-    #add-projet-section-3 {
-        width: 45%;
-    }
-
-    #first-section-allprojets-2 {
-        width: 40%;
+    #first-section-allprojets-2, #image-right-art, #image-right-ent {
+        width: 40%
     }
 
     .sidebar {
@@ -892,117 +613,49 @@
         right: 14%;
         top: 8%;
         height: 80vh;
-        margin-top: 10vh;
+        margin-top: 10vh
     }
 
     .sidebar-allprojet {
-        right: 16% !important;
+        right: 16% !important
     }
 
-    .profil-container{
-        margin-left: 17%;
+    .profil-container {
+        margin-left: 17%
     }
 
     .form-group-ins button {
-        margin-right: 54%;
+        margin-right: 54%
     }
 
     .form-group-co button {
-        margin-left: 35%;
+        margin-left: 35%
     }
-
 }
 
 @media only screen and (min-width: 1680px) {
-
-    #first-section-content-2 {
-        width: 30vw;
-    }
-
-    #second-section-content-2 {
-        width: 30vw;
-    }
-
-    #third-section-content-2 {
-        width: 30vw;
-    }
-
-    #fourth-section-content-2 {
-        width: 30vw;
-    }
-
-    #five-section-content-2 {
-        width: 30vw;
-    }
-
-    #connexion-section-2 {
-        width: 30vw;
-    }
-
-    #add-projet-section-2 {
-        width: 30vw;
-    }
-
-    #add-projet-section-3 {
-        width: 30vw;
-    }
-
-    #image-right-ent {
-        width: 30vw;
-    }
-
-    #image-right-art {
-        width: 30vw;
+    #add-projet-section-2, #add-projet-section-3, #connexion-section-2, #first-section-content-2, #five-section-content-2, #fourth-section-content-2, #image-right-art, #image-right-ent, #second-section-content-2, #third-section-content-2 {
+        width: 30vw
     }
 
     .sidebar-allprojet {
-        right: 12% !important;
+        right: 12% !important
     }
 
-    .link-home {
-        margin: 0%;
-    }
-
-    .link-entreprise {
-        margin: 0%;
-    }
-
-    .link-artiste {
-        margin: 0%;
-    }
-
-    .link-galerie {
-        margin: 0%;
-    }
-
-    .link-contact {
-        margin: 0%;
-    }
-
-    .link-connexion {
-        margin: 0%;
+    .link-artiste, .link-connexion, .link-contact, .link-entreprise, .link-galerie, .link-home {
+        margin: 0
     }
 
     .form-group-ins button {
         margin-left: 27vw;
+        margin-right: 51%
+    }
+
+    .profil-container {
+        margin-left: 18%
     }
 
     .form-group-co button {
-        margin-left: 17vw;
+        margin-left: 37%
     }
-
-
-    .profil-container{
-        margin-left: 18%;
-    }
-
-    .form-group-ins button {
-        margin-right: 51%;
-    }
-
-    .form-group-co button {
-        margin-left: 37%;
-    }
-
-
 }

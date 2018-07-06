@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Candidatures;
 use AppBundle\Form\CandidaturesType;
+use AppBundle\Repository\ProjetsRepository;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -46,7 +47,9 @@ class AddProjetController extends Controller
                 )
             ;
             $mailer->send($message);
-            echo '<script>alert ("Votre demande a bien été transmis")</script>';
+
+            $request->getSession()->getFlashBag()->add('notice', 'Votre demande a bien été enregistrée');
+            return $this->redirectToRoute('home');
         }
 
         return $this->render('Registration/addprojet.html.twig', [
@@ -75,6 +78,7 @@ class AddProjetController extends Controller
             $entityManager->persist($candidatures);
             $entityManager->flush();
 
+
             return $this->redirectToRoute('login');
         }
 
@@ -83,5 +87,17 @@ class AddProjetController extends Controller
             'form_cand' => $form_cand->createView(),
 
         ));
+    }
+    /**
+     * @Route("/projets", name="projets")
+     */
+    public function allprojets(ProjetsRepository $projetsRepository)
+    {
+        $projets = $projetsRepository->findAll();
+
+        return $this->render('content/allprojets.html.twig', [
+            'controller_name' => 'AddProjetController',
+            'projets' => $projets
+        ]);
     }
 }
